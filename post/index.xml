@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on 划船听水声</title>
+        <link>https://munakanisena.github.io/post/</link>
+        <description>Recent content in Posts on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 12 Mar 2025 20:17:36 +0800</lastBuildDate><atom:link href="https://munakanisena.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Text</title>
+        <link>https://munakanisena.github.io/p/text/</link>
+        <pubDate>Wed, 12 Mar 2025 20:16:51 +0800</pubDate>
+        
+        <guid>https://munakanisena.github.io/p/text/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>redis在java基本的使用</title>
+        <link>https://munakanisena.github.io/p/code/java/redis/</link>
+        <pubDate>Fri, 28 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://munakanisena.github.io/p/code/java/redis/</guid>
+        <description>&lt;h1 id=&#34;redis在java基本的使用&#34;&gt;redis在java基本的使用
+&lt;/h1&gt;</description>
+        </item>
+        <item>
+        <title>关于我们的阅读理解出错了这件事</title>
+        <link>https://munakanisena.github.io/p/acg/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%87%BA%E9%94%99%E4%BA%86/</link>
+        <pubDate>Tue, 25 Feb 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://munakanisena.github.io/p/acg/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%87%BA%E9%94%99%E4%BA%86/</guid>
+        <description>&lt;img src="https://munakanisena.github.io/p/acg/%E9%98%85%E8%AF%BB%E7%90%86%E8%A7%A3%E5%87%BA%E9%94%99%E4%BA%86/cropped_image.png" alt="Featured image of post 关于我们的阅读理解出错了这件事" /&gt;&lt;p&gt;//TODO&lt;/p&gt;
+&lt;h2 id=&#34;我们的阅读理解出错了&#34;&gt;我们的阅读理解出错了
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;学生这种生物，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;每天都在寻找着“不明白的东西”的答案。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;明天测验的答案，在班里的风评，
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;喜欢的人所喜欢的人。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;这么说着的我：竹久优真，也正直面着一个问题。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;是关于橡皮擦上写着的“我喜欢你”。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;那正是我与憧憬的文学少女若宫雅两情相悦的确证，然而这份恋情却以玉碎结局结束了。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;也就是说对象另有其人？
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;在升入高中的春天，那份“误会”开始了。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;“你来得正好。我有点头疼的事情啊”
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;被太阳少女宗像濑奈所收集的学园中的小小谜团们——
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;那些，原来是将无数恋爱交缠在一起的事件
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
