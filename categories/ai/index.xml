@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI on 划船听水声</title>
+        <link>https://katomegumi.site/categories/ai/</link>
+        <description>Recent content in AI on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Sat, 09 Aug 2025 17:12:30 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【AI】MCP入门学习</title>
+        <link>https://katomegumi.site/p/aimcp%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+        <pubDate>Sat, 09 Aug 2025 14:25:15 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/aimcp%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+        <description>&lt;h2 id=&#34;mcp是什么&#34;&gt;MCP是什么？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mcp-docs.cn/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MCP 是一个开放协议，它为应用程序向 LLM 提供上下文的方式进行了标准化。你可以将 MCP 想象成 AI 应用程序的 USB-C 接口。就像 USB-C 为设备连接各种外设和配件提供了标准化的方式一样，MCP 为 AI 模型连接各种数据源和工具提供了标准化的接口。&lt;/li&gt;
+&lt;li&gt;MCP Servers 服务器每个专精一个服务。比如有的读取文件，有的访问浏览器。MCP server通常就是本地的nodejs或者python程序。其实就相当于是api，只不是是实现了MCP协议进行标准化罢了。因此你也可以自己写一个MCP服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;简单来说MCP就是AI大模型的&lt;strong&gt;标准化工具箱&lt;/strong&gt;。大模型可以利用这些工具与外界互动。&lt;/p&gt;
+&lt;p&gt;打一个比方，在平常我们使用AI需要手动截图或者复制问题到AI窗口进行对话。&lt;/p&gt;
+&lt;p&gt;而MCP通过标准化的协议。可以自动帮助我们完成这些工作。MCP Server相当于AI与外部工具的中间层，代替人类访问并且操作外部工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用mcp&#34;&gt;使用MCP
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要一个支持MCP协议的AI客户端。(Cursor,cline,cherry studio，WindSurf等)&lt;/li&gt;
+&lt;li&gt;对应的 MCP 服务器环境(node,python等)&lt;/li&gt;
+&lt;li&gt;以及你想使用的MCP服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里我们就使用node环境和cline客户端。在vscode的扩展中下载cline。&lt;a class=&#34;link&#34; href=&#34;https://github.com/cline/cline/blob/main/locales/zh-cn/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cline官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;下载完成后。配置API。这里用的Open Router。然后再市场上选择你想下载的MCP服务&lt;/p&gt;
+&lt;img src=&#34;image-20250809154758906.png&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;p&gt;这里使用github服务做一个例子。&lt;/p&gt;
+&lt;img src=&#34;image-20250809154939827-17547257894743.png&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;p&gt;点击安装。他会自动打开一个AI聊天窗口。会指导你下载MCP服务。跟着来就行。&lt;/p&gt;
+&lt;p&gt;这里需要获取你的github账号的token&lt;/p&gt;
+&lt;img src=&#34;image-20250809162659945.png&#34; style=&#34;zoom: 80%;&#34; /&gt;
+&lt;p&gt;可以自行设定该token具有哪些权限。&lt;/p&gt;
+&lt;img src=&#34;image-20250809163304467.png&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;获取到token后自己填写到配置文件中或者将token输入给AI聊天框让AI给你配置。&lt;/p&gt;
+&lt;p&gt;这里可以选用你自己的环境。比如docker、linux的sh。注意这里如果你是Windows可能需要修改 &lt;strong&gt;MCP服务器&lt;/strong&gt; 的连接配置。&lt;/p&gt;
+&lt;p&gt;实际上这个配置文件是最重要的。直接编写这个配置文件一样可以完成对应MCP服务器的配置。&lt;/p&gt;
+&lt;img src=&#34;image-20250809164302649-175472898632112.png&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;command&lt;/code&gt;是指定启动服务器的 “基础命令”&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;args&lt;/code&gt; 是 &lt;code&gt;command&lt;/code&gt; 的参数列表，用于拼接完整的启动命令。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MCP服务器显示绿色表明运行正常&lt;/p&gt;
+&lt;h3 id=&#34;测试一下&#34;&gt;测试一下
+&lt;/h3&gt;&lt;p&gt;在实际使用。我们不需要指定具体的MCP服务。AI会智能的从工具箱中寻找。自动进行使用。&lt;/p&gt;
+&lt;img src=&#34;image-20250809170359332.png&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;可以发现成功的运行了。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;MCP的本质是 客户端调用了本地的命令行。然后调用本地运行的nodejs程序或者python(其实就是取决于你的MCP服务器用什么写的)然后程序执行了操作。将结果返回。&lt;/p&gt;
+&lt;p&gt;MCP合集网站： &lt;a class=&#34;link&#34; href=&#34;https://smithery.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://smithery.ai/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
