@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Github on 划船听水声</title>
+        <link>https://katomegumi.site/categories/github/</link>
+        <description>Recent content in Github on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Tue, 24 Mar 2026 21:24:57 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/github/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Github Actions 工作流入门</title>
+        <link>https://katomegumi.site/p/github-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%85%A5%E9%97%A8/</link>
+        <pubDate>Mon, 15 Sep 2025 18:53:18 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/github-actions-%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%85%A5%E9%97%A8/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/zh/actions/get-started/quickstart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;GitHub 文档&lt;/a&gt;是一种持续集成和持续交付 (CI/CD) 平台，可用于自动执行生成、测试和部署管道。&lt;br&gt;
+你可以创建工作流，以便在推送更改到存储库时运行测试，或将合并的拉取请求部署到生产环境。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1-基本概念&#34;&gt;1. 基本概念
+&lt;/h2&gt;&lt;p&gt;首先我们来看看一些基本的概念。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Workflow (工作流)&lt;/strong&gt;：一套完整的自动化流程配置，定义了“什么时候”做“什么事”。它就是管家的“工作手册”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Event (事件)&lt;/strong&gt;：触发工作流的特定行为，即“什么时候”。例如 &lt;code&gt;push&lt;/code&gt; 代码、&lt;code&gt;pull_request&lt;/code&gt; 合并等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Job (任务)&lt;/strong&gt;：一个工作流由一个或多个任务组成。默认情况下，任务是并行执行的。你可以把它理解为工作手册中的一个“章节”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Step (步骤)&lt;/strong&gt;：每个任务由多个步骤组成，它们会按顺序执行。这是“章节”里的具体“操作步骤”。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Action (动作)&lt;/strong&gt;：一个可复用的独立脚本，是构成步骤的核心。例如 &lt;code&gt;actions/checkout&lt;/code&gt; 就是一个官方动作，专门用于检出代码。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Runner (运行器)&lt;/strong&gt;：执行工作流的服务器环境。GitHub 提供了免费的虚拟服务器（Ubuntu, Windows, macOS），你也可以使用自己的服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;简单来说我们可以使用 GitHub Actions 指定在&lt;strong&gt;什么时候、干什么事&lt;/strong&gt;。&lt;br&gt;
+例如我们都知道github是代码托管平台。而push代码仓库 其实就是一个&lt;strong&gt;什么时候&lt;/strong&gt;，而这个时候我们就可以指定工作流来完成一些工作。&lt;br&gt;
+既然要做什么事，那就&lt;strong&gt;肯定要有一个工作的平台，也就是服务器&lt;/strong&gt;。&lt;br&gt;
+而这个工作流可以有&lt;strong&gt;多个工作&lt;/strong&gt;，而一个工作又有&lt;strong&gt;多个步骤&lt;/strong&gt;(比如某些指令 某些行动)&lt;/p&gt;
+&lt;h2 id=&#34;2-基本使用&#34;&gt;2. 基本使用
+&lt;/h2&gt;&lt;h3 id=&#34;21-创建文件&#34;&gt;2.1 创建文件
+&lt;/h3&gt;&lt;p&gt;在 GitHub 上的存储库中，创建 &lt;code&gt;.github/workflows&lt;/code&gt; 目录中名为 &lt;code&gt;xxx.yml&lt;/code&gt; 的工作流文件,名字可以任意，文件后缀为&lt;code&gt;yml或yaml&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;22-编写工作流文件&#34;&gt;2.2 编写工作流文件
+&lt;/h3&gt;&lt;p&gt;先来看个示例&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;CI-Web&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;push&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;branches&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;paths&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;l&#34;&gt;zx-picture-frontend/**&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;jobs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;npm-build&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;  	&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;npm-build工作&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;runs-on&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;ubuntu-latest&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;steps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;复制仓库代码到虚拟机服务器当中&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;uses&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;actions/checkout@v4&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;安装依赖&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;npm install&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;      &lt;/span&gt;- &lt;span class=&#34;nt&#34;&gt;name&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;项目打包&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;run&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;l&#34;&gt;npm run build&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里来解释一个各个参数作用&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt; :为工作流取一个名字,便于查看。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;on&lt;/strong&gt;  :指的是什么时候触发工作流 &lt;strong&gt;branches&lt;/strong&gt;:  上传到什么分支时触发  &lt;strong&gt;paths&lt;/strong&gt;:选定工作流的代码目录&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;jobs&lt;/strong&gt;: 工作流&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;npm-build&lt;/strong&gt;: 工作ID,可以自定义。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;runs-on&lt;/strong&gt; :这个工作在什么服务器上运行&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;steps&lt;/strong&gt; :一个任务中按顺序执行的步骤列表。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;name&lt;/strong&gt; :给步骤命名 便于调试&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;run&lt;/strong&gt; :相当于你亲自在服务器（虚拟机）的命令行里&lt;strong&gt;手动输入并执行一条命令&lt;/strong&gt;，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;23-uses-的语法解析&#34;&gt;2.3 uses 的语法解析
+&lt;/h3&gt;&lt;p&gt;这里单独说说&lt;strong&gt;uses&lt;/strong&gt;,因为实际上这个用的非常多。其作用就是调用一个预先打包好的 &lt;strong&gt;Action&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;users&lt;/code&gt; 的值通常遵循 &lt;code&gt;owner/repo@version&lt;/code&gt; 的格式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;owner/repo&lt;/code&gt;&lt;/strong&gt;：托管这个 Action 代码的 GitHub 仓库。第一个是组织、第二个是仓库。
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;actions/checkout&lt;/code&gt;：表示这是由 &lt;code&gt;actions&lt;/code&gt; 这个组织（GitHub 官方）开发的 &lt;code&gt;checkout&lt;/code&gt; 仓库。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;docker/login-action&lt;/code&gt;：表示这是由 &lt;code&gt;docker&lt;/code&gt; 组织开发的 &lt;code&gt;login-action&lt;/code&gt; 仓库。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;@version&lt;/code&gt;&lt;/strong&gt;：指定使用的 Action 版本。
+&lt;ul&gt;
+&lt;li&gt;强烈建议&lt;strong&gt;使用具体的版本标签&lt;/strong&gt;（如 &lt;code&gt;@v4&lt;/code&gt;），而不是分支名（如 &lt;code&gt;@main&lt;/code&gt;）。因为版本标签是稳定且不会改变的，而分支上的代码随时可能更新，这可能会导致你的工作流意外中断。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;3总结&#34;&gt;3.总结
+&lt;/h2&gt;&lt;p&gt;GitHub Actions 是一个功能强大且灵活的自动化平台，是现代软件开发不可或缺的一环。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

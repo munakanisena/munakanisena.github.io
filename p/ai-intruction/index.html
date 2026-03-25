@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍一些AI相关的概念">
+<title>AI相关概念简单介绍</title>
+
+<link rel='canonical' href='https://katomegumi.site/p/ai-intruction/'>
+
+<link rel="stylesheet" href="/scss/style.min.b4ca31904ae20740e1c5bd348df865450239c4e3eb1304aff0acea1160b3e330.css"><meta property='og:title' content="AI相关概念简单介绍">
+<meta property='og:description' content="介绍一些AI相关的概念">
+<meta property='og:url' content='https://katomegumi.site/p/ai-intruction/'>
+<meta property='og:site_name' content='划船听水声'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-09T19:29:23&#43;08:00'/><meta property='article:modified_time' content='2026-03-24T18:09:47&#43;08:00'/>
+<meta name="twitter:title" content="AI相关概念简单介绍">
+<meta name="twitter:description" content="介绍一些AI相关的概念">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16246849853105640066.webp" width="300"
+                            height="332" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">划船听水声</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/429965261?spm_id_from=333.1007.0.0'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z"></path> <path d="M8 3l2 3"></path> <path d="M16 3l-2 3"></path> <path d="M9 13v-2"></path> <path d="M15 11v2"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/munakanisena'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#llm-大语言模型">LLM (大语言模型)</a></li>
+    <li><a href="#token词元">Token（词元）</a></li>
+    <li><a href="#tokenizer分词器">Tokenizer（分词器）</a></li>
+    <li><a href="#embedding嵌入">Embedding（嵌入）</a>
+      <ul>
+        <li><a href="#为什么要引入高维数据向量">为什么要引入高维数据向量？</a></li>
+      </ul>
+    </li>
+    <li><a href="#function-call方法调用">Function Call(方法调用)</a></li>
+    <li><a href="#mcp模型上下文协议">MCP(模型上下文协议)</a>
+      <ul>
+        <li><a href="#什么是mcp">什么是MCP？</a></li>
+        <li><a href="#mcp架构">MCP架构</a></li>
+      </ul>
+    </li>
+    <li><a href="#agent-skills-智能体技能">Agent Skills (智能体技能)</a></li>
+    <li><a href="#大模型的幻觉">大模型的幻觉</a>
+      <ul>
+        <li><a href="#1什么是幻觉">1.什么是幻觉？</a></li>
+        <li><a href="#2为什么会出现幻觉">2.为什么会出现幻觉？</a></li>
+      </ul>
+    </li>
+    <li><a href="#rag检索增强生成">RAG（检索增强生成）</a></li>
+    <li><a href="#ai-agent智能体">AI Agent(智能体)</a>
+      <ul>
+        <li><a href="#cot思维链">CoT（思维链）</a></li>
+        <li><a href="#agent-loop执行循环">Agent Loop（执行循环）</a></li>
+        <li><a href="#react模式思考---行动---观察">React模式（思考 - 行动 - 观察）</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+        <a
+                href="/categories/ai/"
+                
+        >
+            AI
+        </a>
+        
+        <a
+                href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                
+        >
+            学习笔记
+        </a>
+        
+        <a
+                href="/categories/%E6%A6%82%E5%BF%B5/"
+                
+        >
+            概念
+        </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ai-intruction/">AI相关概念简单介绍</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">介绍一些AI相关的概念</h3>
+        
+    </div>
+
+       
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2026-03-09</time>
+        </div>
+         
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 4 分钟
+            </time>
+        </div>
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494zM528.1 472h-32.2c-5.5 0-10.3 3.7-11.6 9.1L434.6 680l-46.1-198.7c-1.3-5.4-6.1-9.3-11.7-9.3h-35.4a12.02 12.02 0 0 0-11.6 15.1l74.2 276c1.4 5.2 6.2 8.9 11.6 8.9h32c5.4 0 10.2-3.6 11.6-8.9l52.8-197l52.8 197c1.4 5.2 6.2 8.9 11.6 8.9h31.8c5.4 0 10.2-3.6 11.6-8.9l74.4-276a12.04 12.04 0 0 0-11.6-15.1H647c-5.6 0-10.4 3.9-11.7 9.3l-45.8 199.1l-49.8-199.3c-1.3-5.4-6.1-9.1-11.6-9.1z"
+          fill="currentColor"></path>
+</svg>
+            <time class="article-time--wordcount">
+                1744字
+            </time>
+        </div>
+        
+    </footer>
+     
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <blockquote class="alert alert-note">
+  <p><p>概念都是个人理解，如有错误欢迎指出。</p>
+</blockquote>
+<h2 id="llm-大语言模型">LLM (大语言模型)
+</h2><ul>
+<li><strong>定义</strong>：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。</li>
+<li><strong>诞生</strong>：分为两个阶段
+<ul>
+<li>训练</li>
+<li>推理</li>
+</ul>
+</li>
+<li><strong>涌现</strong>: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。</li>
+</ul>
+<h2 id="token词元">Token（词元）
+</h2><ul>
+<li><strong>定义</strong>：是LLM（大语言模型）的<strong>最小语义单元</strong>。</li>
+<li><strong>本质</strong>：token是什么？其实就是代表<strong>单词的的编号</strong>。</li>
+</ul>
+<h2 id="tokenizer分词器">Tokenizer（分词器）
+</h2><ul>
+<li><strong>作用</strong>：把文本切成一个个 <strong>token</strong>（子词 / 字 / 符号），再将token映射成<code>token ID</code>（整数编号）；最后就变成了一串<strong>数字编号</strong>。</li>
+</ul>
+<h2 id="embedding嵌入">Embedding（嵌入）
+</h2><ul>
+<li><strong>定义</strong>：Embedding就是大模型自己的语言，注意：embedding模型属于LLM模型中的一部分。</li>
+<li><strong>作用</strong>：把每个 token ID 转换成一个 <strong>高维向量</strong>。</li>
+</ul>
+<h3 id="为什么要引入高维数据向量">为什么要引入高维数据向量？
+</h3><ul>
+<li>主要是为了从更多的维度描述单词。</li>
+</ul>
+<blockquote class="alert alert-note">
+  <p><p>例如：维度1表示颜色；维度2表示形状；苹果和西瓜在向量坐标中虽然<strong>编号不同</strong>；但是<strong>空间位置</strong>很相近。</p>
+</blockquote>
+<h2 id="function-call方法调用">Function Call(方法调用)
+</h2><ul>
+<li><strong>本质</strong>：工具调用函数。</li>
+<li><strong>作用</strong>：允许模型在需要时调用预定义的函数来获取数据或执行操作。</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>Function Call的<strong>平台依赖性强</strong>，没有一个统一的标准，不能做到即插即用。</li>
+<li>一般是本地程序调用，外界无法使用；也因此MCP应运而生。</li>
+</ul>
+</li>
+</ul>
+<h2 id="mcp模型上下文协议">MCP(模型上下文协议)
+</h2><p><a class="link" href="https://modelcontextprotocol.io/docs/getting-started/intro"  target="_blank" rel="noopener"
+    >官方文档</a></p>
+<h3 id="什么是mcp">什么是MCP？
+</h3><ul>
+<li><strong>定义</strong>：MCP模型上下文协议 定义了应用程序和 AI 模型之间交换上下文信息的方式。</li>
+<li><strong>作用</strong>：主要是为了<strong>增强</strong>AI的能力，作为使用者通过MCP我们可以轻松接入别人已经写好的服务。</li>
+</ul>
+<blockquote class="alert alert-tip">
+  <p><p><strong>注意</strong>：MCP只是一个标准协议，并不提供特定的服务，你可以按照要求编写自己的MCP服务。</p>
+</blockquote>
+<h3 id="mcp架构">MCP架构
+</h3><p>分为：客户端、服务端；客户端可以连接多个MCP服务。</p>
+<h2 id="agent-skills-智能体技能">Agent Skills (智能体技能)
+</h2><ul>
+<li>
+<p><strong>本质</strong>：Agent Skills 的本质不是工具，而是：</p>
+<blockquote class="alert alert-tip">
+  <p><p><strong>行为规范 + 专业知识 + 使用时机的组合</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>组成</strong>：其实就是一个文件夹(相当于打包好的提示词工程)；里面必须有一个 SKILL.md 文件（包含说明和元数据），可选其他资源文件（如脚本、示例、参考文档）。</p>
+</li>
+<li>
+<p><strong>使用</strong>：Agent Skills 的关键是渐进式披露，分三层加载：</p>
+<ul>
+<li><strong>技能发现</strong> ：AI 先读取所有技能的元数据（name 和 description），判断任务是否相关，注意：这些元数据始终在系统提示中。</li>
+<li><strong>加载核心指令</strong> ： 如果相关，AI 自动读取 SKILL.md 的正文内容，获取详细指导。</li>
+<li><strong>加载资源文件</strong> ：按需读取，执行脚本。</li>
+</ul>
+</li>
+</ul>
+<blockquote class="alert alert-note">
+  <p><p>Agent Skills和MCP的区别?</p>
+<p>MCP需要把完整的MCP协议规范告诉AI，占用大量上下文，即使你不去用他，如果你装的MCP多，就没多少可用的上下文了，必须手动控制启用和禁用以节省上下文空间。skills相当于打包好的一套提示词工程，包含提示词、文档、脚本、工具，然后把简单的元数据告诉AI。</p>
+<p>简单来讲：<br>
+Agent Skills相当于<strong>懒加载</strong>，一个是按需加载自动决定上下文。<br>
+MCP是<strong>启动就加载</strong>，并且每次请求都会占用上下文。</p>
+</blockquote>
+<h2 id="大模型的幻觉">大模型的幻觉
+</h2><h3 id="1什么是幻觉">1.什么是幻觉？
+</h3><p>其实就是大模型生成不合理或完全虚构的内容。</p>
+<h3 id="2为什么会出现幻觉">2.为什么会出现幻觉？
+</h3><ul>
+<li>一方面，模型的训练数据中可能包含错误或过时的信息。</li>
+<li>另一方面，大语言模型本质上是 <strong>预测下一个词的概率</strong> 模型，它们倾向于生成流畅而未必准确的内容。</li>
+</ul>
+<h2 id="rag检索增强生成">RAG（检索增强生成）
+</h2><ul>
+<li>
+<p><strong>作用</strong>：可以解决‌大模型的知识时效性限制和幻觉问题。</p>
+</li>
+<li>
+<p><strong>实现步骤</strong>：</p>
+<ol>
+<li>前置准备</li>
+</ol>
+<ul>
+<li>文档收集和切割</li>
+<li>向量转换和存储</li>
+</ul>
+<ol start="2">
+<li>实现增强</li>
+</ol>
+<ul>
+<li>文档过滤和检索</li>
+<li>查询增强和关联</li>
+</ul>
+</li>
+</ul>
+<blockquote class="alert alert-note">
+  <p><p><strong>注意</strong>：RAG进行向量转换的Embedding模型和LLM的Embedding的模型并不一致。LLM的Embedding模型是随着训练一起出来的，而RAG进行向量转换的Embedding模型是需要单独去训练的。</p>
+<p><strong>差异</strong>：</p>
+<ul>
+<li>RAG Embedding：对整段文本做语义压缩，输出一个向量。</li>
+<li>LLM Embedding：对每个 token 编码，再通过 Transformer 整体理解整句话。</li>
+</ul>
+</blockquote>
+<h2 id="ai-agent智能体">AI Agent(智能体)
+</h2><ul>
+<li><strong>定义</strong>：会自己思考 + 能自己行动的 AI。</li>
+<li><strong>分类</strong>：
+<ul>
+<li>反应式智能体</li>
+<li>有限规划智能体</li>
+<li>自主规划智能体</li>
+</ul>
+</li>
+</ul>
+<h3 id="cot思维链">CoT（思维链）
+</h3><ul>
+<li><strong>定义</strong>：让 AI 像人类一‌样 “思考” 的技术，帮助 AI 在处理复杂问题时能够先思考后执行。(思维链的实现主要是通过prompt实现)。</li>
+</ul>
+<h3 id="agent-loop执行循环">Agent Loop（执行循环）
+</h3><ul>
+<li><strong>定义</strong>：智能体在没有用户输入‎的情况下，自主重复执‌行推理和工具调用的过程。</li>
+</ul>
+<h3 id="react模式思考---行动---观察">React模式（思考 - 行动 - 观察）
+</h3><ol>
+<li>先思考执行需要哪些工具</li>
+<li>执行工具</li>
+<li>根据工具结果判断是否完成该任务</li>
+<li>循环执行</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-03-24
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/cross-origin/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">跨域问题</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/docker-introduction/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Docker入门</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/aimcp%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">【AI】MCP入门学习</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/nginx%E5%85%A5%E9%97%A8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nginx入门</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="munakanisena/munakanisena.github.io"
+    data-repo-id="R_kgDON_Rlkg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDON_Rlks4CnWeY"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading=""
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 划船听水声
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2024089321号-2</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+ 
+      #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+        #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://katomegumi.site/icons/backTop.svg);
+    }
+</style>
+
+
+<script src=https://katomegumi.site/background/sakura.js></script>
+
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://katomegumi.site/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+    </body>
+</html>

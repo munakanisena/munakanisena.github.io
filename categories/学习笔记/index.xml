@@ -1,0 +1,832 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>学习笔记 on 划船听水声</title>
+        <link>https://katomegumi.site/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <description>Recent content in 学习笔记 on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 25 Mar 2026 16:07:25 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>跨域问题</title>
+        <link>https://katomegumi.site/p/cross-origin/</link>
+        <pubDate>Tue, 24 Mar 2026 16:29:23 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/cross-origin/</guid>
+        <description>&lt;h2 id=&#34;1-什么是跨域&#34;&gt;1. 什么是跨域？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;简单来说：&lt;strong&gt;不同域名/端口/协议之间的请求被浏览器阻止了，这就是跨域问题。&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;必须&lt;strong&gt;同源&lt;/strong&gt;浏览器才允许互相访问数据，跨域参照的是&lt;strong&gt;当前网页的域名&lt;/strong&gt; 。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;条件&lt;/th&gt;
+          &lt;th&gt;示例&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;协议&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;http://&lt;/code&gt; 或 &lt;code&gt;https://&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;域名&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;example.com&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;端口&lt;/td&gt;
+          &lt;td&gt;&lt;code&gt;:80&lt;/code&gt;, &lt;code&gt;:3000&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;&lt;strong&gt;比较项&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;页面名片 (A)&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;请求名片 (B)&lt;/strong&gt;&lt;/th&gt;
+          &lt;th&gt;&lt;strong&gt;结果&lt;/strong&gt;&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;协议&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;https&lt;/strong&gt;://example.com&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;http&lt;/strong&gt;://example.com&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;跨域&lt;/strong&gt; (协议不同)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;域名&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;https://&lt;strong&gt;api&lt;/strong&gt;.example.com&lt;/td&gt;
+          &lt;td&gt;https://&lt;strong&gt;web&lt;/strong&gt;.example.com&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;跨域&lt;/strong&gt; (子域名不同)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;端口&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://me.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://example.com&lt;/a&gt;:&lt;strong&gt;8080&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://me.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://example.com&lt;/a&gt;:&lt;strong&gt;9000&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;跨域&lt;/strong&gt; (端口不同)&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;&lt;strong&gt;全匹配&lt;/strong&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://me.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://example.com&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;a class=&#34;link&#34; href=&#34;https://example.com/data&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://example.com/data&lt;/a&gt;&lt;/td&gt;
+          &lt;td&gt;&lt;strong&gt;同源&lt;/strong&gt; (安全通过)&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;2-为什么会有跨域限制&#34;&gt;2. 为什么会有跨域限制？
+&lt;/h2&gt;&lt;p&gt;跨域（CORS）是浏览器的一种&lt;strong&gt;保护机制&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;假设你登录了微博 &lt;code&gt;weibo.com&lt;/code&gt;，浏览器存了你的登录状态（Cookie）。&lt;/li&gt;
+&lt;li&gt;此时你打开了一个看小说的网页 &lt;code&gt;novel.com&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;如果没跨域限制：&lt;code&gt;novel.com&lt;/code&gt; 里的 JS 脚本可以直接写一段代码 &lt;code&gt;fetch(&#39;https://weibo.com/delete-post&#39;)&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;后果：&lt;/strong&gt; 浏览器会带着你的 Cookie 发出请求，微博服务器以为是你本人想删贴，于是操作成功。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;浏览器设立跨域限制的逻辑是：除非 &lt;code&gt;weibo.com&lt;/code&gt; 明确告诉我它信任 &lt;code&gt;novel.com&lt;/code&gt;，否则我不允许 &lt;code&gt;novel.com&lt;/code&gt; 的脚本去碰 &lt;code&gt;weibo.com&lt;/code&gt; 的数据。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;3-js-发送请求时的过程&#34;&gt;3. JS 发送请求时的过程
+&lt;/h2&gt;&lt;h3 id=&#34;1域名一致同源&#34;&gt;1.域名一致（同源）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;浏览器的判断：&lt;/strong&gt; 比较发现“协议+域名+端口”完全一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;行为：&lt;/strong&gt; 直接发送请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2情况二域名不一致跨域&#34;&gt;2.情况二：域名不一致（跨域）
+&lt;/h3&gt;&lt;p&gt;这时浏览器会根据请求的内容，决定是&lt;strong&gt;先斩后奏&lt;/strong&gt;还是&lt;strong&gt;先请示再行动&lt;/strong&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单请求 —— “先斩后奏”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;请求很“简单（比如普通的 &lt;code&gt;GET&lt;/code&gt; 或 &lt;code&gt;POST&lt;/code&gt;）&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;复杂请求 —— “先请示再行动”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;请求比较高级（比如 &lt;code&gt;PUT&lt;/code&gt;、&lt;code&gt;DELETE&lt;/code&gt;，或者你在 Header 里加了 &lt;code&gt;Authorization&lt;/code&gt; 令牌）&lt;/p&gt;
+&lt;h2 id=&#34;4跨域的常见解决方案&#34;&gt;4.跨域的常见解决方案
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CORS&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原理：&lt;/strong&gt; 后端设置响应头，告诉浏览器：“我允许这个网站访问我的资源。&lt;/p&gt;
+&lt;p&gt;Spring MVC设置允许跨域&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@Configuration&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@RequiredArgsConstructor&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;CorsConfig&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;implements&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;WebMvcConfigurer&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;private&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;final&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CorsProperties&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;corsProperties&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;nd&#34;&gt;@Override&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;public&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kt&#34;&gt;void&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;addCorsMappings&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;CorsRegistry&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;registry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;        &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;registry&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;addMapping&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;/**&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//允许发送cookie&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;allowCredentials&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//放行哪些域名 因为allowCredentials要发送cookie 所以必须是具体的源地址&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;allowedOrigins&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;corsProperties&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;getAllowOrigins&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;().&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;toArray&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;new&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;String&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;allowedHeaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;allowedMethods&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;GET&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;POST&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;PUT&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;DELETE&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;OPTIONS&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;                &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;exposedHeaders&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;*&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;    &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Nginx代理转发&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原理&lt;/strong&gt;：跨域问题本质是浏览器的安全校验，因此只要绕过浏览器就好了。先将请求发给Nginx服务器，然后Nginx再将请求转发给后端，后端返回结果给Nginx服务器，Nginx再返回给前端。看上去是&lt;strong&gt;同源&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;9
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-nginx&#34; data-lang=&#34;nginx&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;location&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;^~&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;/api&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;kn&#34;&gt;proxy_pass&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;http://域名:8123&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;Host&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$proxy_host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Real-IP&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$remote_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-For&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;kn&#34;&gt;proxy_set_header&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;X-Forwarded-Proto&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$scheme&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      &lt;span class=&#34;c1&#34;&gt;# 增加错误调试信息
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;      &lt;span class=&#34;kn&#34;&gt;proxy_intercept_errors&lt;/span&gt; &lt;span class=&#34;no&#34;&gt;off&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;p&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;5一些小细节&#34;&gt;5.一些小细节
+&lt;/h2&gt;&lt;p&gt;事实上：当你从 &lt;code&gt;a.com&lt;/code&gt; 的网页向 &lt;code&gt;b.com/api&lt;/code&gt; 发送 JS 请求时，浏览器会自动在 HTTP 请求头（Headers）里加上：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Origin字段&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内容：&lt;/strong&gt; &lt;code&gt;Origin: http://a.com&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用：&lt;/strong&gt; 它是专门为了 &lt;strong&gt;CORS（跨域资源共享）&lt;/strong&gt; 设计的。它只包含“协议+域名+端口”，不包含具体的路径。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器的逻辑：&lt;/strong&gt; 告诉 &lt;code&gt;b.com&lt;/code&gt;，这行 JS 代码是 &lt;code&gt;a.com&lt;/code&gt; 指使我运行的。看&lt;code&gt;b.com&lt;/code&gt; 自己准不准它读你的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Referer 字段&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内容：&lt;/strong&gt; &lt;code&gt;Referer: http://a.com/pages/index.html&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用：&lt;/strong&gt; 它比 Origin 更详细，包含了具体的&lt;strong&gt;来源页面全路径&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;浏览器的逻辑：&lt;/strong&gt; 告诉 &lt;code&gt;b.com&lt;/code&gt;，用户是从哪一个具体的页面跳过来的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
+        <title>AI相关概念简单介绍</title>
+        <link>https://katomegumi.site/p/ai-intruction/</link>
+        <pubDate>Mon, 09 Mar 2026 19:29:23 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/ai-intruction/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;概念都是个人理解，如有错误欢迎指出。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;llm-大语言模型&#34;&gt;LLM (大语言模型)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;诞生&lt;/strong&gt;：分为两个阶段
+&lt;ul&gt;
+&lt;li&gt;训练&lt;/li&gt;
+&lt;li&gt;推理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;涌现&lt;/strong&gt;: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;token词元&#34;&gt;Token（词元）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：是LLM（大语言模型）的&lt;strong&gt;最小语义单元&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：token是什么？其实就是代表&lt;strong&gt;单词的的编号&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tokenizer分词器&#34;&gt;Tokenizer（分词器）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：把文本切成一个个 &lt;strong&gt;token&lt;/strong&gt;（子词 / 字 / 符号），再将token映射成&lt;code&gt;token ID&lt;/code&gt;（整数编号）；最后就变成了一串&lt;strong&gt;数字编号&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;embedding嵌入&#34;&gt;Embedding（嵌入）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：Embedding就是大模型自己的语言，注意：embedding模型属于LLM模型中的一部分。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：把每个 token ID 转换成一个 &lt;strong&gt;高维向量&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;为什么要引入高维数据向量&#34;&gt;为什么要引入高维数据向量？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;主要是为了从更多的维度描述单词。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;例如：维度1表示颜色；维度2表示形状；苹果和西瓜在向量坐标中虽然&lt;strong&gt;编号不同&lt;/strong&gt;；但是&lt;strong&gt;空间位置&lt;/strong&gt;很相近。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;function-call方法调用&#34;&gt;Function Call(方法调用)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：工具调用函数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：允许模型在需要时调用预定义的函数来获取数据或执行操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;Function Call的&lt;strong&gt;平台依赖性强&lt;/strong&gt;，没有一个统一的标准，不能做到即插即用。&lt;/li&gt;
+&lt;li&gt;一般是本地程序调用，外界无法使用；也因此MCP应运而生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mcp模型上下文协议&#34;&gt;MCP(模型上下文协议)
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/docs/getting-started/intro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;什么是mcp&#34;&gt;什么是MCP？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：MCP模型上下文协议 定义了应用程序和 AI 模型之间交换上下文信息的方式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：主要是为了&lt;strong&gt;增强&lt;/strong&gt;AI的能力，作为使用者通过MCP我们可以轻松接入别人已经写好的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：MCP只是一个标准协议，并不提供特定的服务，你可以按照要求编写自己的MCP服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;mcp架构&#34;&gt;MCP架构
+&lt;/h3&gt;&lt;p&gt;分为：客户端、服务端；客户端可以连接多个MCP服务。&lt;/p&gt;
+&lt;h2 id=&#34;agent-skills-智能体技能&#34;&gt;Agent Skills (智能体技能)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;本质&lt;/strong&gt;：Agent Skills 的本质不是工具，而是：&lt;/p&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;行为规范 + 专业知识 + 使用时机的组合&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;组成&lt;/strong&gt;：其实就是一个文件夹(相当于打包好的提示词工程)；里面必须有一个 SKILL.md 文件（包含说明和元数据），可选其他资源文件（如脚本、示例、参考文档）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用&lt;/strong&gt;：Agent Skills 的关键是渐进式披露，分三层加载：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;技能发现&lt;/strong&gt; ：AI 先读取所有技能的元数据（name 和 description），判断任务是否相关，注意：这些元数据始终在系统提示中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载核心指令&lt;/strong&gt; ： 如果相关，AI 自动读取 SKILL.md 的正文内容，获取详细指导。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载资源文件&lt;/strong&gt; ：按需读取，执行脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;Agent Skills和MCP的区别?&lt;/p&gt;
+&lt;p&gt;MCP需要把完整的MCP协议规范告诉AI，占用大量上下文，即使你不去用他，如果你装的MCP多，就没多少可用的上下文了，必须手动控制启用和禁用以节省上下文空间。skills相当于打包好的一套提示词工程，包含提示词、文档、脚本、工具，然后把简单的元数据告诉AI。&lt;/p&gt;
+&lt;p&gt;简单来讲：&lt;br&gt;
+Agent Skills相当于&lt;strong&gt;懒加载&lt;/strong&gt;，一个是按需加载自动决定上下文。&lt;br&gt;
+MCP是&lt;strong&gt;启动就加载&lt;/strong&gt;，并且每次请求都会占用上下文。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;大模型的幻觉&#34;&gt;大模型的幻觉
+&lt;/h2&gt;&lt;h3 id=&#34;1什么是幻觉&#34;&gt;1.什么是幻觉？
+&lt;/h3&gt;&lt;p&gt;其实就是大模型生成不合理或完全虚构的内容。&lt;/p&gt;
+&lt;h3 id=&#34;2为什么会出现幻觉&#34;&gt;2.为什么会出现幻觉？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一方面，模型的训练数据中可能包含错误或过时的信息。&lt;/li&gt;
+&lt;li&gt;另一方面，大语言模型本质上是 &lt;strong&gt;预测下一个词的概率&lt;/strong&gt; 模型，它们倾向于生成流畅而未必准确的内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rag检索增强生成&#34;&gt;RAG（检索增强生成）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;作用&lt;/strong&gt;：可以解决‌大模型的知识时效性限制和幻觉问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现步骤&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前置准备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;文档收集和切割&lt;/li&gt;
+&lt;li&gt;向量转换和存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;实现增强&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;文档过滤和检索&lt;/li&gt;
+&lt;li&gt;查询增强和关联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：RAG进行向量转换的Embedding模型和LLM的Embedding的模型并不一致。LLM的Embedding模型是随着训练一起出来的，而RAG进行向量转换的Embedding模型是需要单独去训练的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;差异&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RAG Embedding：对整段文本做语义压缩，输出一个向量。&lt;/li&gt;
+&lt;li&gt;LLM Embedding：对每个 token 编码，再通过 Transformer 整体理解整句话。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ai-agent智能体&#34;&gt;AI Agent(智能体)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：会自己思考 + 能自己行动的 AI。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分类&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;反应式智能体&lt;/li&gt;
+&lt;li&gt;有限规划智能体&lt;/li&gt;
+&lt;li&gt;自主规划智能体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cot思维链&#34;&gt;CoT（思维链）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：让 AI 像人类一‌样 “思考” 的技术，帮助 AI 在处理复杂问题时能够先思考后执行。(思维链的实现主要是通过prompt实现)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;agent-loop执行循环&#34;&gt;Agent Loop（执行循环）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：智能体在没有用户输入‎的情况下，自主重复执‌行推理和工具调用的过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;react模式思考---行动---观察&#34;&gt;React模式（思考 - 行动 - 观察）
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;先思考执行需要哪些工具&lt;/li&gt;
+&lt;li&gt;执行工具&lt;/li&gt;
+&lt;li&gt;根据工具结果判断是否完成该任务&lt;/li&gt;
+&lt;li&gt;循环执行&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>Docker入门</title>
+        <link>https://katomegumi.site/p/docker-introduction/</link>
+        <pubDate>Tue, 16 Sep 2025 18:53:18 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/docker-introduction/</guid>
+        <description>&lt;h2 id=&#34;1-docker核心概念&#34;&gt;1. Docker核心概念
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.docker.com/get-started/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt; Docker快速开始 &lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;镜像 (Image)&lt;/strong&gt;: 应用程序的&lt;strong&gt;打包文件&lt;/strong&gt;。它包含了所有运行应用所需的代码、运行时环境、依赖项和配置。它是一个静态模板。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容器 (Container)&lt;/strong&gt;: 镜像的&lt;strong&gt;可运行实例&lt;/strong&gt;。当你运行 &lt;code&gt;docker run&lt;/code&gt; 时，Docker 会从镜像中启动一个进程，并为其分配资源，使其成为一个活生生的、正在运行的实例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2-docker常用命令&#34;&gt;2. Docker常用命令
+&lt;/h2&gt;&lt;h3 id=&#34;21-镜像管理&#34;&gt;2.1 镜像管理
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#从Docker Hub 或其他镜像仓库拉取镜像到本地。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull &amp;lt;image_name&amp;gt;:&amp;lt;tag&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;示例：docker pull nginx:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#根据当前目录下的 Dockerfile 构建一个新的镜像,注意不要忘记最后的 .&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build -t &amp;lt;image_name&amp;gt;&amp;lt;tag&amp;gt; .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;示例：docker build -t my-app:v1 .
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#列出所有本地镜像。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker images
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#删除指定的镜像。如果镜像正在被容器使用，你需要先删除容器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker rmi &amp;lt;image_name/image_id&amp;gt;:&amp;lt;tag&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;示例：docker rmi my-app:v1
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#清理所有未被使用的镜像，包括无标签的“悬空”镜像。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker image prune -a
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;22-容器管理&#34;&gt;2.2 容器管理
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#它会创建一个新的容器并运行它。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p &amp;lt;host_port&amp;gt;:&amp;lt;container_port&amp;gt; --name &amp;lt;container_name&amp;gt; &amp;lt;image_name&amp;gt;:&amp;lt;tag&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-d：在后台运行容器。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;-p：将主机的端口映射到容器的端口,第一个参数为主机端口,第二个为容器端口。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;--name：为容器指定一个易于识别的名称。
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;示例：docker run -d -p 80:80 --name my-nginx nginx:latest
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#查看正在运行的容器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#查看所有容器(包括停止的)。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker -a
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#停止容器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker stop &amp;lt;container_id/name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#启动停止的容器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker start &amp;lt;container_id/name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#删除容器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker rm &amp;lt;container_id/name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#查看容器的日志输出。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker logs &amp;lt;container_id/name&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#进入正在运行的容器，并启动一个交互式的 Bash shell。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker &lt;span class=&#34;nb&#34;&gt;exec&lt;/span&gt; -it &amp;lt;container_id/name&amp;gt; bash
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#清理所有已停止的容器。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker container prune
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3-构建docker镜像&#34;&gt;3. 构建Docker镜像
+&lt;/h2&gt;&lt;p&gt;Spring Boot 应用打包成 Docker 镜像已经成为一种标准实践。然而，直接将应用打包到镜像中，可能会导致镜像体积过于庞大。这时，&lt;strong&gt;多阶段构建&lt;/strong&gt;（Multi-stage build）就成了我们的救星。它能帮助我们创建体积更小、更安全的生产环境镜像。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先，在你的项目根目录中创建一个名为 &lt;strong&gt;Dockerfile&lt;/strong&gt; 的文件，我们将它分为两个阶段来完成镜像构建。&lt;/li&gt;
+&lt;li&gt;编写Dockerfile文件&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c&#34;&gt;# 阶段1 编译和打包项目&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; maven:3.9-amazoncorretto-17 AS build&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WORKDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; /app&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COPY&lt;/span&gt; pom.xml .&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COPY&lt;/span&gt; src ./src&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;RUN&lt;/span&gt; mvn clean package -DskipTests&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 阶段2：构建最终运行镜像&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; openjdk:17-jdk-slim&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 暴露应用端口(提供文档和网络配置信息)&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;c&#34;&gt;# 向外界声明这个容器内部有一个服务正在监听 EXPOSE 后指定的端口。&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;EXPOSE&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; 8123&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;WORKDIR&lt;/span&gt;&lt;span class=&#34;s&#34;&gt; /app&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;COPY&lt;/span&gt; --from&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;build /app/target/zx-picture-backend-0.0.1-SNAPSHOT.jar zx-picture-backend-0.0.1-SNAPSHOT.jar&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;err&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;ENTRYPOINT&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;java&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;-jar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;zx-picture-backend-0.0.1-SNAPSHOT.jar&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;参数的作用：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我们都知道镜像包含了&lt;strong&gt;运行时环境、依赖项和配置&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;FROM 表示一个阶段(也就是构建当前运行环境)。docker的构建是分阶段的。且最后只会保存最后一个阶段的文件。可以有效的减少构建的体积&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;31-第一阶段&#34;&gt;3.1 第一阶段：
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;FROM maven:3.9-amazoncorretto-17 AS build&lt;/code&gt;: 定义了第一个构建阶段，我们使用了一个包含 Maven 和 JDK 的镜像作为基础，并将其命名为 &lt;code&gt;build&lt;/code&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WORKDIR /app&lt;/code&gt;: 1. 创建app文件（如果没有）2.设置容器中的工作目录为 &lt;code&gt;/app&lt;/code&gt; 3.后续所有操作都会在app文件夹中进行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;COPY pom.xml .&lt;/code&gt; 和 &lt;code&gt;COPY src ./src&lt;/code&gt;: 这两条指令负责将我们本地的源代码和配置文件复制到容器中。第一个参数为当前dockerfile文件所在的目录,第二个参数为容器中的工作目录。 这个.相当于当前docker的工作目录/app&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;RUN mvn clean package -DskipTests&lt;/code&gt;: 在容器中执行 Maven 打包命令，生成可运行的 JAR 包。这里我们使用 &lt;code&gt;-DskipTests&lt;/code&gt; 跳过单元测试，以节省构建时间。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;32-第二阶段&#34;&gt;3.2 第二阶段:
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;FROM openjdk:17-jre-slim&lt;/code&gt;:  因为前面我们已经构建了jar包。这里我们可以不再使用庞大的 JDK 镜像，而是使用一个仅包含 Java 运行时环境（JRE）的精简镜像。这能显著减小最终镜像的体积。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;EXPOSE 8123&lt;/code&gt;: 这个指令向外界声明容器中的服务正在监听 &lt;code&gt;8123&lt;/code&gt; 端口。但是请注意，这只是一个文档声明。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;COPY --from=build ...&lt;/code&gt;: 这是多阶段构建的精髓。我们使用 &lt;code&gt;--from=build&lt;/code&gt; 参数（指名），只将第一阶段生成的最终 JAR 包复制过来，而不是整个庞大的编译环境。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ENTRYPOINT [...]&lt;/code&gt;: 定义了容器启动时要执行的命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通过这种多阶段构建的方式，我们最终得到的镜像将非常小巧，只包含&lt;strong&gt;必要的运行时环境&lt;/strong&gt;和我们&lt;strong&gt;打包好的 JAR 文件&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;4-运行docker容器&#34;&gt;4. 运行Docker容器
+&lt;/h2&gt;&lt;p&gt;构建完镜像之后，我们就可以通过 &lt;code&gt;docker run&lt;/code&gt; 命令来启动容器了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. 查看构建好的镜像&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;首先，使用 &lt;code&gt;docker images&lt;/code&gt; 命令来确认你的镜像是否构建成功。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker images
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;2. 运行容器&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;现在，使用 &lt;code&gt;docker run&lt;/code&gt; 命令来启动你的 Spring Boot 应用容器。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d -p 8123:8123 --name my-spring-app --rm zx-picture-backend
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;-d&lt;/code&gt;：在后台模式下运行容器。不占用终端&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-p &amp;lt;宿主机端口&amp;gt;:&amp;lt;容器端口&amp;gt;&lt;/code&gt;：将宿主机的端口映射到容器内的端口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--name &amp;lt;容器名&amp;gt;&lt;/code&gt;：为容器指定一个名称。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;--rm&lt;/code&gt;：当容器停止时，自动删除容器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;3. 验证容器是否正常运行&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;构建完成后,你可以使用 &lt;code&gt;docker ps&lt;/code&gt; 命令来查看正在运行的容器。查看是否有刚刚创建的容器。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker ps
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        <item>
+        <title>Nginx入门</title>
+        <link>https://katomegumi.site/p/nginx%E5%85%A5%E9%97%A8/</link>
+        <pubDate>Mon, 14 Jul 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://katomegumi.site/p/nginx%E5%85%A5%E9%97%A8/</guid>
+        <description>&lt;h2 id=&#34;1下载和常见配置&#34;&gt;1.下载和常见配置
+&lt;/h2&gt;&lt;p&gt;这里我用的Ubuntu,首先下载nginx。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt update 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install nginx
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;常用命令&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#启动服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#停止服务&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx -s stop
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改配置后 检查 Nginx 配置文件的语法是否正确&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx -t
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 校验通过后重载配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;nginx -s reload
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;2web服务器&#34;&gt;2.Web服务器
+&lt;/h2&gt;&lt;p&gt;nginx主要是通过 nginx.conf 文件进行配置的，我们来新写一个nginx.conf文件,由此来逐渐了解nginx的使用。&lt;br&gt;
+Nginx 的配置是基于一套分层的块（block）结构，最核心的是 http, server, 和 location。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;events&lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#这里的server块定义的是虚拟服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  server:&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen 80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#监听80端口,因为一般浏览器默认用80端口进行请求&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#填写ip地址/自己的域名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;200&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;666&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#可以自己定义返回的内容&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#注意 这时要删掉return这一行 不然会返回 return这一行&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    root /var/www/localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#指定网站根目录.这里会默认去找localhost文件中的index.html文件 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#那么我们如何指定查找html文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    index app.html&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#这样就会默认找app.html文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;我们知道一个网站有多个文件。比如css文件。但是这时你引入css文件。打开浏览器会发现css文件类型居然是text/pain.这显然是不对的&lt;br&gt;
+nginx中有这样一个文件mime.types文件 里面有文件类型对应的文件后缀。因此我们可以引入这个文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  include /etc/nginx/mime.types &lt;span class=&#34;c1&#34;&gt;#这里注意写在http块里面，server块外面 相当于总配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;实际上nginx采用的是多文件配置。在nginx文件中有一个conf.d文件夹。里面有一个default.conf文件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;c1&#34;&gt;#注意写在http里面 sever外面 相当于公共配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   include /etc/nginx/mime.types&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   include /ect/nginx/conf.d/*.conf&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;#这里的*是匹配所有后缀为conf文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这样我们可以把我们之前写的nginx的server块配置移动到default.conf文件中。以后我们就改这个文件就行了&lt;/p&gt;
+&lt;h2 id=&#34;3location指令&#34;&gt;3.location指令
+&lt;/h2&gt;&lt;p&gt;使用location指令可以更好的指定路径&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt; server:&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    listen 80&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    server_name localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#相当于匹配路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    location /&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      root /var/www/localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#(实际上是模糊匹配) 如果请求 localhost/apple 也一样会匹配成功 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    location /app&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;      root /var/www/localhost&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;# ** 映射到服务器的/var/www/localhost/app/ ** 所以我们这个文件夹一定要存在&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这里我们一定要注意location不仅匹配的uri。还会匹配对应路径的文件&lt;/p&gt;
+&lt;p&gt;有四种匹配方式&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;location = /path&lt;/code&gt;: &lt;strong&gt;精确匹配&lt;/strong&gt;。只有当 URI 完全是 &lt;code&gt;/path&lt;/code&gt; 时才匹配。优先级最高。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;location /path&lt;/code&gt;: &lt;strong&gt;前缀匹配&lt;/strong&gt;。匹配所有以 &lt;code&gt;/path&lt;/code&gt; 开头的 URI。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;location ~ /regex/&lt;/code&gt;: &lt;strong&gt;正则表达式匹配&lt;/strong&gt; (区分大小写)。 loaction ~/video[4-9] 相当于匹配video4 video5&amp;hellip;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;location ~* /regex/&lt;/code&gt;: &lt;strong&gt;正则表达式匹配&lt;/strong&gt; (不区分大小写)。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;匹配优先级&lt;/strong&gt;: 精确匹配 (&lt;code&gt;=&lt;/code&gt;) &amp;gt; 前缀匹配 &amp;gt; 正则表达式匹配 (&lt;code&gt;~&lt;/code&gt;, &lt;code&gt;~*&lt;/code&gt;)。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#可以直接进行重写 用户访问 /temp 实际访问的服务器资源为/app/index.html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  rewrite /temp /app/index.html
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#但是这只能选择一个文件 如果要选择多个文件要用try_files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  location /&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   &lt;span class=&#34;c1&#34;&gt;#实际上就是一个一个尝试往下面找 如果有就返回&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   try_files &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt;/ &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;404&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;#这是一个很重要的配置 在配置vue .react有很重要的作用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#以下是一个vue的例子&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  location /&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;c1&#34;&gt;#这里如果都找不到。就去找目录的index.html文件。这样就能让vue路由接管。不然页面是访问不到的。因为Vue/Reacts是单页应用 (SPA)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   try_files &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;$uri&lt;/span&gt;/ /index.html 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;4反向代理&#34;&gt;4.反向代理
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;server&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;   
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  location /api &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#这里就是将带有/api前缀的uri请求 转发给localhost:8123服务器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    proxy_pass localhost:8123 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;5负载均匀&#34;&gt;5.负载均匀
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;c1&#34;&gt;#这里是设置一个上游服务器(注意写到http里面,server块的外面)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	upstream backend-servers &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	&lt;span class=&#34;c1&#34;&gt;#设置权重 数字越大被分配的次数就会越多&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	server localhost:3000 weight 6&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;	server localhsot:3001 weight 5&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  sever&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;c1&#34;&gt;#这里相当于把流量分配给上游的服务器 实际上也是代理&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     location /&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;       proxy_pass http://backend-servers
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;     &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
