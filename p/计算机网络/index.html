@@ -1,0 +1,1396 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="计算机网络基础知识">
+<title>计算机网络</title>
+
+<link rel='canonical' href='https://katomegumi.site/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/'>
+
+<link rel="stylesheet" href="/scss/style.min.b4ca31904ae20740e1c5bd348df865450239c4e3eb1304aff0acea1160b3e330.css"><meta property='og:title' content="计算机网络">
+<meta property='og:description' content="计算机网络基础知识">
+<meta property='og:url' content='https://katomegumi.site/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/'>
+<meta property='og:site_name' content='划船听水声'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-01-15T15:11:08&#43;08:00'/><meta property='article:modified_time' content='2026-03-25T16:07:25&#43;08:00'/>
+<meta name="twitter:title" content="计算机网络">
+<meta name="twitter:description" content="计算机网络基础知识">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16246849853105640066.webp" width="300"
+                            height="332" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">划船听水声</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/429965261?spm_id_from=333.1007.0.0'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z"></path> <path d="M8 3l2 3"></path> <path d="M16 3l-2 3"></path> <path d="M9 13v-2"></path> <path d="M15 11v2"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/munakanisena'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#一计算机网络概念与结构">一、计算机网络概念与结构</a>
+      <ul>
+        <li><a href="#1波特率">1.波特率</a></li>
+        <li><a href="#2-比特率">2. 比特率</a></li>
+        <li><a href="#3-信道带宽">3. 信道带宽</a></li>
+        <li><a href="#4-吞吐量">4. 吞吐量</a></li>
+        <li><a href="#数据传输方式">数据传输方式</a></li>
+        <li><a href="#数据交换方式">数据交换方式</a></li>
+        <li><a href="#通信协议和体系结构">通信协议和体系结构</a>
+          <ul>
+            <li><a href="#协议三要素">协议三要素</a></li>
+            <li><a href="#osi模型重点">OSI模型（重点）</a></li>
+            <li><a href="#tcpip模型">TCP/IP模型</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#二物理层">二、物理层</a>
+      <ul>
+        <li><a href="#概念">概念</a>
+          <ul>
+            <li><a href="#四大特性重点">四大特性（重点）</a></li>
+            <li><a href="#两种信号">两种信号</a></li>
+            <li><a href="#调制和编码">调制和编码</a></li>
+            <li><a href="#传输介质">传输介质</a></li>
+            <li><a href="#三大部分">三大部分</a></li>
+          </ul>
+        </li>
+        <li><a href="#基本通信技术">基本通信技术</a>
+          <ul>
+            <li><a href="#四种信道复用技术">四种信道复用技术</a></li>
+            <li><a href="#数据传输方式-1">数据传输方式</a></li>
+          </ul>
+        </li>
+        <li><a href="#香农定理">香农定理</a></li>
+      </ul>
+    </li>
+    <li><a href="#三数据链路层">三、数据链路层</a>
+      <ul>
+        <li><a href="#概念-1">概念</a>
+          <ul>
+            <li><a href="#主要的三个任务">主要的三个任务</a></li>
+            <li><a href="#相关设备">相关设备</a></li>
+            <li><a href="#冲突域和广播域">冲突域和广播域</a></li>
+            <li><a href="#虚拟局域网技术vlan">虚拟局域网技术（VLAN）</a></li>
+            <li><a href="#ppp对象协议">PPP对象协议</a></li>
+          </ul>
+        </li>
+        <li><a href="#csmacd">CSMA/CD</a></li>
+        <li><a href="#pppoe">PPPoE</a></li>
+        <li><a href="#crc循环差错检测">CRC循环差错检测</a></li>
+      </ul>
+    </li>
+    <li><a href="#四网络层">四、网络层</a>
+      <ul>
+        <li><a href="#概念-2">概念</a></li>
+        <li><a href="#网络层协议">网络层协议</a></li>
+        <li><a href="#ip地址">IP地址</a>
+          <ul>
+            <li><a href="#组成">组成</a></li>
+            <li><a href="#子网掩码">子网掩码</a></li>
+            <li><a href="#ip的一般分类">IP的一般分类</a></li>
+            <li><a href="#子网划分">子网划分</a></li>
+          </ul>
+        </li>
+        <li><a href="#路由器">路由器</a></li>
+      </ul>
+    </li>
+    <li><a href="#五传输层">五、传输层</a>
+      <ul>
+        <li><a href="#概念-3">概念</a></li>
+        <li><a href="#udp">UDP</a></li>
+        <li><a href="#tcp">TCP</a>
+          <ul>
+            <li><a href="#三次握手和四次挥手">三次握手和四次挥手</a></li>
+            <li><a href="#窗口">窗口</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#六应用层">六、应用层</a>
+      <ul>
+        <li><a href="#概念-4">概念</a></li>
+        <li><a href="#万维网指定-url">万维网指定 URL</a></li>
+        <li><a href="#相关协议需背记">相关协议（需背记）</a></li>
+      </ul>
+    </li>
+    <li><a href="#七其他">七、其他</a>
+      <ul>
+        <li><a href="#哪些是私网-ip">哪些是私网 IP</a></li>
+        <li><a href="#nat网络地址转换">NAT（网络地址转换）</a></li>
+        <li><a href="#为什么会有端口转发">为什么会有“端口转发”？</a></li>
+      </ul>
+    </li>
+    <li><a href="#习题">习题</a>
+      <ul>
+        <li><a href="#路由问题">路由问题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">计算机网络基础知识</h3>
+        
+    </div>
+
+       
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2026-01-15</time>
+        </div>
+         
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 14 分钟
+            </time>
+        </div>
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494zM528.1 472h-32.2c-5.5 0-10.3 3.7-11.6 9.1L434.6 680l-46.1-198.7c-1.3-5.4-6.1-9.3-11.7-9.3h-35.4a12.02 12.02 0 0 0-11.6 15.1l74.2 276c1.4 5.2 6.2 8.9 11.6 8.9h32c5.4 0 10.2-3.6 11.6-8.9l52.8-197l52.8 197c1.4 5.2 6.2 8.9 11.6 8.9h31.8c5.4 0 10.2-3.6 11.6-8.9l74.4-276a12.04 12.04 0 0 0-11.6-15.1H647c-5.6 0-10.4 3.9-11.7 9.3l-45.8 199.1l-49.8-199.3c-1.3-5.4-6.1-9.1-11.6-9.1z"
+          fill="currentColor"></path>
+</svg>
+            <time class="article-time--wordcount">
+                6518字
+            </time>
+        </div>
+        
+    </footer>
+     
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="一计算机网络概念与结构">一、计算机网络概念与结构
+</h2><p><strong>定义</strong>：独立的计算机通过通道线路连接从而<strong>共享资源</strong>的计算机系统</p>
+<p><strong>组成</strong>：资源子网和通信子网</p>
+<p><strong>分类</strong>：1.按照拓扑 2.按照范围 3.按照传输方式</p>
+<p><strong>拓扑</strong> ：1.星型 2.网状型 3.树形 4.总线型 5.环型<br>
+<strong>范围</strong>： 1.局域网（LAN）2.城域网（MAN）3.广域网（WAN）<br>
+<strong>传输</strong>：  无线和有线网络</p>
+<h3 id="1波特率">1.波特率
+</h3><ul>
+<li><strong>核心定义</strong>：单位时间内传输的<strong>信号码元个数</strong>（码元是承载数字信号的基本波形单元），单位是 “波特（Baud）”。</li>
+<li><strong>注意</strong>：波特率≠比特率（比特率是每秒传输的二进制位数），只有当每个码元携带 1 个比特时，两者数值才相等。</li>
+</ul>
+<h3 id="2-比特率">2. 比特率
+</h3><ul>
+<li><strong>核心定义</strong>：单位时间内传输的<strong>二进制数据位数</strong>，单位是 “比特 / 秒（bit/s）”，常用 Kbit/s、Mbit/s 等。</li>
+<li><strong>和波特率的关系</strong>：比特率 = 波特率 × 每个码元携带的比特数（比如一个码元表示 2 位二进制，波特率 1000Baud 对应比特率 2000bit/s）。</li>
+</ul>
+<h3 id="3-信道带宽">3. 信道带宽
+</h3><ul>
+<li><strong>核心定义</strong>：信道能传输的信号的<strong>最高频率与最低频率的差值</strong>（单位是 “赫兹（Hz）”），也常用来指代 “信道的最大数据传输速率”（此时单位是 bit/s）。</li>
+<li><strong>通俗理解</strong>：类比 “水管的粗细”—— 带宽越大，信道能同时传输的信号越多，理论上传输速度越快。</li>
+</ul>
+<h3 id="4-吞吐量">4. 吞吐量
+</h3><ul>
+<li><strong>核心定义</strong>：实际传输过程中，<strong>单位时间内成功送达的数据量</strong>，单位通常是 bit/s 或 Byte/s。</li>
+<li><strong>通俗理解</strong>：相当于 “实际能用上的传输速度”（比如宽带标称 100M，但实际下载时吞吐量可能只有 50Mbit/s，因为会受网络拥堵、干扰等影响）。</li>
+<li><strong>区别于带宽</strong>：带宽是 “理论最大能力”，吞吐量是 “实际传输效果”。</li>
+</ul>
+<p>时延、时延带宽积、速率（比特率）、利用率（网络利用率和信道利用率）往返时间、吞吐量、带宽</p>
+<p>网络结构—</p>
+<h3 id="数据传输方式">数据传输方式
+</h3><p>分为<strong>按照方向</strong>和<strong>按照对象</strong>划分</p>
+<p>按照方向： 1.单双工 2.半双工 3.全双工</p>
+<p>按照对象： 1.单播 2. 多播 3.广播</p>
+<h3 id="数据交换方式">数据交换方式
+</h3><ol>
+<li>电路交换  需要互相连接  <strong>独占资源、实时性高、无差错控制</strong>。</li>
+<li>报文交换 无连接 但需要交换机将<strong>整个报文下载下来</strong></li>
+<li>分组交换 这是<strong>报文交换的优化</strong> 将报文进行分组传输</li>
+</ol>
+<p>分组交换又分为<strong>数据报方式</strong>和<strong>虚电路方式</strong>两种形式</p>
+<p>虚电路交换是进行逻辑连接的。其实就是一些交换的规则（并不是独占信道）</p>
+<h3 id="通信协议和体系结构">通信协议和体系结构
+</h3><h4 id="协议三要素">协议三要素
+</h4><p>1.语法 2.语义 3.同步</p>
+<p>语法：语法定义了数据在网络传输中的格式和编码方式</p>
+<p>语义：语义定义了数据的意义和操作规则</p>
+<p>时序：时序定义了数据传输和处理的时间规则</p>
+<h4 id="osi模型重点">OSI模型（重点）
+</h4><p>1.物理层</p>
+<p>2.数据链路层</p>
+<p>3.网络层</p>
+<p>4.传输层</p>
+<p>5.会话层</p>
+<p>6.表示层</p>
+<p>7.应用层</p>
+<h4 id="tcpip模型">TCP/IP模型
+</h4><p>1.网络接口层（物理层和数据链路层）</p>
+<p>2.网络层</p>
+<p>3.传输层</p>
+<p>4.应用层</p>
+<p>计算机网络的工作模式可分为对等网工作模式（P2P）和 客户端和服务器工作方式(C/S模式)。</p>
+<p>HFC；ADSL</p>
+<h2 id="二物理层">二、物理层
+</h2><h3 id="概念">概念
+</h3><h4 id="四大特性重点">四大特性（重点）
+</h4><ol>
+<li>机械特性	 使用什么接口</li>
+<li>电气特性         传输什么型号，使用多少伏的电</li>
+<li>功能特性         作用</li>
+<li>过程特性         不同的效果</li>
+</ol>
+<h4 id="两种信号">两种信号
+</h4><p>数字信号和模拟信号</p>
+<h4 id="调制和编码">调制和编码
+</h4><p>调制：数字信号转模拟信号  三种方式 调频 调幅 调相</p>
+<p>编码：将数据转换成数字信号</p>
+<img src="计网知识.assets/image-20260104121638030-1767500199397-1.png" alt="image-20260104121638030" style="zoom:50%;" />
+<p><strong>曼切斯特编码：</strong>（自同步能力）</p>
+<p>0 = 低到高，1 = 高到低</p>
+<p><strong>差分曼切斯特编码：</strong></p>
+<p>0不变，1变</p>
+<h4 id="传输介质">传输介质
+</h4><ol>
+<li>双绞线</li>
+</ol>
+<ul>
+<li>屏蔽双绞线 （抗干扰更好）</li>
+<li>非屏蔽双绞线</li>
+<li>交叉线 （两个计算机联通）</li>
+</ul>
+<p>一般情况下计算机与交换机相连采用的是（<strong>直通线 / 标准线</strong>），计算机与路由器相连采用（<strong>交叉线</strong>）。</p>
+<ol start="2">
+<li>光纤</li>
+</ol>
+<ul>
+<li>单模光纤 折射</li>
+<li>多模光纤 距离更短 直射</li>
+</ul>
+<ol start="3">
+<li>同轴电缆</li>
+<li>无线信号（IEEP）
+<ul>
+<li><strong>短波通信</strong>
+<ul>
+<li>特点：传输距离极远（可达数千千米），设备简单成本低；但受电离层变化（昼夜、季节）和气候影响大</li>
+<li>带宽窄、稳定性差。</li>
+</ul>
+</li>
+<li><strong>微波通信</strong></li>
+</ul>
+</li>
+</ol>
+<h4 id="三大部分">三大部分
+</h4><p>源系统：发送数据方</p>
+<p>传输系统：传输数据的各种介质</p>
+<p>目的系统：接收数据方</p>
+<h3 id="基本通信技术">基本通信技术
+</h3><p>信道共享技术中，动态媒体接入控制分为两大类：（<strong>随机接入</strong>）和（<strong>受控接入</strong>）。</p>
+<h4 id="四种信道复用技术">四种信道复用技术
+</h4><p>信道复用：将<strong>多种不同</strong>的信号在 同一信道上进行传输。主要作用是用于区分信号的。</p>
+<ol>
+<li>频分复用</li>
+<li>时分复用</li>
+<li>波分复用（光信号）</li>
+<li>码分复用</li>
+</ol>
+<h4 id="数据传输方式-1">数据传输方式
+</h4><h5 id="根据同一时间传输数量">根据同一时间传输数量
+</h5><p>串行和并行</p>
+<p>串行：<strong>数据的位只在一条通信线路依次传输</strong>的方式</p>
+<p>并行：<strong>数据的多个位同时在多条并行的通信线路上传输</strong>的方式。</p>
+<h5 id="根据报文双方的行为">根据报文双方的行为
+</h5><p>同步和异步</p>
+<p>同步：同步是要<strong>接收方按照发送方</strong>发送的每个位的起止时刻和速率来接收数据，否则会产生误差。</p>
+<p>异步：以组的形式进行发送 接收方不知道什么时候会来数据</p>
+<h5 id="根据传输信号">根据传输信号
+</h5><p>基带传输：传输数字信号</p>
+<p>频带传输：传输模拟信号</p>
+<h3 id="香农定理">香农定理
+</h3><img src="计网知识.assets/image-20260103124704634-1767415626993-1.png" alt="image-20260103124704634" style="zoom:50%;" />
+<p><img src="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260104124420677-1767501861983-9-1767501863191-11-1767501864058-13.png"
+	width="1181"
+	height="500"
+	srcset="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260104124420677-1767501861983-9-1767501863191-11-1767501864058-13_hu17500692028705382401.png 480w, /p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260104124420677-1767501861983-9-1767501863191-11-1767501864058-13_hu7726172577591726599.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260104124420677"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="236"
+		data-flex-basis="566px"
+	
+></p>
+<p><img src="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260104123203307.png"
+	width="976"
+	height="47"
+	srcset="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260104123203307_hu13815888702413272725.png 480w, /p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260104123203307_hu13674317681322485629.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260104123203307"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="2076"
+		data-flex-basis="4983px"
+	
+></p>
+<p><strong>码间串扰</strong></p>
+<h2 id="三数据链路层">三、数据链路层
+</h2><h3 id="概念-1">概念
+</h3><p>主要作用：提供<strong>点到点</strong>的数据传输。</p>
+<blockquote>
+<p>这里的点到点。指的是物理上<strong>直接相连接</strong>的节点（比如电脑到交换机）</p>
+</blockquote>
+<p>传输的<strong>基本单位</strong>：帧</p>
+<p>以太网规定最短帧长为 <strong>64 字节</strong>。</p>
+<p>由三部分组成：</p>
+<ul>
+<li>帧头 MAC位置等</li>
+<li>数据</li>
+<li>帧尾  校验数据、</li>
+</ul>
+<p>网桥：连接两个<strong>同类型局域网</strong>的设备，基于<strong>MAC 地址</strong>转发数据帧</p>
+<h4 id="主要的三个任务">主要的三个任务
+</h4><ol>
+<li>组装成帧</li>
+<li>透明传输</li>
+<li>差错检测</li>
+</ol>
+<h4 id="相关设备">相关设备
+</h4><p>集线器：物理层</p>
+<p>交换机：数据链路层</p>
+<p>网桥：位于两个层之间</p>
+<h4 id="冲突域和广播域">冲突域和广播域
+</h4><p>只要与交换机相连的计算机都算是广播域。连接交换机的话就会变成一个广播域。</p>
+<p>冲突域：<strong>计算机和交换机相连</strong>的范围就是冲突域</p>
+<h4 id="虚拟局域网技术vlan">虚拟局域网技术（VLAN）
+</h4><p>作用：就是在<strong>交换机上</strong>将一个物理的局域网用<strong>逻辑划分</strong>成多个局域网</p>
+<p>基于端口进行划分：Access(只允许通过一个VLAN) Trunk(可以通过多个VLAN 其实说白了就是 可以让<strong>不同的交换机</strong>都使用VLAN这个标签，因此它的链路可以通过多个VLAN，主要就是为了可以跨交换机传输)</p>
+<p>VLAN 标签是交换机的 “分拣标识”，Access 端口负责给终端的消息 “贴 / 撕标签”，交换机靠标签把数据只发给同一 VLAN 的设备，实现部门间的隔离。</p>
+<h4 id="ppp对象协议">PPP对象协议
+</h4><p>是一种用于<strong>封装帧</strong>的协议。</p>
+<p>主要原因在于数据包如果转换成二进制 直接传到物理层进行传输。如果有多个数据，这个时候你是不知道他的数据起始的位置的。因此需要打上标识那个是结束那个是开始。</p>
+<h3 id="csmacd">CSMA/CD
+</h3><p>即载波侦听多路访问/冲突检测</p>
+<p>是广播型信道中采用一种随机访问技术的<strong>竞争型访问方法</strong>，具有多目标地址的特点。<strong>总线型网络</strong>传输数据</p>
+<ol>
+<li>先听再发</li>
+<li>边听边发</li>
+<li>冲突停止</li>
+<li>延迟重发</li>
+</ol>
+<h3 id="pppoe">PPPoE
+</h3><p>PPPoE（以太网上的点对点协议）是目前最常用的宽带拨号上网协议。</p>
+<h3 id="crc循环差错检测">CRC循环差错检测
+</h3><ol>
+<li>这里首先需要知道二进制的<strong>异或运算</strong>（模2除法）  也就是 相同为0，相异为1</li>
+<li>题目一般会给出<strong>多项式</strong>。例如x^4^+x+1这个多项式。对应的<strong>比特序列</strong> = 10011（5位）</li>
+<li>因此要将发送的数据后**+4个0**  （+最高次幂也就是x^4^  对应4，或者对应位数-1）</li>
+<li>然后和对应的多项式的<strong>比特序列</strong>进行<strong>异或运算</strong>，获得CRC 校验码（余数位数需为 r 位，不足补 0）</li>
+<li>最终发送序列 = 原数据 M + CRC 校验码</li>
+</ol>
+<h2 id="四网络层">四、网络层
+</h2><h3 id="概念-2">概念
+</h3><p>主要作用： 能够将<strong>数据包从</strong>源主机<strong>跨越多个网络送到</strong>目的主机（也就是主机到主机）。</p>
+<p>也就是提供端到端的<strong>逻辑连接服务</strong>，核心在于<strong>跨网络的路径选择</strong>与<strong>分组转发</strong></p>
+<p>基本单位：数据包/分组</p>
+<p>广播风暴：网络中大量广播报文泛滥导致的拥堵</p>
+<h3 id="网络层协议">网络层协议
+</h3><ul>
+<li>ARP地址解析协议：根据IP地址获取物理地址</li>
+<li>ICMP网际控制报文协议：通过ICMP传输控制消息，控制消息是指网络通不通、主机是否可达、路由是否可用等网络本身的消息。（测试）不能获取IP地址</li>
+</ul>
+<h3 id="ip地址">IP地址
+</h3><p>概念： IP地址是逻辑地址，MAC地址属于物理地址（全0和全1是不能做IP地址的，因为属于<strong>特殊作用</strong>）</p>
+<h4 id="组成">组成
+</h4><p>IP地址=网络地址（网络号）+主机地址（主机号）</p>
+<p>一般是32位也就是4个字节，以点分十进制表示，（IPV6 的话是128位 以16进制为主）</p>
+<p>比如192.168.12.1这就是个IPV4地址</p>
+<blockquote>
+<p>MAC地址一般是48位</p>
+</blockquote>
+<h4 id="子网掩码">子网掩码
+</h4><p>如上述可知 IP地址由网络号+主机号确认，那么如何确认哪个是网络号那个是主机号呢？</p>
+<p>由此引入<strong>子网掩码</strong>，来解决这个问题 就是将某个IP地址划分成网络地址和主机地址两部分。</p>
+<p>例如：255.0.0.0 这是A类地址的<strong>默认子网掩码</strong> 为什么是这种形式？</p>
+<p>因为255转换为二进制就是8位的1，用1来表示当前对应的位是网络号。</p>
+<blockquote>
+<p>缺省子网掩码（即默认子网掩码）</p>
+</blockquote>
+<h4 id="ip的一般分类">IP的一般分类
+</h4><img src="计网知识.assets/image-20260105143124793.png" alt="image-20260105143124793" style="zoom: 50%;" />
+<img src="计网知识.assets/image-20260106154650859.png" alt="image-20260106154650859" style="zoom: 80%;" />
+<h4 id="子网划分">子网划分
+</h4><p>作用：就是通过修改子网掩码来合理分配IP地址，能够节约资源。</p>
+<p>需要知道的两个概念：</p>
+<ol>
+<li>网络地址</li>
+</ol>
+<ul>
+<li>定义：子网中<strong>主机位全为 0</strong>的地址，用于标识整个子网本身。</li>
+<li>示例：C 类子网<code>203.192.168.0/26</code>（子网掩码<code>255.255.255.192</code>），主机位是最后 6 位，全 0 时地址为<code>203.192.168.0</code>，这就是该子网的网络地址。</li>
+</ul>
+<ol start="2">
+<li>广播地址</li>
+</ol>
+<ul>
+<li>定义：子网中<strong>主机位全为 1</strong>的地址，用于向子网内所有主机发送广播报文。</li>
+<li>示例：同上子网，主机位全 1 时地址为<code>203.192.168.63</code>，这就是该子网的广播地址。</li>
+</ul>
+<p>这两个地址是子网的 “<strong>保留地址</strong>”，不能分配给具体的主机使用，所以计算子网可用主机数时，需要用 “总主机位数量对应的主机数 - 2”（减去网络地址和广播地址）。</p>
+<h3 id="路由器">路由器
+</h3><p>路由器：作用就是连接不同的<strong>网段</strong>，使其互相能够进行<strong>通信</strong>。</p>
+<p>路由表的分组转发部分由组成。</p>
+<ul>
+<li>交换结构</li>
+<li>输入端口</li>
+<li>输出端口</li>
+</ul>
+<p>设定生命周期TTL字段，每经过一个路由器减1，当TTL为0时丢弃该报文</p>
+<p><strong>网关</strong>：属于网络层，连接两个<strong>不同类型网络</strong>的设备，基于<strong>IP 地址</strong>（或更高层协议）转发数据包，可实现协议转换。</p>
+<blockquote>
+<p>网桥（数据链路层）：连接两个<strong>同类型局域网</strong>的设备，基于<strong>MAC 地址</strong>转发数据帧</p>
+<p>网段: 就是仅靠数据链路层设备（交换机 / 网桥），不需要网络层设备（路由器）转发，就能让内部设备互相通信的逻辑的网络区域。</p>
+</blockquote>
+<p><strong>动态路由协议</strong></p>
+<p>主要作用是<strong>路由选择</strong>也就是选择传输数据的线路。</p>
+<blockquote>
+<p>差不就是Vue中的路由 router</p>
+</blockquote>
+<ul>
+<li>RIP  UDP协议 基于<strong>矢量</strong> 可能发生回环</li>
+<li>OSPF  IP协议 基于<strong>链路状态</strong></li>
+<li>BGP TCP协议</li>
+</ul>
+<h2 id="五传输层">五、传输层
+</h2><h3 id="概念-3">概念
+</h3><p>主要作用： 提供<strong>进程之间</strong>的通信服务，端到端（也就是应用到应用的过程）</p>
+<img src="计网知识.assets/image-20260105194356689.png" alt="image-20260105194356689" style="zoom:50%;" />
+<h3 id="udp">UDP
+</h3><p>用户数据报</p>
+<p>特点：</p>
+<ol>
+<li>无连接</li>
+<li>面向报文(不切分数据直接传输)</li>
+<li>不可靠（简单的差错校验、广播多播属于不可靠传输）</li>
+<li>提供复用/分用服务</li>
+</ol>
+<p>UDP 只有 <strong>8 个字节</strong> 的固定首部。它不保证可靠性，所以不需要序号和确认号。</p>
+<ul>
+<li><strong>源端口 (Source Port)</strong>：发送端的进程标识。</li>
+<li><strong>目的端口 (Destination Port)</strong>：接收端的进程标识。</li>
+<li><strong>长度 (Length)</strong>：UDP 用户数据报的总长度（首部 + 数据）。</li>
+<li><strong>检验和 (Checksum)</strong>：检测传输中是否有差错。如果有错，接收端直接丢弃。</li>
+</ul>
+<p><strong>UDP 处理</strong>: 接收端收到有差错的 UDP 数据报直接<strong>丢弃</strong>。</p>
+<p><strong>首部差异</strong>: TCP 首部包含<strong>序号</strong>，而 UDP 不包含。UDP 报首部不包含“UDP 用户数据报首部长度”（因为它固定为 8 字节）。</p>
+<h3 id="tcp">TCP
+</h3><p>TCP 头部长度是<strong>可变</strong>的（20 到 60 字节）</p>
+<p>TCP 运输连接有三个阶段：连接建立、数据传送、连接释放。</p>
+<p>特点：</p>
+<ol>
+<li>面向连接的</li>
+<li>可靠服务 (具备<strong>流量控制</strong>（滑动窗口）和<strong>拥塞控制</strong>机制。)</li>
+<li>全双工通信</li>
+<li>面向字节流 (不支持<strong>广播</strong>) 对每个字节进行编号，</li>
+<li>报文段的确认机制。</li>
+<li>提供复用/分用服务</li>
+</ol>
+<h4 id="三次握手和四次挥手">三次握手和四次挥手
+</h4><p>三次握手的核心是<strong>序列号（seq）的交换</strong>，确保双方都知道对方的起步节奏。</p>
+<ol>
+<li><strong>第一步：客户端 $\rightarrow$ 服务器 ($SYN=1, seq=x$)</strong>
+<ul>
+<li><strong>动作：</strong> 客户端发送同步信号，并随机生成一个初始序列号 $x$。</li>
+<li><strong>状态：</strong> 客户端进入 <strong>SYN-SENT</strong>（同步已发送）。</li>
+</ul>
+</li>
+<li><strong>第二步：服务器 $\rightarrow$ 客户端 ($SYN=1, ACK=1, seq=y, ack=x+1$)</strong>
+<ul>
+<li><strong>动作：</strong> 服务器同意连接，回发自己的序列号 $y$，并确认收到了 $x$（所以 $ack=x+1$）。</li>
+<li><strong>状态：</strong> 服务器进入 <strong>SYN-RCVD</strong>（同步收到）。</li>
+</ul>
+</li>
+<li><strong>第三步：客户端 $\rightarrow$ 服务器 ($ACK=1, seq=x+1, ack=y+1$)</strong>
+<ul>
+<li><strong>动作：</strong> 客户端最后确认，告诉服务器：“我也收到你的序列号了。”</li>
+<li><strong>状态：</strong> 双方进入 <strong>ESTABLISHED</strong>（连接已建立），开始传数据。</li>
+</ul>
+</li>
+</ol>
+<p>挥手之所以多一次，是因为 TCP 是<strong>全双工</strong>的。你不想发了，不代表我正好也发完了。</p>
+<ol>
+<li><strong>第一步：客户端 $\rightarrow$ 服务器 ($FIN=1$)</strong>
+<ul>
+<li><strong>意思：</strong> “我这边没东西发了，关了啊。”</li>
+<li><strong>状态：</strong> 客户端进入 <strong>FIN-WAIT-1</strong>。</li>
+</ul>
+</li>
+<li><strong>第二步：服务器 $\rightarrow$ 客户端 ($ACK=1$)</strong>
+<ul>
+<li><strong>意思：</strong> “收到，但我还没准备好，你等我把剩下的发完。”</li>
+<li><strong>状态：</strong> 客户端进入 <strong>FIN-WAIT-2</strong>，服务器进入 <strong>CLOSE-WAIT</strong>（半关闭）。</li>
+</ul>
+</li>
+<li><strong>第三步：服务器 $\rightarrow$ 客户端 ($FIN=1$)</strong>
+<ul>
+<li><strong>意思：</strong> “好了，我也发完了，你可以彻底关了。”</li>
+<li><strong>状态：</strong> 服务器进入 <strong>LAST-ACK</strong>。</li>
+</ul>
+</li>
+<li><strong>第四步：客户端 $\rightarrow$ 服务器 ($ACK=1$)</strong>
+<ul>
+<li><strong>意思：</strong> “好，那我最后确认一下，再见！”</li>
+<li><strong>状态：</strong> 客户端进入 <strong>TIME-WAIT</strong>（重点！），等一阵子确认服务器收到了才真正消失。</li>
+</ul>
+</li>
+</ol>
+<h4 id="窗口">窗口
+</h4><p>窗口：缓存空间</p>
+<p>滑动窗口是一种流量控制技术</p>
+<p>它本质上是描述接收方的<strong>TCP数据报缓冲区大小</strong>的数据，发送方根据这个数据来计算自己最多能发送多长的数据，如果发送方收到接收方的窗口大小为0的TCP数据报，那么发送方将停止发送数据，等到接收方发送窗口大小不为0的数据报的到来</p>
+<p>发送窗口=min[接收端窗口，拥塞窗口]</p>
+<p>接收窗口（rwnd）由<strong>接收方</strong>根据自身的缓存大小确定，并通过 TCP 报文首部中的“窗口”字段通知发送方，实现流量控制。</p>
+<p>拥塞窗口（cwnd）是<strong>发送端</strong>根据探测到的网络拥塞情况自行确定的窗口值，而不是接收端确定的。</p>
+<ol>
+<li><strong>流量控制</strong>：由<strong>接收方</strong>控制，目的是防止发送方发得太快，导致接收方缓冲区溢出（对应 rwnd）。</li>
+<li><strong>拥塞控制</strong>：由<strong>发送方</strong>控制，目的是防止过多的数据注入网络，导致网络路由器或链路过载（对应 cwnd）。</li>
+</ol>
+<img src="计网知识.assets/image-20260105194613762.png" alt="image-20260105194613762" style="zoom:50%;" />
+<h2 id="六应用层">六、应用层
+</h2><h3 id="概念-4">概念
+</h3><p>通过位于不同主机中的多个应用进程之间的通信和协同工作来完成，应用层的内容就是具体<strong>定义通信规则</strong>。（也就是各种协议）</p>
+<h3 id="万维网指定-url">万维网指定 URL
+</h3><p>URL 的标准格式为 “协议:// 域名 / 路径”，</p>
+<p>例如http://baidu.com</p>
+<h3 id="相关协议需背记">相关协议（需背记）
+</h3><p>DNS 服务是<strong>无连接</strong>的服务。使用<strong>UDP</strong>协议 端口号为53</p>
+<img src="计网知识.assets/image-20260106171157396.png" alt="image-20260106171157396" style="zoom:50%;" />
+<p>DHCP、DNS 主要基于UDP协议</p>
+<h2 id="七其他">七、其他
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><strong>IP 类型</strong></th>
+          <th><strong>特点</strong></th>
+          <th><strong>形象记忆</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>公网 IP</strong></td>
+          <td>全球唯一，互联网通行证</td>
+          <td><strong>全球唯一的快递寄送地址</strong></td>
+      </tr>
+      <tr>
+          <td><strong>私网 IP</strong></td>
+          <td>内部重复，节省地址资源</td>
+          <td><strong>办公室内的分机号</strong></td>
+      </tr>
+      <tr>
+          <td><strong>127.0.0.1</strong></td>
+          <td>指向设备自身</td>
+          <td><strong>镜子里的自己</strong></td>
+      </tr>
+      <tr>
+          <td><strong>0.0.0.0</strong></td>
+          <td>所有的/未指定的地址</td>
+          <td><strong>全选 / 空白</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="哪些是私网-ip">哪些是私网 IP
+</h3><p>为了不搞混，国际上专门预留了三段地址作为私网 IP，你在任何地方看到它们，就说明你现在处于局域网中：</p>
+<ul>
+<li><strong>192.168.x.x</strong>（最常见，家用路由器常用）</li>
+<li><strong>10.x.x.x</strong>（大型企业、校园网常用）</li>
+<li><strong>172.16.x.x - 172.31.x.x</strong></li>
+</ul>
+<h3 id="nat网络地址转换">NAT（网络地址转换）
+</h3><p>它会在你出门时把你的私网地址换成路由器的公网地址，等数据回来时再换回来。</p>
+<p><strong>换 IP</strong> 是为了让你能<strong>走出去</strong>（私网地址在公网无法路由）。</p>
+<p><strong>换端口</strong> 是为了让你能<strong>回得来</strong>（区分家里多台设备，防止回包送错地方）。</p>
+<p><strong>什么是 NAPT？</strong> 全称是 Network Address Port Translation。它是 NAT 的一种改进版。</p>
+<h3 id="为什么会有端口转发">为什么会有“端口转发”？
+</h3><p>如果你想在家里电脑开个游戏服务器，问题就来了：<strong>外面的朋友想主动联系你，但他不知道该敲路由器的哪扇门。</strong></p>
+<p>这时你就需要进路由器设置界面，做一次**“端口转发” **：</p>
+<ul>
+<li><strong>你告诉路由器</strong>：“以后只要有人敲你公网的 <strong>25565</strong> 号大门（端口），别废话，直接把人领到我这台电脑（私网IP）来！”</li>
+<li>这样，路由器就产生了一个<strong>永久的</strong>逻辑映射，而不是临时的。</li>
+</ul>
+<h2 id="习题">习题
+</h2><p><img src="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260114125533150.png"
+	width="1502"
+	height="668"
+	srcset="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260114125533150_hu16435470870748960690.png 480w, /p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260114125533150_hu15157082841480314344.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260114125533150"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="224"
+		data-flex-basis="539px"
+	
+></p>
+<p>等待时间=随机数x争用期（512比特）/自己的传输比特(单位是微秒)</p>
+<p><strong>STDM</strong>：同步时分复用。</p>
+<p><strong>CDMA</strong>：码分多址，利用唯一码序列区分用户。</p>
+<p><strong>ADSL</strong>：非对称数字用户线，下行快上行慢。</p>
+<p><strong>CIDR</strong>：无分类域间路由，通过网络前缀划分网络。</p>
+<p><strong>ARQ</strong>：自动重传请求，接收出错请求重发。</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><strong>特性</strong></th>
+          <th><strong>RIP</strong></th>
+          <th><strong>OSPF</strong></th>
+          <th><strong>BGP</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>网关协议类型</strong></td>
+          <td>内部网关协议 (IGP)</td>
+          <td>内部网关协议 (IGP)</td>
+          <td>外部网关协议 (EGP)</td>
+      </tr>
+      <tr>
+          <td><strong>路由表内容</strong></td>
+          <td>到所有网络的距离及下一跳</td>
+          <td>全网拓扑结构的数据库</td>
+          <td>到达其他 AS 的路径</td>
+      </tr>
+      <tr>
+          <td><strong>核心算法</strong></td>
+          <td>距离矢量算法 (Bellman-Ford)</td>
+          <td>链路状态算法 (Dijkstra/SPF)</td>
+          <td>路径矢量算法</td>
+      </tr>
+      <tr>
+          <td><strong>最优路径依据</strong></td>
+          <td><strong>跳数</strong> (Max 15)</td>
+          <td><strong>带宽</strong> (Cost 费用)</td>
+          <td><strong>策略</strong> (多种属性)</td>
+      </tr>
+      <tr>
+          <td><strong>传送方式</strong></td>
+          <td>UDP 报文</td>
+          <td>IP 数据报 (89号)</td>
+          <td>TCP 连接 (179号)</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th><strong>特性</strong></th>
+          <th><strong>IGP (内部网关协议)</strong></th>
+          <th><strong>EGP (外部网关协议)</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>范围</strong></td>
+          <td>自治系统（AS）<strong>内部</strong></td>
+          <td>自治系统（AS）<strong>之间</strong></td>
+      </tr>
+      <tr>
+          <td><strong>比喻</strong></td>
+          <td>城市内的街道导航</td>
+          <td>省际、国际高速公路</td>
+      </tr>
+      <tr>
+          <td><strong>核心目标</strong></td>
+          <td>追求<strong>速度和效率</strong>（选最快的路）</td>
+          <td>追求<strong>策略和安全</strong>（选准许走的路）</td>
+      </tr>
+      <tr>
+          <td><strong>常见协议</strong></td>
+          <td>OSPF, RIP, IS-IS</td>
+          <td><strong>BGP</strong> (目前唯一的 EGP)</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>单模光纤比多模光纤性能要更加好</p>
+<p>TCP  分用复用、流量控制、拥塞控制、可靠传输、差错校验</p>
+<p><strong>10Base-T 是以太网的一个标准，其中：</strong></p>
+<ul>
+<li><strong>“Base” 表示：</strong> <strong>基带传输</strong>。</li>
+<li><strong>“10” 表示：</strong> <strong>传输速率为 10Mb/s</strong></li>
+<li><strong>“T” 表示：</strong> <strong>传输介质为双绞线</strong>。</li>
+</ul>
+<p>TCP 协议中的窗口指的是：缓存空间</p>
+<h3 id="路由问题">路由问题
+</h3><p><strong>先看大前缀：</strong> 与最大前缀的子网掩码进行计算。如果有相同的前缀并且子网掩码也不同就都进行计算。</p>
+<p><strong>进行与运算</strong> 确认落在哪个具体的子网范围内。</p>
+<p><strong>最长匹配：</strong> 如果都满足，选子网掩码数值最大的那一个。</p>
+<p>如果算出来的都不满足就走默认路由</p>
+<blockquote>
+<p>与运算&amp; 只有都为1才为1 否则为0 跟编程差不多</p>
+</blockquote>
+<p><img src="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260115145614670.png"
+	width="1174"
+	height="357"
+	srcset="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260115145614670_hu3143539819792370553.png 480w, /p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260115145614670_hu9037345621662261861.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260115145614670"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="328"
+		data-flex-basis="789px"
+	
+></p>
+<p>依据：出现<strong>超时</strong>和<strong>收到三个重复的ACK</strong></p>
+<p>慢开始:指数增长 x2</p>
+<p>拥塞避免：达到门限值。线性增长+1</p>
+<p>快重传 改变门限值</p>
+<p>快恢复 更新拥塞窗口</p>
+<p><strong>加法增大</strong>：窗口线性缓慢加 1，防止拥塞。</p>
+<p><strong>乘法减小</strong>：遇拥塞门限立即减半，腾出带宽。</p>
+<p><img src="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260115150616703.png"
+	width="610"
+	height="356"
+	srcset="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260115150616703_hu1387390305448296279.png 480w, /p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E8%AE%A1%E7%BD%91%E7%9F%A5%E8%AF%86.assets/image-20260115150616703_hu8993937153904323059.png 1024w"
+	loading="lazy"
+	
+		alt="image-20260115150616703"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="171"
+		data-flex-basis="411px"
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-03-25
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="munakanisena/munakanisena.github.io"
+    data-repo-id="R_kgDON_Rlkg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDON_Rlks4CnWeY"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading=""
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 划船听水声
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2024089321号-2</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+ 
+      #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+        #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://katomegumi.site/icons/backTop.svg);
+    }
+</style>
+
+
+<script src=https://katomegumi.site/background/sakura.js></script>
+
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://katomegumi.site/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+    </body>
+</html>

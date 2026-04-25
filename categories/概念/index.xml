@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>概念 on 划船听水声</title>
+        <link>https://katomegumi.site/categories/%E6%A6%82%E5%BF%B5/</link>
+        <description>Recent content in 概念 on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Tue, 24 Mar 2026 18:09:47 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/%E6%A6%82%E5%BF%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AI相关概念简单介绍</title>
+        <link>https://katomegumi.site/p/ai-intruction/</link>
+        <pubDate>Mon, 09 Mar 2026 19:29:23 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/ai-intruction/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;概念都是个人理解，如有错误欢迎指出。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;llm-大语言模型&#34;&gt;LLM (大语言模型)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;诞生&lt;/strong&gt;：分为两个阶段
+&lt;ul&gt;
+&lt;li&gt;训练&lt;/li&gt;
+&lt;li&gt;推理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;涌现&lt;/strong&gt;: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;token词元&#34;&gt;Token（词元）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：是LLM（大语言模型）的&lt;strong&gt;最小语义单元&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：token是什么？其实就是代表&lt;strong&gt;单词的的编号&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tokenizer分词器&#34;&gt;Tokenizer（分词器）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：把文本切成一个个 &lt;strong&gt;token&lt;/strong&gt;（子词 / 字 / 符号），再将token映射成&lt;code&gt;token ID&lt;/code&gt;（整数编号）；最后就变成了一串&lt;strong&gt;数字编号&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;embedding嵌入&#34;&gt;Embedding（嵌入）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：Embedding就是大模型自己的语言，注意：embedding模型属于LLM模型中的一部分。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：把每个 token ID 转换成一个 &lt;strong&gt;高维向量&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;为什么要引入高维数据向量&#34;&gt;为什么要引入高维数据向量？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;主要是为了从更多的维度描述单词。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;例如：维度1表示颜色；维度2表示形状；苹果和西瓜在向量坐标中虽然&lt;strong&gt;编号不同&lt;/strong&gt;；但是&lt;strong&gt;空间位置&lt;/strong&gt;很相近。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;function-call方法调用&#34;&gt;Function Call(方法调用)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：工具调用函数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：允许模型在需要时调用预定义的函数来获取数据或执行操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;Function Call的&lt;strong&gt;平台依赖性强&lt;/strong&gt;，没有一个统一的标准，不能做到即插即用。&lt;/li&gt;
+&lt;li&gt;一般是本地程序调用，外界无法使用；也因此MCP应运而生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mcp模型上下文协议&#34;&gt;MCP(模型上下文协议)
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/docs/getting-started/intro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;什么是mcp&#34;&gt;什么是MCP？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：MCP模型上下文协议 定义了应用程序和 AI 模型之间交换上下文信息的方式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：主要是为了&lt;strong&gt;增强&lt;/strong&gt;AI的能力，作为使用者通过MCP我们可以轻松接入别人已经写好的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：MCP只是一个标准协议，并不提供特定的服务，你可以按照要求编写自己的MCP服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;mcp架构&#34;&gt;MCP架构
+&lt;/h3&gt;&lt;p&gt;分为：客户端、服务端；客户端可以连接多个MCP服务。&lt;/p&gt;
+&lt;h2 id=&#34;agent-skills-智能体技能&#34;&gt;Agent Skills (智能体技能)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;本质&lt;/strong&gt;：Agent Skills 的本质不是工具，而是：&lt;/p&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;行为规范 + 专业知识 + 使用时机的组合&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;组成&lt;/strong&gt;：其实就是一个文件夹(相当于打包好的提示词工程)；里面必须有一个 SKILL.md 文件（包含说明和元数据），可选其他资源文件（如脚本、示例、参考文档）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用&lt;/strong&gt;：Agent Skills 的关键是渐进式披露，分三层加载：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;技能发现&lt;/strong&gt; ：AI 先读取所有技能的元数据（name 和 description），判断任务是否相关，注意：这些元数据始终在系统提示中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载核心指令&lt;/strong&gt; ： 如果相关，AI 自动读取 SKILL.md 的正文内容，获取详细指导。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载资源文件&lt;/strong&gt; ：按需读取，执行脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;Agent Skills和MCP的区别?&lt;/p&gt;
+&lt;p&gt;MCP需要把完整的MCP协议规范告诉AI，占用大量上下文，即使你不去用他，如果你装的MCP多，就没多少可用的上下文了，必须手动控制启用和禁用以节省上下文空间。skills相当于打包好的一套提示词工程，包含提示词、文档、脚本、工具，然后把简单的元数据告诉AI。&lt;/p&gt;
+&lt;p&gt;简单来讲：&lt;br&gt;
+Agent Skills相当于&lt;strong&gt;懒加载&lt;/strong&gt;，一个是按需加载自动决定上下文。&lt;br&gt;
+MCP是&lt;strong&gt;启动就加载&lt;/strong&gt;，并且每次请求都会占用上下文。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;大模型的幻觉&#34;&gt;大模型的幻觉
+&lt;/h2&gt;&lt;h3 id=&#34;1什么是幻觉&#34;&gt;1.什么是幻觉？
+&lt;/h3&gt;&lt;p&gt;其实就是大模型生成不合理或完全虚构的内容。&lt;/p&gt;
+&lt;h3 id=&#34;2为什么会出现幻觉&#34;&gt;2.为什么会出现幻觉？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一方面，模型的训练数据中可能包含错误或过时的信息。&lt;/li&gt;
+&lt;li&gt;另一方面，大语言模型本质上是 &lt;strong&gt;预测下一个词的概率&lt;/strong&gt; 模型，它们倾向于生成流畅而未必准确的内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rag检索增强生成&#34;&gt;RAG（检索增强生成）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;作用&lt;/strong&gt;：可以解决‌大模型的知识时效性限制和幻觉问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现步骤&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前置准备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;文档收集和切割&lt;/li&gt;
+&lt;li&gt;向量转换和存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;实现增强&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;文档过滤和检索&lt;/li&gt;
+&lt;li&gt;查询增强和关联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：RAG进行向量转换的Embedding模型和LLM的Embedding的模型并不一致。LLM的Embedding模型是随着训练一起出来的，而RAG进行向量转换的Embedding模型是需要单独去训练的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;差异&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RAG Embedding：对整段文本做语义压缩，输出一个向量。&lt;/li&gt;
+&lt;li&gt;LLM Embedding：对每个 token 编码，再通过 Transformer 整体理解整句话。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ai-agent智能体&#34;&gt;AI Agent(智能体)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：会自己思考 + 能自己行动的 AI。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分类&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;反应式智能体&lt;/li&gt;
+&lt;li&gt;有限规划智能体&lt;/li&gt;
+&lt;li&gt;自主规划智能体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cot思维链&#34;&gt;CoT（思维链）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：让 AI 像人类一‌样 “思考” 的技术，帮助 AI 在处理复杂问题时能够先思考后执行。(思维链的实现主要是通过prompt实现)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;agent-loop执行循环&#34;&gt;Agent Loop（执行循环）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：智能体在没有用户输入‎的情况下，自主重复执‌行推理和工具调用的过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;react模式思考---行动---观察&#34;&gt;React模式（思考 - 行动 - 观察）
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;先思考执行需要哪些工具&lt;/li&gt;
+&lt;li&gt;执行工具&lt;/li&gt;
+&lt;li&gt;根据工具结果判断是否完成该任务&lt;/li&gt;
+&lt;li&gt;循环执行&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

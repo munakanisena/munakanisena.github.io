@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI on 划船听水声</title>
+        <link>https://katomegumi.site/categories/ai/</link>
+        <description>Recent content in AI on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Sat, 25 Apr 2026 17:21:48 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>使用cc-switch配置claude code 使用DeepSeek V4 Pro</title>
+        <link>https://katomegumi.site/p/cc-switch/</link>
+        <pubDate>Sat, 25 Apr 2026 16:42:53 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/cc-switch/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;在2026.4.24 DeepSeek官方发布了最新一代大模型，也就是DeepSeek V4。&lt;br&gt;
+那我们当然要来试一试啦，毕竟是国产大模型嘛，然后还有就是便宜。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1cc-switch是什么&#34;&gt;1.cc-switch是什么？
+&lt;/h2&gt;&lt;p&gt;官方解释：现代 AI 编程依赖于 Claude Code、Codex、Gemini CLI、OpenCode 和 OpenClaw 等 CLI 工具——但每个工具都有自己的配置格式。切换 API 供应商意味着手动编辑 JSON、TOML 或 &lt;code&gt;.env&lt;/code&gt; 文件，而在多个工具之间缺乏一个统一管理 MCP, SKILLS 的方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CC Switch&lt;/strong&gt; 为你提供一个桌面应用来管理所有五个 CLI 工具。&lt;/p&gt;
+&lt;h2 id=&#34;2下载cc-switch&#34;&gt;2.下载cc-switch
+&lt;/h2&gt;&lt;p&gt;选择对应版本下载：&lt;a class=&#34;link&#34; href=&#34;https://github.com/farion1231/cc-switch/releases/tag/v3.14.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3配置&#34;&gt;3.配置
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;添加供应商，选择deepseek。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;index.assets/image-20260425165435471.png&#34; alt=&#34;image-20260425165435471&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;填写API kye，需要去&lt;a class=&#34;link&#34; href=&#34;https://platform.deepseek.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deepseek开放平台获取&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;index.assets/image-20260425165756475.png&#34; alt=&#34;image-20260425165756475&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;设置模型可选：
+&lt;ul&gt;
+&lt;li&gt;deepseek-v4-flash&lt;/li&gt;
+&lt;li&gt;deepseek-v4-pro&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具体可以自己参照&lt;a class=&#34;link&#34; href=&#34;https://api-docs.deepseek.com/zh-cn/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;index.assets/image-20260425170100006.png&#34; alt=&#34;image-20260425170100006&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4测试&#34;&gt;4.测试
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;点击进行测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;index.assets/image-20260425170550372.png&#34; alt=&#34;image-20260425170550372&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;或者：&lt;/p&gt;
+&lt;img src=&#34;index.assets/image-20260425170228486.png&#34; alt=&#34;image-20260425170228486&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;可以看到配置成功了。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>AI相关概念简单介绍</title>
+        <link>https://katomegumi.site/p/ai-intruction/</link>
+        <pubDate>Mon, 09 Mar 2026 19:29:23 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/ai-intruction/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;概念都是个人理解，如有错误欢迎指出。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;llm-大语言模型&#34;&gt;LLM (大语言模型)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;诞生&lt;/strong&gt;：分为两个阶段
+&lt;ul&gt;
+&lt;li&gt;训练&lt;/li&gt;
+&lt;li&gt;推理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;涌现&lt;/strong&gt;: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;token词元&#34;&gt;Token（词元）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：是LLM（大语言模型）的&lt;strong&gt;最小语义单元&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：token是什么？其实就是代表&lt;strong&gt;单词的的编号&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tokenizer分词器&#34;&gt;Tokenizer（分词器）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：把文本切成一个个 &lt;strong&gt;token&lt;/strong&gt;（子词 / 字 / 符号），再将token映射成&lt;code&gt;token ID&lt;/code&gt;（整数编号）；最后就变成了一串&lt;strong&gt;数字编号&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;embedding嵌入&#34;&gt;Embedding（嵌入）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：Embedding就是大模型自己的语言，注意：embedding模型属于LLM模型中的一部分。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：把每个 token ID 转换成一个 &lt;strong&gt;高维向量&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;为什么要引入高维数据向量&#34;&gt;为什么要引入高维数据向量？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;主要是为了从更多的维度描述单词。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;例如：维度1表示颜色；维度2表示形状；苹果和西瓜在向量坐标中虽然&lt;strong&gt;编号不同&lt;/strong&gt;；但是&lt;strong&gt;空间位置&lt;/strong&gt;很相近。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;function-call方法调用&#34;&gt;Function Call(方法调用)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;本质&lt;/strong&gt;：工具调用函数。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：允许模型在需要时调用预定义的函数来获取数据或执行操作。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;缺点&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;Function Call的&lt;strong&gt;平台依赖性强&lt;/strong&gt;，没有一个统一的标准，不能做到即插即用。&lt;/li&gt;
+&lt;li&gt;一般是本地程序调用，外界无法使用；也因此MCP应运而生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;mcp模型上下文协议&#34;&gt;MCP(模型上下文协议)
+&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://modelcontextprotocol.io/docs/getting-started/intro&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;什么是mcp&#34;&gt;什么是MCP？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：MCP模型上下文协议 定义了应用程序和 AI 模型之间交换上下文信息的方式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;作用&lt;/strong&gt;：主要是为了&lt;strong&gt;增强&lt;/strong&gt;AI的能力，作为使用者通过MCP我们可以轻松接入别人已经写好的服务。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：MCP只是一个标准协议，并不提供特定的服务，你可以按照要求编写自己的MCP服务。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;mcp架构&#34;&gt;MCP架构
+&lt;/h3&gt;&lt;p&gt;分为：客户端、服务端；客户端可以连接多个MCP服务。&lt;/p&gt;
+&lt;h2 id=&#34;agent-skills-智能体技能&#34;&gt;Agent Skills (智能体技能)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;本质&lt;/strong&gt;：Agent Skills 的本质不是工具，而是：&lt;/p&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;行为规范 + 专业知识 + 使用时机的组合&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;组成&lt;/strong&gt;：其实就是一个文件夹(相当于打包好的提示词工程)；里面必须有一个 SKILL.md 文件（包含说明和元数据），可选其他资源文件（如脚本、示例、参考文档）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;使用&lt;/strong&gt;：Agent Skills 的关键是渐进式披露，分三层加载：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;技能发现&lt;/strong&gt; ：AI 先读取所有技能的元数据（name 和 description），判断任务是否相关，注意：这些元数据始终在系统提示中。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载核心指令&lt;/strong&gt; ： 如果相关，AI 自动读取 SKILL.md 的正文内容，获取详细指导。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加载资源文件&lt;/strong&gt; ：按需读取，执行脚本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;Agent Skills和MCP的区别?&lt;/p&gt;
+&lt;p&gt;MCP需要把完整的MCP协议规范告诉AI，占用大量上下文，即使你不去用他，如果你装的MCP多，就没多少可用的上下文了，必须手动控制启用和禁用以节省上下文空间。skills相当于打包好的一套提示词工程，包含提示词、文档、脚本、工具，然后把简单的元数据告诉AI。&lt;/p&gt;
+&lt;p&gt;简单来讲：&lt;br&gt;
+Agent Skills相当于&lt;strong&gt;懒加载&lt;/strong&gt;，一个是按需加载自动决定上下文。&lt;br&gt;
+MCP是&lt;strong&gt;启动就加载&lt;/strong&gt;，并且每次请求都会占用上下文。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;大模型的幻觉&#34;&gt;大模型的幻觉
+&lt;/h2&gt;&lt;h3 id=&#34;1什么是幻觉&#34;&gt;1.什么是幻觉？
+&lt;/h3&gt;&lt;p&gt;其实就是大模型生成不合理或完全虚构的内容。&lt;/p&gt;
+&lt;h3 id=&#34;2为什么会出现幻觉&#34;&gt;2.为什么会出现幻觉？
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;一方面，模型的训练数据中可能包含错误或过时的信息。&lt;/li&gt;
+&lt;li&gt;另一方面，大语言模型本质上是 &lt;strong&gt;预测下一个词的概率&lt;/strong&gt; 模型，它们倾向于生成流畅而未必准确的内容。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;rag检索增强生成&#34;&gt;RAG（检索增强生成）
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;作用&lt;/strong&gt;：可以解决‌大模型的知识时效性限制和幻觉问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现步骤&lt;/strong&gt;：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;前置准备&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;文档收集和切割&lt;/li&gt;
+&lt;li&gt;向量转换和存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;实现增强&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;文档过滤和检索&lt;/li&gt;
+&lt;li&gt;查询增强和关联&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：RAG进行向量转换的Embedding模型和LLM的Embedding的模型并不一致。LLM的Embedding模型是随着训练一起出来的，而RAG进行向量转换的Embedding模型是需要单独去训练的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;差异&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RAG Embedding：对整段文本做语义压缩，输出一个向量。&lt;/li&gt;
+&lt;li&gt;LLM Embedding：对每个 token 编码，再通过 Transformer 整体理解整句话。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;ai-agent智能体&#34;&gt;AI Agent(智能体)
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：会自己思考 + 能自己行动的 AI。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分类&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;反应式智能体&lt;/li&gt;
+&lt;li&gt;有限规划智能体&lt;/li&gt;
+&lt;li&gt;自主规划智能体&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;cot思维链&#34;&gt;CoT（思维链）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：让 AI 像人类一‌样 “思考” 的技术，帮助 AI 在处理复杂问题时能够先思考后执行。(思维链的实现主要是通过prompt实现)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;agent-loop执行循环&#34;&gt;Agent Loop（执行循环）
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;定义&lt;/strong&gt;：智能体在没有用户输入‎的情况下，自主重复执‌行推理和工具调用的过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;react模式思考---行动---观察&#34;&gt;React模式（思考 - 行动 - 观察）
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;先思考执行需要哪些工具&lt;/li&gt;
+&lt;li&gt;执行工具&lt;/li&gt;
+&lt;li&gt;根据工具结果判断是否完成该任务&lt;/li&gt;
+&lt;li&gt;循环执行&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>【AI】MCP入门学习</title>
+        <link>https://katomegumi.site/p/aimcp%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</link>
+        <pubDate>Sat, 09 Aug 2025 14:25:15 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/aimcp%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0/</guid>
+        <description>&lt;h2 id=&#34;mcp是什么&#34;&gt;MCP是什么？
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mcp-docs.cn/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MCP官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;MCP 是一个开放协议，它为应用程序向 LLM 提供上下文的方式进行了标准化。你可以将 MCP 想象成 AI 应用程序的 USB-C 接口。就像 USB-C 为设备连接各种外设和配件提供了标准化的方式一样，MCP 为 AI 模型连接各种数据源和工具提供了标准化的接口。&lt;/li&gt;
+&lt;li&gt;MCP Servers 服务器每个专精一个服务。比如有的读取文件，有的访问浏览器。MCP server通常就是本地的nodejs或者python程序。其实就相当于是api，只不是是实现了MCP协议进行标准化罢了。因此你也可以自己写一个MCP服务器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;简单来说MCP就是AI大模型的&lt;strong&gt;标准化工具箱&lt;/strong&gt;。大模型可以利用这些工具与外界互动。打一个比方，在平常我们使用AI需要手动截图或者复制问题到AI窗口进行对话。而MCP通过标准化的协议。可以自动帮助我们完成这些工作。MCP Server相当于AI与外部工具的中间层，代替人类访问并且操作外部工具。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;使用mcp&#34;&gt;使用MCP
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;需要一个支持MCP协议的AI客户端。(Cursor,cline,cherry studio，WindSurf等)&lt;/li&gt;
+&lt;li&gt;对应的 MCP 服务器环境(node,python等)&lt;/li&gt;
+&lt;li&gt;以及你想使用的MCP服务器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;这里我们就使用node环境和cline客户端。在vscode的扩展中下载cline。&lt;a class=&#34;link&#34; href=&#34;https://github.com/cline/cline/blob/main/locales/zh-cn/README.md&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;cline官方文档&lt;/a&gt;下载完成后。配置API。这里用的Open Router。然后再市场上选择你想下载的MCP服务&lt;/p&gt;
+&lt;img src=&#34;image-20250809154758906.png&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;p&gt;这里使用github服务做一个例子。&lt;/p&gt;
+&lt;img src=&#34;image-20250809154939827-17547257894743.png&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;p&gt;点击安装。他会自动打开一个AI聊天窗口。会指导你下载MCP服务。跟着来就行。这里需要获取你的github账号的token&lt;/p&gt;
+&lt;img src=&#34;image-20250809162659945.png&#34; style=&#34;zoom: 80%;&#34; /&gt;
+&lt;p&gt;可以自行设定该token具有哪些权限。&lt;/p&gt;
+&lt;img src=&#34;image-20250809163304467.png&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;获取到token后自己填写到配置文件中或者将token输入给AI聊天框让AI给你配置。这里可以选用你自己的环境。比如docker、linux的sh。注意这里如果你是Windows可能需要修改 &lt;strong&gt;MCP服务器&lt;/strong&gt; 的连接配置。实际上这个配置文件是最重要的。直接编写这个配置文件一样可以完成对应MCP服务器的配置。&lt;/p&gt;
+&lt;img src=&#34;image-20250809164302649-175472898632112.png&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;command&lt;/code&gt;是指定启动服务器的 “基础命令”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;args&lt;/code&gt; 是 &lt;code&gt;command&lt;/code&gt; 的参数列表，用于拼接完整的启动命令。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;MCP服务器显示绿色表明运行正常&lt;/p&gt;
+&lt;h3 id=&#34;测试一下&#34;&gt;测试一下
+&lt;/h3&gt;&lt;p&gt;在实际使用。我们不需要指定具体的MCP服务。AI会智能的从工具箱中寻找。自动进行使用。&lt;/p&gt;
+&lt;img src=&#34;image-20250809170359332.png&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;可以发现成功的运行了。&lt;/p&gt;
+&lt;h2 id=&#34;总结&#34;&gt;总结
+&lt;/h2&gt;&lt;p&gt;MCP的本质是 客户端调用了本地的命令行。然后调用本地运行的nodejs程序或者python(其实就是取决于你的MCP服务器用什么写的)然后程序执行了操作。将结果返回。&lt;/p&gt;
+&lt;p&gt;MCP合集网站： &lt;a class=&#34;link&#34; href=&#34;https://smithery.ai/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://smithery.ai/&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
