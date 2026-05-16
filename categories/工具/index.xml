@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>工具 on 划船听水声</title>
+        <link>https://katomegumi.site/categories/%E5%B7%A5%E5%85%B7/</link>
+        <description>Recent content in 工具 on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Sat, 16 May 2026 19:51:50 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>JMeter基本使用</title>
+        <link>https://katomegumi.site/p/tool-jmeter-use/</link>
+        <pubDate>Sat, 02 May 2026 15:11:23 +0900</pubDate>
+        
+        <guid>https://katomegumi.site/p/tool-jmeter-use/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>JMeter下载安装</title>
+        <link>https://katomegumi.site/p/tool-jmeter-download/</link>
+        <pubDate>Fri, 01 May 2026 15:11:23 +0900</pubDate>
+        
+        <guid>https://katomegumi.site/p/tool-jmeter-download/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;由于写了Redis+lua脚本限流，想要测试是否有效，需要使用JMeter进行测试。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1jmeter简介&#34;&gt;1.JMeter简介
+&lt;/h2&gt;&lt;p&gt;JMeter是一个纯Java编写的开源软件，主要用于进行&lt;strong&gt;性能测试&lt;/strong&gt;和&lt;strong&gt;功能测试&lt;/strong&gt;。它支持测试的应用/服务/协议包括Web (HTTP, HTTPS)、SOAP/REST Webservices、FTP、Database via JDBC等。我们最常使用的是HTTP和HTTPS协议。&lt;/p&gt;
+&lt;h2 id=&#34;2安装配置搭建&#34;&gt;2.安装、配置、搭建
+&lt;/h2&gt;&lt;h3 id=&#34;21环境&#34;&gt;2.1环境
+&lt;/h3&gt;&lt;p&gt;由于Jemter是基于java语言开发的，所以使用Jemter需要安装JDK/JRE 。&lt;/p&gt;
+&lt;h3 id=&#34;22安装&#34;&gt;2.2安装
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://jmeter.apache.org/download_jmeter.cgi&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;23环境配置&#34;&gt;2.3环境配置
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;在环境变量中配置 &lt;strong&gt;JMETER_HOME&lt;/strong&gt;：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204119753.png&#34;
+	width=&#34;1043&#34;
+	height=&#34;276&#34;
+	srcset=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204119753_hu8773914152080395550.png 480w, https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204119753_hu8662370141028897096.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260508204119753&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;377&#34;
+		data-flex-basis=&#34;906px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;系统变量找到Path双击：&lt;strong&gt;%JMETER_HOME%\bin&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204349928.png&#34;
+	width=&#34;845&#34;
+	height=&#34;813&#34;
+	srcset=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204349928_hu10547280387600002683.png 480w, https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204349928_hu1243848778159990602.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260508204349928&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;249px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;查看是否配置成功&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;运行-&amp;gt; &lt;code&gt;cmd-&amp;gt; jmeter -v&lt;/code&gt; 命令查看是否能查看到Jmeter版本信息&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;运行-&amp;gt; &lt;code&gt;cmd-&amp;gt;jmeter&lt;/code&gt; 命令查看是否能启动jmeter&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204503666.png&#34;
+	width=&#34;1746&#34;
+	height=&#34;1060&#34;
+	srcset=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204503666_hu14060929526663095274.png 480w, https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204503666_hu17761955055005005925.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260508204503666&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;164&#34;
+		data-flex-basis=&#34;395px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;启动 Jmeter
+&lt;ul&gt;
+&lt;li&gt;进入Jmeter 文件夹，点击 &lt;code&gt;jmeter.bat&lt;/code&gt; 文件，运行JMeter&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cmd-&amp;gt;jmeter&lt;/code&gt; 命令查看是否能启动jmeter&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：不管用使用哪一种方式打开，都会打开一个cmd窗口。如果关闭这个cmd窗口，打开的&lt;code&gt;jmeter&lt;/code&gt;也会被关闭。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;设置中文&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204852023.png&#34;
+	width=&#34;2041&#34;
+	height=&#34;1112&#34;
+	srcset=&#34;https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204852023_hu12295094448327337799.png 480w, https://katomegumi.site/p/tool-jmeter-download/index.assets/image-20260508204852023_hu9614038336456638499.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260508204852023&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;183&#34;
+		data-flex-basis=&#34;440px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

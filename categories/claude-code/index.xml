@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Claude Code on 划船听水声</title>
+        <link>https://katomegumi.site/categories/claude-code/</link>
+        <description>Recent content in Claude Code on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Sat, 16 May 2026 19:51:50 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/claude-code/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Claude Code的基本操作</title>
+        <link>https://katomegumi.site/p/claude-code-study/</link>
+        <pubDate>Sat, 25 Apr 2026 18:42:53 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/claude-code-study/</guid>
+        <description>&lt;h2 id=&#34;1claude-code介绍&#34;&gt;1.Claude code介绍
+&lt;/h2&gt;&lt;p&gt;Claude Code 是一个代理编码工具，可以读取你的代码库、编辑文件、运行命令，并与你的开发工具集成。可在终端、IDE、桌面应用和浏览器中使用。注意：Claude Code 是 Agent（智能体工具），不是 Chat（聊天工具）。&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://code.claude.com/docs/zh-CN/overview&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方中文文档&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2三种模式&#34;&gt;2.三种模式
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;三种模式（通过shift+tab切换）
+&lt;ul&gt;
+&lt;li&gt;默认模式&lt;/li&gt;
+&lt;li&gt;同意模式&lt;/li&gt;
+&lt;li&gt;计划模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以在启动Claude code的时候使用&lt;code&gt;--dangerously-skip-permissions&lt;/code&gt; 这个命令，可以跳过所有安全检查，能让 AI 完全自主执行操作。&lt;/p&gt;
+&lt;h2 id=&#34;3基本操作&#34;&gt;3.基本操作
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;/powerup 启动一个由浅入深的交互式教程（共10级），带你系统学习Claude Code的各项功能&lt;/li&gt;
+&lt;li&gt;claude -c 继续之前的对话&lt;/li&gt;
+&lt;li&gt;进入会话后双击esc可以进行回滚操作&lt;/li&gt;
+&lt;li&gt;/init 项目初始化，扫描当前项目并生成 CLAUDE.md 文件&lt;/li&gt;
+&lt;li&gt;/model 切换模型&lt;/li&gt;
+&lt;li&gt;/status 查看状态&lt;/li&gt;
+&lt;li&gt;/clear 完全清除当前会话的对话历史，避免上下文干扰&lt;/li&gt;
+&lt;li&gt;/export 将当前整个对话（包括提示词、回复、工具调用等）导出为Markdown文件&lt;/li&gt;
+&lt;li&gt;/rename 为当前会话命名，方便后续通过名称恢复和管理&lt;/li&gt;
+&lt;li&gt;/btw    主会话外另开一个侧边聊天，用于询问与当前主任务无关的问题而不干扰主会话的上下文。&lt;/li&gt;
+&lt;li&gt;/compact 压缩上下文&lt;/li&gt;
+&lt;li&gt;/memory 修改claude.md文件，项目或者用户都可以&lt;/li&gt;
+&lt;li&gt;/resume 选择历史对话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote class=&#34;alert alert-warning&#34;&gt;
+  &lt;p&gt;&lt;p&gt;resume 的行为在 v2.1.108 版本中被修改了：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;之前：/resume 默认显示所有项目的全部会话&lt;/li&gt;
+&lt;li&gt;之后：/resume 默认只显示当前目录的会话&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;双击esc：只能回滚claude code自己写入的文件，终端生成的文件就无法回滚&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>使用cc-switch配置claude code 使用DeepSeek V4 Pro</title>
+        <link>https://katomegumi.site/p/cc-switch/</link>
+        <pubDate>Sat, 25 Apr 2026 16:42:53 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/cc-switch/</guid>
+        <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;
+  &lt;p&gt;&lt;p&gt;在2026.4.24 DeepSeek官方发布了最新一代大模型，也就是DeepSeek V4。&lt;br&gt;
+那我们当然要来试一试啦，毕竟是国产大模型嘛，然后还有就是便宜。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;1cc-switch是什么&#34;&gt;1.cc-switch是什么？
+&lt;/h2&gt;&lt;p&gt;官方解释：现代 AI 编程依赖于 Claude Code、Codex、Gemini CLI、OpenCode 和 OpenClaw 等 CLI 工具——但每个工具都有自己的配置格式。切换 API 供应商意味着手动编辑 JSON、TOML 或 &lt;code&gt;.env&lt;/code&gt; 文件，而在多个工具之间缺乏一个统一管理 MCP, SKILLS 的方式。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;CC Switch&lt;/strong&gt; 为你提供一个桌面应用来管理所有五个 CLI 工具。&lt;/p&gt;
+&lt;h2 id=&#34;2下载cc-switch&#34;&gt;2.下载cc-switch
+&lt;/h2&gt;&lt;p&gt;选择对应版本下载：&lt;a class=&#34;link&#34; href=&#34;https://github.com/farion1231/cc-switch/releases/tag/v3.14.1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载地址&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;3配置&#34;&gt;3.配置
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;添加供应商，选择deepseek。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;index.assets/image-20260425165435471.png&#34; alt=&#34;image-20260425165435471&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;填写API kye，需要去&lt;a class=&#34;link&#34; href=&#34;https://platform.deepseek.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;deepseek开放平台获取&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;index.assets/image-20260425165756475.png&#34; alt=&#34;image-20260425165756475&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;设置模型可选：
+&lt;ul&gt;
+&lt;li&gt;deepseek-v4-flash&lt;/li&gt;
+&lt;li&gt;deepseek-v4-pro[1m]&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：是&lt;code&gt;deepseek-v4-pro[1m]&lt;/code&gt; 不要忘记**[1m]** ，不然没有1m上下文长度，图片是之前的懒得修改了。&lt;/p&gt;
+&lt;p&gt;具体可以自己参照&lt;a class=&#34;link&#34; href=&#34;https://api-docs.deepseek.com/zh-cn/guides/agent_integrations/claude_code&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&#34;index.assets/image-20260425170100006.png&#34; alt=&#34;image-20260425170100006&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;ul&gt;
+&lt;li&gt;保存&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;4测试&#34;&gt;4.测试
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;点击进行测试&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;index.assets/image-20260425170550372.png&#34; alt=&#34;image-20260425170550372&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;或者：&lt;/p&gt;
+&lt;img src=&#34;index.assets/image-20260425174946076.png&#34; style=&#34;zoom:50%;&#34; /&gt;
+&lt;p&gt;可以看到配置成功了。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
