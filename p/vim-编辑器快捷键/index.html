@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Vim备忘录">
+<title>Vim 编辑器快捷键</title>
+
+<link rel='canonical' href='https://katomegumi.site/p/vim-%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/'>
+
+<link rel="stylesheet" href="/scss/style.min.eccaf3949da47938aa28517cad86a8e4c2f2a612a7d30ef35dae23362879a6b4.css"><meta property='og:title' content="Vim 编辑器快捷键">
+<meta property='og:description' content="Vim备忘录">
+<meta property='og:url' content='https://katomegumi.site/p/vim-%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/'>
+<meta property='og:site_name' content='划船听水声'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-06-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-08-05T10:23:04&#43;08:00'/>
+<meta name="twitter:title" content="Vim 编辑器快捷键">
+<meta name="twitter:description" content="Vim备忘录">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16246849853105640066.webp" width="300"
+                            height="332" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">划船听水声</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/429965261?spm_id_from=333.1007.0.0'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z"></path> <path d="M8 3l2 3"></path> <path d="M16 3l-2 3"></path> <path d="M9 13v-2"></path> <path d="M15 11v2"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/munakanisena'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#vim-编辑器快捷键">Vim 编辑器快捷键</a>
+      <ul>
+        <li><a href="#一命令模式normal-mode">一、命令模式（Normal Mode）</a>
+          <ul>
+            <li><a href="#1-进入插入模式从命令模式切换到插入模式">1. 进入插入模式（从命令模式切换到插入模式）</a></li>
+            <li><a href="#2-返回命令模式">2. 返回命令模式</a></li>
+            <li><a href="#3-光标移动">3. 光标移动</a></li>
+            <li><a href="#4-翻页页面切换">4. 翻页（页面切换）</a></li>
+            <li><a href="#5-搜索">5. 搜索</a></li>
+            <li><a href="#6-常用编辑操作复制粘贴删除撤销">6. 常用编辑操作（复制、粘贴、删除、撤销）</a></li>
+            <li><a href="#复制yank">复制（yank）</a></li>
+            <li><a href="#粘贴paste">粘贴（paste）</a></li>
+            <li><a href="#删除delete">删除（delete）</a></li>
+            <li><a href="#撤销与重做">撤销与重做</a></li>
+          </ul>
+        </li>
+        <li><a href="#二扩展命令模式末行模式">二、扩展命令模式（末行模式）</a>
+          <ul>
+            <li><a href="#1-常规操作保存退出设置">1. 常规操作（保存、退出、设置）</a></li>
+            <li><a href="#2-替换操作s--substitute">2. 替换操作（<code>s</code> = substitute）</a></li>
+          </ul>
+        </li>
+        <li><a href="#三可视化模式">三、可视化模式</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+        <a
+                href="/categories/linux/"
+                
+        >
+            Linux
+        </a>
+        
+        <a
+                href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                
+        >
+            学习笔记
+        </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/vim-%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">Vim 编辑器快捷键</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">Vim备忘录</h3>
+        
+    </div>
+
+       
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2026-06-01</time>
+        </div>
+         
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 3 分钟
+            </time>
+        </div>
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494zM528.1 472h-32.2c-5.5 0-10.3 3.7-11.6 9.1L434.6 680l-46.1-198.7c-1.3-5.4-6.1-9.3-11.7-9.3h-35.4a12.02 12.02 0 0 0-11.6 15.1l74.2 276c1.4 5.2 6.2 8.9 11.6 8.9h32c5.4 0 10.2-3.6 11.6-8.9l52.8-197l52.8 197c1.4 5.2 6.2 8.9 11.6 8.9h31.8c5.4 0 10.2-3.6 11.6-8.9l74.4-276a12.04 12.04 0 0 0-11.6-15.1H647c-5.6 0-10.4 3.9-11.7 9.3l-45.8 199.1l-49.8-199.3c-1.3-5.4-6.1-9.1-11.6-9.1z"
+          fill="currentColor"></path>
+</svg>
+            <time class="article-time--wordcount">
+                1204字
+            </time>
+        </div>
+        
+    </footer>
+     
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="vim-编辑器快捷键">Vim 编辑器快捷键
+</h2><p>前言：Vim 有三种基本模式</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">模式</th>
+          <th style="text-align: left">名称</th>
+          <th style="text-align: left">进入方法</th>
+          <th style="text-align: left">退出方法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><strong>命令模式（Normal）</strong></td>
+          <td style="text-align: left">默认模式，用于浏览、复制、删除、移动光标等</td>
+          <td style="text-align: left">启动 Vim 时默认进入；按 <code>Esc</code> 可从其他模式返回</td>
+          <td style="text-align: left">按 <code>:</code> 进入扩展命令模式；按 <code>i</code>/<code>a</code>/<code>o</code> 等进入插入模式</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>插入模式（Insert）</strong></td>
+          <td style="text-align: left">文本输入模式，可像普通编辑器一样键入内容</td>
+          <td style="text-align: left">在命令模式下按 <code>i</code>、<code>a</code>、<code>o</code>、<code>I</code>、<code>A</code>、<code>O</code>、<code>s</code>、<code>S</code> 等</td>
+          <td style="text-align: left">按 <code>Esc</code> 返回命令模式</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><strong>扩展命令模式（Ex / Cmdline）</strong></td>
+          <td style="text-align: left">执行保存、退出、替换、设置等命令</td>
+          <td style="text-align: left">在命令模式下按 <code>:</code>（冒号）</td>
+          <td style="text-align: left">按 <code>Esc</code> 返回命令模式；或执行 <code>:q</code>、<code>:wq</code>、<code>:q!</code> 等退出 Vim</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="一命令模式normal-mode">一、命令模式（Normal Mode）
+</h3><h4 id="1-进入插入模式从命令模式切换到插入模式">1. 进入插入模式（从命令模式切换到插入模式）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">英文助记</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>a</code></td>
+          <td style="text-align: left">append</td>
+          <td style="text-align: left">在当前光标<strong>之后</strong>插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>A</code></td>
+          <td style="text-align: left">append</td>
+          <td style="text-align: left">在当前行<strong>末尾</strong>插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>i</code></td>
+          <td style="text-align: left">insert</td>
+          <td style="text-align: left">在当前光标<strong>位置</strong>插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>I</code></td>
+          <td style="text-align: left">insert</td>
+          <td style="text-align: left">在当前行<strong>开头</strong>插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>o</code></td>
+          <td style="text-align: left">open</td>
+          <td style="text-align: left">在当前行<strong>下方</strong>新建一行并插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>O</code></td>
+          <td style="text-align: left">open</td>
+          <td style="text-align: left">在当前行<strong>上方</strong>新建一行并插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>s</code></td>
+          <td style="text-align: left">switch</td>
+          <td style="text-align: left">删除当前光标处的字符并插入</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>S</code></td>
+          <td style="text-align: left">switch</td>
+          <td style="text-align: left">删除当前行所有字符并插入</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="2-返回命令模式">2. 返回命令模式
+</h4><ul>
+<li><code>Esc</code> —— 任何模式下按 <code>Esc</code> 均可回到命令模式</li>
+</ul>
+<h4 id="3-光标移动">3. 光标移动
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>←</code> 或 <code>h</code></td>
+          <td style="text-align: left">向左移动一格</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>↓</code> 或 <code>j</code></td>
+          <td style="text-align: left">向下移动一行</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>↑</code> 或 <code>k</code></td>
+          <td style="text-align: left">向上移动一行</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>→</code> 或 <code>l</code></td>
+          <td style="text-align: left">向右移动一格</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>0</code> 或 <code>^</code></td>
+          <td style="text-align: left">移动到当前行开头</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>$</code></td>
+          <td style="text-align: left">移动到当前行结尾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>PgUp</code></td>
+          <td style="text-align: left">向上翻一页</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>PgDn</code></td>
+          <td style="text-align: left">向下翻一页</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>gg</code></td>
+          <td style="text-align: left">跳到文件<strong>首行</strong></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>G</code></td>
+          <td style="text-align: left">跳到文件<strong>末行</strong></td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="4-翻页页面切换">4. 翻页（页面切换）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">助记</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>Ctrl + f</code></td>
+          <td style="text-align: left">forward</td>
+          <td style="text-align: left">向下翻一页</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Ctrl + b</code></td>
+          <td style="text-align: left">backward</td>
+          <td style="text-align: left">向上翻一页</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Ctrl + u</code></td>
+          <td style="text-align: left">up</td>
+          <td style="text-align: left">向上翻半页</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Ctrl + d</code></td>
+          <td style="text-align: left">down</td>
+          <td style="text-align: left">向下翻半页</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="5-搜索">5. 搜索
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>/</code></td>
+          <td style="text-align: left">进入搜索模式，输入关键词后回车开始搜索</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>n</code></td>
+          <td style="text-align: left">向下继续查找下一个匹配</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>N</code></td>
+          <td style="text-align: left">向上继续查找上一个匹配</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="6-常用编辑操作复制粘贴删除撤销">6. 常用编辑操作（复制、粘贴、删除、撤销）
+</h4><h4 id="复制yank">复制（yank）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>yy</code></td>
+          <td style="text-align: left">复制当前行</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>nyy</code>（n 为数字）</td>
+          <td style="text-align: left">复制当前行及向下共 n 行</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="粘贴paste">粘贴（paste）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>p</code></td>
+          <td style="text-align: left">在光标后粘贴复制的内容</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>np</code>（n 为数字）</td>
+          <td style="text-align: left">粘贴复制的内容 n 次</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="删除delete">删除（delete）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>dd</code></td>
+          <td style="text-align: left">删除当前行</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>ndd</code>（n 为数字）</td>
+          <td style="text-align: left">删除当前行及向下共 n 行</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>dgg</code></td>
+          <td style="text-align: left">从当前行开始，向上删除至文件首行</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>dG</code></td>
+          <td style="text-align: left">从当前行开始，向下删除至文件末行（注：原文写为 <code>Dg</code>，应为 <code>dG</code>）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>d0</code></td>
+          <td style="text-align: left">从光标位置删除到本行开头</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>d$</code></td>
+          <td style="text-align: left">从光标位置删除到本行结尾</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="撤销与重做">撤销与重做
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">快捷键</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>u</code></td>
+          <td style="text-align: left">撤销上一步操作（undo）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>Ctrl + r</code></td>
+          <td style="text-align: left">重做（撤销撤销）</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="二扩展命令模式末行模式">二、扩展命令模式（末行模式）
+</h3><p>在命令模式下按 <code>:</code> 进入，执行命令后按回车生效。</p>
+<h4 id="1-常规操作保存退出设置">1. 常规操作（保存、退出、设置）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">命令</th>
+          <th style="text-align: left">英文助记</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>:set nu</code></td>
+          <td style="text-align: left">number</td>
+          <td style="text-align: left">显示行号</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:set nonu</code></td>
+          <td style="text-align: left">nonumber</td>
+          <td style="text-align: left">取消显示行号</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:set paste</code></td>
+          <td style="text-align: left">paste</td>
+          <td style="text-align: left">设置粘贴模式（避免自动缩进干扰）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:w</code></td>
+          <td style="text-align: left">write</td>
+          <td style="text-align: left">保存文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:w /newfile</code></td>
+          <td style="text-align: left">write</td>
+          <td style="text-align: left">另存为指定文件（<code>/newfile</code> 为路径）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:q</code></td>
+          <td style="text-align: left">quit</td>
+          <td style="text-align: left">退出（未修改时）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:q!</code></td>
+          <td style="text-align: left">quit!</td>
+          <td style="text-align: left">强制退出，放弃所有修改</td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:wq</code></td>
+          <td style="text-align: left">write &amp; quit</td>
+          <td style="text-align: left">保存并退出</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="2-替换操作s--substitute">2. 替换操作（<code>s</code> = substitute）
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">命令</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left"><code>:s /old/new</code></td>
+          <td style="text-align: left">替换当前行中第一个 <code>old</code> 为 <code>new</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:s /old/new/g</code></td>
+          <td style="text-align: left">替换当前行中所有 <code>old</code> 为 <code>new</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:#,# s/old/new/g</code></td>
+          <td style="text-align: left">在指定行号范围（如 <code>3,10</code>）内替换所有 <code>old</code> 为 <code>new</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:%s /old/new/g</code></td>
+          <td style="text-align: left">在整个文件范围内替换所有 <code>old</code> 为 <code>new</code></td>
+      </tr>
+      <tr>
+          <td style="text-align: left"><code>:#,$s/old/new/g</code></td>
+          <td style="text-align: left">从第 <code>#</code> 行到文件末尾替换所有 <code>old</code> 为 <code>new</code></td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="三可视化模式">三、可视化模式
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">操作类型</th>
+          <th style="text-align: left">操作键</th>
+          <th style="text-align: left">功能</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">字符选择</td>
+          <td style="text-align: left">v</td>
+          <td style="text-align: left">光标经过字符被选中</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">行选择</td>
+          <td style="text-align: left">V</td>
+          <td style="text-align: left">按行选择</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">区块选择</td>
+          <td style="text-align: left">Ctrl + v</td>
+          <td style="text-align: left">按&quot;块&quot;选择</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">复制</td>
+          <td style="text-align: left">y</td>
+          <td style="text-align: left">复制选中内容</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">粘贴</td>
+          <td style="text-align: left">p</td>
+          <td style="text-align: left">粘贴复制内容</td>
+      </tr>
+  </tbody>
+</table></div>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-08-05
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Linux常用指令</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/markdown-learn/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">markdown的使用说明</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/tool-jmeter-download/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">JMeter下载安装</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/ai-harnessengineering/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Harness Engineering 相关知识速记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/claude-code-study/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Claude Code的基本操作</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="munakanisena/munakanisena.github.io"
+    data-repo-id="R_kgDON_Rlkg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDON_Rlks4CnWeY"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading=""
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 划船听水声
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2024089321号-2</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+ 
+      #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+        #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://katomegumi.site/icons/backTop.svg);
+    }
+</style>
+
+
+<script src=https://katomegumi.site/background/sakura.js></script>
+
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://katomegumi.site/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+    </body>
+</html>

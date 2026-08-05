@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Linux on 划船听水声</title>
+        <link>https://katomegumi.site/categories/linux/</link>
+        <description>Recent content in Linux on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 05 Aug 2026 10:23:04 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/linux/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vim 编辑器快捷键</title>
+        <link>https://katomegumi.site/p/vim-%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+        <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://katomegumi.site/p/vim-%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+        <description>&lt;h2 id=&#34;vim-编辑器快捷键&#34;&gt;Vim 编辑器快捷键
+&lt;/h2&gt;&lt;p&gt;前言：Vim 有三种基本模式&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;模式&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;名称&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;进入方法&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;退出方法&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;命令模式（Normal）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;默认模式，用于浏览、复制、删除、移动光标等&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;启动 Vim 时默认进入；按 &lt;code&gt;Esc&lt;/code&gt; 可从其他模式返回&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;按 &lt;code&gt;:&lt;/code&gt; 进入扩展命令模式；按 &lt;code&gt;i&lt;/code&gt;/&lt;code&gt;a&lt;/code&gt;/&lt;code&gt;o&lt;/code&gt; 等进入插入模式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;插入模式（Insert）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;文本输入模式，可像普通编辑器一样键入内容&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在命令模式下按 &lt;code&gt;i&lt;/code&gt;、&lt;code&gt;a&lt;/code&gt;、&lt;code&gt;o&lt;/code&gt;、&lt;code&gt;I&lt;/code&gt;、&lt;code&gt;A&lt;/code&gt;、&lt;code&gt;O&lt;/code&gt;、&lt;code&gt;s&lt;/code&gt;、&lt;code&gt;S&lt;/code&gt; 等&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;按 &lt;code&gt;Esc&lt;/code&gt; 返回命令模式&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;strong&gt;扩展命令模式（Ex / Cmdline）&lt;/strong&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;执行保存、退出、替换、设置等命令&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在命令模式下按 &lt;code&gt;:&lt;/code&gt;（冒号）&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;按 &lt;code&gt;Esc&lt;/code&gt; 返回命令模式；或执行 &lt;code&gt;:q&lt;/code&gt;、&lt;code&gt;:wq&lt;/code&gt;、&lt;code&gt;:q!&lt;/code&gt; 等退出 Vim&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;一命令模式normal-mode&#34;&gt;一、命令模式（Normal Mode）
+&lt;/h3&gt;&lt;h4 id=&#34;1-进入插入模式从命令模式切换到插入模式&#34;&gt;1. 进入插入模式（从命令模式切换到插入模式）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;英文助记&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;a&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;append&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在当前光标&lt;strong&gt;之后&lt;/strong&gt;插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;A&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;append&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在当前行&lt;strong&gt;末尾&lt;/strong&gt;插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;i&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;insert&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在当前光标&lt;strong&gt;位置&lt;/strong&gt;插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;I&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;insert&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在当前行&lt;strong&gt;开头&lt;/strong&gt;插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;o&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;open&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在当前行&lt;strong&gt;下方&lt;/strong&gt;新建一行并插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;O&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;open&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在当前行&lt;strong&gt;上方&lt;/strong&gt;新建一行并插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;s&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;switch&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除当前光标处的字符并插入&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;S&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;switch&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除当前行所有字符并插入&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;2-返回命令模式&#34;&gt;2. 返回命令模式
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Esc&lt;/code&gt; —— 任何模式下按 &lt;code&gt;Esc&lt;/code&gt; 均可回到命令模式&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3-光标移动&#34;&gt;3. 光标移动
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;←&lt;/code&gt; 或 &lt;code&gt;h&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向左移动一格&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;↓&lt;/code&gt; 或 &lt;code&gt;j&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向下移动一行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;↑&lt;/code&gt; 或 &lt;code&gt;k&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向上移动一行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;→&lt;/code&gt; 或 &lt;code&gt;l&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向右移动一格&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;0&lt;/code&gt; 或 &lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;移动到当前行开头&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;移动到当前行结尾&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;PgUp&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向上翻一页&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;PgDn&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向下翻一页&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;gg&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;跳到文件&lt;strong&gt;首行&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;G&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;跳到文件&lt;strong&gt;末行&lt;/strong&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;4-翻页页面切换&#34;&gt;4. 翻页（页面切换）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;助记&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Ctrl + f&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;forward&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向下翻一页&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Ctrl + b&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;backward&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向上翻一页&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Ctrl + u&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;up&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向上翻半页&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Ctrl + d&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;down&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向下翻半页&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;5-搜索&#34;&gt;5. 搜索
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;/&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;进入搜索模式，输入关键词后回车开始搜索&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;n&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向下继续查找下一个匹配&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;N&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;向上继续查找上一个匹配&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;6-常用编辑操作复制粘贴删除撤销&#34;&gt;6. 常用编辑操作（复制、粘贴、删除、撤销）
+&lt;/h4&gt;&lt;h4 id=&#34;复制yank&#34;&gt;复制（yank）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;yy&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;复制当前行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;nyy&lt;/code&gt;（n 为数字）&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;复制当前行及向下共 n 行&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;粘贴paste&#34;&gt;粘贴（paste）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在光标后粘贴复制的内容&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;np&lt;/code&gt;（n 为数字）&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;粘贴复制的内容 n 次&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;删除delete&#34;&gt;删除（delete）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;dd&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除当前行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;ndd&lt;/code&gt;（n 为数字）&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除当前行及向下共 n 行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;dgg&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;从当前行开始，向上删除至文件首行&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;dG&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;从当前行开始，向下删除至文件末行（注：原文写为 &lt;code&gt;Dg&lt;/code&gt;，应为 &lt;code&gt;dG&lt;/code&gt;）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;d0&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;从光标位置删除到本行开头&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;d$&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;从光标位置删除到本行结尾&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;撤销与重做&#34;&gt;撤销与重做
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;快捷键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;u&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;撤销上一步操作（undo）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;Ctrl + r&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;重做（撤销撤销）&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;二扩展命令模式末行模式&#34;&gt;二、扩展命令模式（末行模式）
+&lt;/h3&gt;&lt;p&gt;在命令模式下按 &lt;code&gt;:&lt;/code&gt; 进入，执行命令后按回车生效。&lt;/p&gt;
+&lt;h4 id=&#34;1-常规操作保存退出设置&#34;&gt;1. 常规操作（保存、退出、设置）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;命令&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;英文助记&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:set nu&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;number&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;显示行号&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:set nonu&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;nonumber&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;取消显示行号&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:set paste&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;paste&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置粘贴模式（避免自动缩进干扰）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:w&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;write&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;保存文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:w /newfile&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;write&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;另存为指定文件（&lt;code&gt;/newfile&lt;/code&gt; 为路径）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:q&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;quit&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;退出（未修改时）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:q!&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;quit!&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;强制退出，放弃所有修改&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:wq&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;write &amp;amp; quit&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;保存并退出&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;2-替换操作s--substitute&#34;&gt;2. 替换操作（&lt;code&gt;s&lt;/code&gt; = substitute）
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;命令&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:s /old/new&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;替换当前行中第一个 &lt;code&gt;old&lt;/code&gt; 为 &lt;code&gt;new&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:s /old/new/g&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;替换当前行中所有 &lt;code&gt;old&lt;/code&gt; 为 &lt;code&gt;new&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:#,# s/old/new/g&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在指定行号范围（如 &lt;code&gt;3,10&lt;/code&gt;）内替换所有 &lt;code&gt;old&lt;/code&gt; 为 &lt;code&gt;new&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:%s /old/new/g&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在整个文件范围内替换所有 &lt;code&gt;old&lt;/code&gt; 为 &lt;code&gt;new&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;&lt;code&gt;:#,$s/old/new/g&lt;/code&gt;&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;从第 &lt;code&gt;#&lt;/code&gt; 行到文件末尾替换所有 &lt;code&gt;old&lt;/code&gt; 为 &lt;code&gt;new&lt;/code&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;三可视化模式&#34;&gt;三、可视化模式
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;操作类型&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;操作键&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;功能&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;字符选择&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;v&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;光标经过字符被选中&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;行选择&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;V&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;按行选择&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;区块选择&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;Ctrl + v&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;按&amp;quot;块&amp;quot;选择&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;复制&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;y&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;复制选中内容&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;粘贴&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;p&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;粘贴复制内容&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+        </item>
+        <item>
+        <title>Linux常用指令</title>
+        <link>https://katomegumi.site/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</link>
+        <pubDate>Sun, 17 May 2026 00:00:00 +0000</pubDate>
+        
+        <guid>https://katomegumi.site/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/</guid>
+        <description>&lt;h2 id=&#34;linux的常用命令&#34;&gt;Linux的常用命令:
+&lt;/h2&gt;&lt;p&gt;终端命令格式&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;command&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;-options&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;parameter&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;command ：命令名，相应功能的英文单词或单词的缩写&lt;/li&gt;
+&lt;li&gt;[-options] ：选项，可用来对命令进行控制，也可以省略&lt;/li&gt;
+&lt;li&gt;parameter ：传给命令的&lt;strong&gt;参数&lt;/strong&gt;，可以是 零个、一个 或者 多个&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;常用命令&#34;&gt;常用命令
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;命令&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;描述&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ls&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;查看当前目录下的文件列表。 -l 显示详细信息；-a 显示包括隐藏文件在内的所有文件；-h 以人类可读方式显示大小；-t 按修改时间排序；-r 逆序显示；-i 查看文件的 inode&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cat&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cat 文件名 查看该文件的内容。-b 对非空输出行编号；-n 对输出的所有行编号&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;more&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;分屏显示文件内容&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;grep&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;搜索文本文件内容。-n 显示匹配行及行号；-v 显示不包含匹配文本的所有行（相当于求反）；-i 忽略大小写&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;clear&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;清屏&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ln&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;ln (-s 表示软连接，不加为硬链接) 被指向文件 link文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;rm&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;rm 文件名 删除该文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;chmod&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;修改文件权限。 符号模式：chmod +(r/w/x) 文件名 增加权限，- 减少权限；可用 u/g/o 分别指定所有者/组/其他用户，如 ug+rw。 数字模式：r=4, w=2, x=1，如 chmod 777 test1.txt&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;touch&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;更新文件的修改时间为当前时间；若文件不存在，则创建空文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;↑/↓ 方向键&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;在终端中查找历史输入过的命令&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;pwd&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;显示当前所在目录的路径&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cd&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cd 目录 切换工作目录，例如 cd / 切换到根目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cp&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;复制文件或目录：cp 源文件 目标文件。 复制目录需加 -r 参数递归复制，如 cp -r folder1 foldercopy&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;mv&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;重命名文件或移动文件：mv 文件1 文件2（文件1被重命名为文件2 或 移动到新位置）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;mkdir&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;创建目录：mkdir 目录名。 -p 可创建多级目录，如 mkdir -p folder1/folder2/folder3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;du&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;查看文件和目录的大小，以及目录结构。 -h 以人类可读方式显示（如自动加 K、M 等单位）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;tree&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;以树状图形式显示目录结构（非 Linux 自带命令，需手动安装）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;find&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;find [路径] -name &amp;ldquo;*.py&amp;rdquo; 在指定路径下（含子目录）查找所有扩展名为 .py 的文件&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;打包解包-压缩-解压缩&#34;&gt;打包/解包 、压缩 /解压缩
+&lt;/h3&gt;&lt;p&gt;&lt;code&gt;tar&lt;/code&gt; 此命令可以 &lt;strong&gt;把一系列文件&lt;/strong&gt; 打包到 一个&lt;strong&gt;大文件&lt;/strong&gt;中，也可以把一个 打包的大文件恢复成一系列文件，注意不是压缩。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 打包文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -cvf 打包文件.tar 被打包的文件／路径...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解包文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -xvf 打包文件.tar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;tar选项说明：&lt;/strong&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;选项&lt;/th&gt;
+          &lt;th&gt;含义&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;c&lt;/td&gt;
+          &lt;td&gt;生成档案文件，创建打包文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;x&lt;/td&gt;
+          &lt;td&gt;解开档案文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;v&lt;/td&gt;
+          &lt;td&gt;列出归档解档的详细过程，显示进度&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;f&lt;/td&gt;
+          &lt;td&gt;指定档案文件名称，f 后面一定是 .tar 文件，注意：必须放选项最后&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;gzip&lt;/code&gt;压缩 tar 打包后的文件，其扩展名一般用 xxx.tar.gz、bzip2(two)压缩 tar 打包后的文件，其扩展名一般用 xxx.tar.bz2&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 压缩文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zcvf 打包文件.tar.gz 被压缩的文件／路径...
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解压缩文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zxvf 打包文件.tar.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 解压缩到指定路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;tar -zxvf 打包文件.tar.gz -C 目标路径
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;如果是bzip2，将z改成j即可
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;软件安装&#34;&gt;软件安装
+&lt;/h3&gt;&lt;p&gt;通过 apt 安装／卸载软件&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 1. 安装软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt install 软件包
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2. 卸载软件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt remove 软件名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 3. 更新已安装的包&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;sudo apt upgrade
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;其他&#34;&gt;其他
+&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;echo 是一个用来输出文本的命令,echo &amp;ldquo;txt&amp;rdquo;/&amp;rsquo;txt&amp;rsquo;/txt 就会在框中输出这段txt，通常会和重定向联合使用&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;重定向 &amp;gt; （&lt;strong&gt;表示输出，会覆盖文件原有的内容&lt;/strong&gt;）和 &amp;raquo;（&lt;strong&gt;表示追加，会将内容追加到已有文件的末尾&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;管道 | :Linux 允许将 一个命令的输出 可以通过管道 做为 另一个命令的输入&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;常用指令&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;more ：分屏显示内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;grep ：在命令执行结果的基础上查询指定的文本&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;系统相关常用命令&#34;&gt;系统相关常用命令
+&lt;/h2&gt;&lt;h3 id=&#34;磁盘信息&#34;&gt;磁盘信息
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;df -h&lt;/td&gt;
+          &lt;td&gt;disk free 显示磁盘剩余空间&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;du -h [目录名]&lt;/td&gt;
+          &lt;td&gt;disk usage 显示目录下的文件大小&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;进程信息&#34;&gt;进程信息
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;ps aux&lt;/td&gt;
+          &lt;td&gt;process status 查看进程的详细状况  a:显示终端上的所有进程，包括其他用户的进程；u:显示进程的详细状态；x：显示没有控制终端的进程&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;top&lt;/td&gt;
+          &lt;td&gt;动态显示运行中的进程并且排序&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;kill [-9] 进程代号&lt;/td&gt;
+          &lt;td&gt;终止指定代号的进程， -9 表示强行终止&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;注意：ps 默认只会显示当前用户通过终端启动的应用程序&lt;/p&gt;
+&lt;h2 id=&#34;用户权限相关命令&#34;&gt;用户权限相关命令
+&lt;/h2&gt;&lt;h3 id=&#34;组管理&#34;&gt;组管理
+&lt;/h3&gt;&lt;p&gt;注意：创建组 / 删除组 的终端命令都需要通过 sudo 执行&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;groupadd 组名&lt;/td&gt;
+          &lt;td&gt;添加组&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;groupdel 组名&lt;/td&gt;
+          &lt;td&gt;删除组&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;cat /etc/group&lt;/td&gt;
+          &lt;td&gt;确认组信息&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;chgrp -R 组名 文件/目录名&lt;/td&gt;
+          &lt;td&gt;递归修改文件/目录的所属组&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;用户管理&#34;&gt;用户管理
+&lt;/h3&gt;&lt;p&gt;注意：创建用户 / 删除用户 / 修改其他用户密码 的终端命令都需要通过 sudo 执行&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;命令格式&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;useradd -m -g 组 用户名&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;新建用户。 -m 自动建立用户家目录； -g 指定用户所在的组（否则会建立一个和用户名同名的组）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;passwd 用户名&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设置用户密码。 如果是普通用户，直接执行 passwd 可以修改自己的账户密码&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;userdel -r 用户名&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;删除用户。 -r 选项会自动删除用户家目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;cat /etc/passwd | grep 用户名&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;确认用户信息。 新建用户后，用户信息会保存在 /etc/passwd 文件中&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4 id=&#34;查看用户信息&#34;&gt;查看用户信息
+&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;id [用户名]&lt;/td&gt;
+          &lt;td&gt;查看用户 UID 和 GID 信息&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;who&lt;/td&gt;
+          &lt;td&gt;查看当前所有登录的用户列表&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;whoami&lt;/td&gt;
+          &lt;td&gt;查看当前登录用户的账户名&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;which&#34;&gt;which
+&lt;/h3&gt;&lt;p&gt;which 命令可以查看执行命令所在位置&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;which ls 
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#输出 /bin/ls&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;切换用户&#34;&gt;切换用户
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;su - 用户名&lt;/td&gt;
+          &lt;td&gt;切换用户，并且切换目录 - 可以切换到用户家目录，否则保持位置不变&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;exit&lt;/td&gt;
+          &lt;td&gt;退出当前登录账户&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;修改文件权限&#34;&gt;修改文件权限
+&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;命令&lt;/th&gt;
+          &lt;th&gt;作用&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;chown&lt;/td&gt;
+          &lt;td&gt;修改拥有者&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;chgrp&lt;/td&gt;
+          &lt;td&gt;修改组&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;chmod&lt;/td&gt;
+          &lt;td&gt;修改权限&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 修改文件|目录的拥有者&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chown 用户名 文件名&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;目录名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 递归修改文件|目录的组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chgrp -R 组名 文件名&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;目录名
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 递归修改文件权限&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;chmod -R &lt;span class=&#34;m&#34;&gt;755&lt;/span&gt; 文件名&lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;目录名
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;在linux中需知&#34;&gt;在Linux中需知
+&lt;/h2&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;目录&lt;/th&gt;
+          &lt;th style=&#34;text-align: left&#34;&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/bin&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;用户二进制文件（基本命令）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/boot&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;启动加载器相关文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/sbin&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;系统二进制文件（管理员命令）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/tmp&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;临时文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/etc&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;配置文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/usr&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;用户程序与数据&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/dev&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;设备文件&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/var&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;可变文件（日志、缓存等）&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/home&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;普通用户家目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/root&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;root 用户家目录&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;/proc&lt;/td&gt;
+          &lt;td style=&#34;text-align: left&#34;&gt;进程信息虚拟文件系统&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;1.以半角英文的点开头的文件和目录都是隐藏的&lt;/p&gt;
+&lt;p&gt;2.ls -l显示更详细信息中第一个信息中的第一个字母(-表示普通文件 d表示目录 l表示链接文件)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一个信息中除了第一个字母后面9个字符表示文件的权限，可以把它们按照三个字母一组来看&lt;/li&gt;
+&lt;li&gt;第一组表示文件所有者的权限(user)&lt;/li&gt;
+&lt;li&gt;第二组表示文件所属组别的权限(group)&lt;/li&gt;
+&lt;li&gt;第三组表示其他用户的权限(other)&lt;/li&gt;
+&lt;li&gt;r可读 w可写 x可执行（rwx） 如果相应的位置上没有相应的权限就会显示一个中杠(-)&lt;/li&gt;
+&lt;li&gt;第二个数字表示文件的硬链接数，如果该文件没有设置过硬链接，那么其本身就是一个硬链接，就是1&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;第一行total+数字表示该目录下文件和子目录中占据了多少个磁盘块&lt;/p&gt;
+&lt;p&gt;3.软链接文件就相当于windows中的快捷方式，不存储任何东西，只是指向那个文件，故存储大小很小&lt;/p&gt;
+&lt;p&gt;4.硬链接本质上是一个指向文件系统中另一个文件的指针，它与原始文件共享相同的i节点&lt;/p&gt;
+&lt;p&gt;5.i节点(inode)是文件系统中一个非常重要的概念，在Linux系统中，每个文件或者目录都有一个唯一的i节点它存储了文件的元数据信息(包括1.文件类型 2.权限 3.所有者 4.文件大小 5.时间戳[文件的创建时间，最后访问时间和最后的修改时间] 6.数据块指针)，系统也是通过这个i节点来识别文件的，硬链接与原始文件共享相同的i节点，也就说明它们共享相同的文件内容(显示存储大小与源文件相同)，源文件和硬链接实际上是同一个文件的不同两个名字&lt;/p&gt;
+&lt;p&gt;6.将文件其中一个硬链接删除，其他的硬链接都还可以正常访问文件&lt;/p&gt;
+&lt;p&gt;7.当将软链接目标文件删除时，软连接就会失效&lt;/p&gt;
+&lt;p&gt;8.软链接可以指向文件和目录，但是硬链接只能指向文件&lt;/p&gt;
+&lt;p&gt;9.windows系统中文件和目录都是以盘符开始的 而Linux系统中文件系统是树状结构，所有文件和目录都是从根目录开始的，根目录的符号是/&lt;/p&gt;
+&lt;p&gt;10.相对路径,相对于当前目录的路径&lt;/p&gt;
+&lt;p&gt;11.绝对路径,从根目录开始的完整路径 可以用一个点来表示当前目录，使用两个点表示上一个目录(如cd ../..返回到上一级目录的再上一级目录中去)&lt;/p&gt;
+&lt;p&gt;12.根目录下 bin存放系统的基本命令和一些二进制可执行文件 etc存放系统核和一些软件的配置文件 home用户家目录&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

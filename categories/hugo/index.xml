@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hugo on 划船听水声</title>
+        <link>https://katomegumi.site/categories/hugo/</link>
+        <description>Recent content in Hugo on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 25 Mar 2026 16:07:25 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>解决Hugo渲染html换行和Typora本地配置换行不一致的问题</title>
+        <link>https://katomegumi.site/p/hugo/gold_mark/</link>
+        <pubDate>Tue, 24 Mar 2026 20:29:23 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/hugo/gold_mark/</guid>
+        <description>&lt;h2 id=&#34;问题&#34;&gt;问题
+&lt;/h2&gt;&lt;p&gt;在Typora中使用&lt;code&gt;shift+Enter&lt;/code&gt;进行软换行，但hugo渲染网页时不会换行。只能使用&lt;code&gt;2个空格+Enter&lt;/code&gt;进行换行/使用&amp;lt;br&amp;gt;进行换行。&lt;/p&gt;
+&lt;h2 id=&#34;原因&#34;&gt;原因
+&lt;/h2&gt;&lt;p&gt;这是因为&lt;strong&gt;Hugo 默认渲染器（Goldmark）的规范行为&lt;/strong&gt;，和 Typora 的本地配置不同。&lt;br&gt;
+Hugo 遵循标准的 CommonMark 规范：单纯的回车（软换行）只会被当作空格处理，必须在行尾加 2 个空格才会渲染成 &lt;code&gt;&amp;lt;br&amp;gt;&lt;/code&gt; 换行。&lt;/p&gt;
+&lt;h2 id=&#34;解决办法&#34;&gt;解决办法
+&lt;/h2&gt;&lt;p&gt;修改 Hugo 配置文件，打开你的 &lt;code&gt;hugo.yaml&lt;/code&gt;文件，添加以下配置：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nt&#34;&gt;markup.goldmark.renderer.hardWraps&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;true&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;img src=&#34;index.assets/image-20260324210341486.png&#34; alt=&#34;image-20260324210341486&#34; style=&#34;zoom:80%;&#34; /&gt;
+&lt;p&gt;&lt;strong&gt;效果&lt;/strong&gt;：之后在 Typora 里按 &lt;code&gt;Shift + Enter&lt;/code&gt;，Hugo 渲染后就能正常换行&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

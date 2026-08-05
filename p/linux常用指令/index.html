@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Linxu指令备忘录">
+<title>Linux常用指令</title>
+
+<link rel='canonical' href='https://katomegumi.site/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/'>
+
+<link rel="stylesheet" href="/scss/style.min.eccaf3949da47938aa28517cad86a8e4c2f2a612a7d30ef35dae23362879a6b4.css"><meta property='og:title' content="Linux常用指令">
+<meta property='og:description' content="Linxu指令备忘录">
+<meta property='og:url' content='https://katomegumi.site/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/'>
+<meta property='og:site_name' content='划船听水声'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-05-17T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2026-08-05T10:23:04&#43;08:00'/>
+<meta name="twitter:title" content="Linux常用指令">
+<meta name="twitter:description" content="Linxu指令备忘录">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu16246849853105640066.webp" width="300"
+                            height="332" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">划船听水声</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客。</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/429965261?spm_id_from=333.1007.0.0'
+                        target="_blank"
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z"></path> <path d="M8 3l2 3"></path> <path d="M16 3l-2 3"></path> <path d="M9 13v-2"></path> <path d="M15 11v2"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/munakanisena'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#linux的常用命令">Linux的常用命令:</a>
+      <ul>
+        <li><a href="#常用命令">常用命令</a></li>
+        <li><a href="#打包解包-压缩-解压缩">打包/解包 、压缩 /解压缩</a></li>
+        <li><a href="#软件安装">软件安装</a></li>
+        <li><a href="#其他">其他</a></li>
+      </ul>
+    </li>
+    <li><a href="#系统相关常用命令">系统相关常用命令</a>
+      <ul>
+        <li><a href="#磁盘信息">磁盘信息</a></li>
+        <li><a href="#进程信息">进程信息</a></li>
+      </ul>
+    </li>
+    <li><a href="#用户权限相关命令">用户权限相关命令</a>
+      <ul>
+        <li><a href="#组管理">组管理</a></li>
+        <li><a href="#用户管理">用户管理</a>
+          <ul>
+            <li><a href="#查看用户信息">查看用户信息</a></li>
+          </ul>
+        </li>
+        <li><a href="#which">which</a></li>
+        <li><a href="#切换用户">切换用户</a></li>
+        <li><a href="#修改文件权限">修改文件权限</a></li>
+      </ul>
+    </li>
+    <li><a href="#在linux中需知">在Linux中需知</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+        <a
+                href="/categories/linux/"
+                
+        >
+            Linux
+        </a>
+        
+        <a
+                href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                
+        >
+            学习笔记
+        </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/linux%E5%B8%B8%E7%94%A8%E6%8C%87%E4%BB%A4/">Linux常用指令</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">Linxu指令备忘录</h3>
+        
+    </div>
+
+       
+    <footer class="article-time">
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+            <time class="article-time--published">2026-05-17</time>
+        </div>
+         
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+            <time class="article-time--reading">
+                阅读时长: 6 分钟
+            </time>
+        </div>
+        
+        <div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494zM528.1 472h-32.2c-5.5 0-10.3 3.7-11.6 9.1L434.6 680l-46.1-198.7c-1.3-5.4-6.1-9.3-11.7-9.3h-35.4a12.02 12.02 0 0 0-11.6 15.1l74.2 276c1.4 5.2 6.2 8.9 11.6 8.9h32c5.4 0 10.2-3.6 11.6-8.9l52.8-197l52.8 197c1.4 5.2 6.2 8.9 11.6 8.9h31.8c5.4 0 10.2-3.6 11.6-8.9l74.4-276a12.04 12.04 0 0 0-11.6-15.1H647c-5.6 0-10.4 3.9-11.7 9.3l-45.8 199.1l-49.8-199.3c-1.3-5.4-6.1-9.1-11.6-9.1z"
+          fill="currentColor"></path>
+</svg>
+            <time class="article-time--wordcount">
+                2904字
+            </time>
+        </div>
+        
+    </footer>
+     
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="linux的常用命令">Linux的常用命令:
+</h2><p>终端命令格式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">command</span> <span class="o">[</span>-options<span class="o">]</span> <span class="o">[</span>parameter<span class="o">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>command ：命令名，相应功能的英文单词或单词的缩写</li>
+<li>[-options] ：选项，可用来对命令进行控制，也可以省略</li>
+<li>parameter ：传给命令的<strong>参数</strong>，可以是 零个、一个 或者 多个</li>
+</ul>
+<h3 id="常用命令">常用命令
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">命令</th>
+          <th style="text-align: left">描述</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">ls</td>
+          <td style="text-align: left">查看当前目录下的文件列表。 -l 显示详细信息；-a 显示包括隐藏文件在内的所有文件；-h 以人类可读方式显示大小；-t 按修改时间排序；-r 逆序显示；-i 查看文件的 inode</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cat</td>
+          <td style="text-align: left">cat 文件名 查看该文件的内容。-b 对非空输出行编号；-n 对输出的所有行编号</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">more</td>
+          <td style="text-align: left">分屏显示文件内容</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">grep</td>
+          <td style="text-align: left">搜索文本文件内容。-n 显示匹配行及行号；-v 显示不包含匹配文本的所有行（相当于求反）；-i 忽略大小写</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">clear</td>
+          <td style="text-align: left">清屏</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">ln</td>
+          <td style="text-align: left">ln (-s 表示软连接，不加为硬链接) 被指向文件 link文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">rm</td>
+          <td style="text-align: left">rm 文件名 删除该文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">chmod</td>
+          <td style="text-align: left">修改文件权限。 符号模式：chmod +(r/w/x) 文件名 增加权限，- 减少权限；可用 u/g/o 分别指定所有者/组/其他用户，如 ug+rw。 数字模式：r=4, w=2, x=1，如 chmod 777 test1.txt</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">touch</td>
+          <td style="text-align: left">更新文件的修改时间为当前时间；若文件不存在，则创建空文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">↑/↓ 方向键</td>
+          <td style="text-align: left">在终端中查找历史输入过的命令</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">pwd</td>
+          <td style="text-align: left">显示当前所在目录的路径</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cd</td>
+          <td style="text-align: left">cd 目录 切换工作目录，例如 cd / 切换到根目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cp</td>
+          <td style="text-align: left">复制文件或目录：cp 源文件 目标文件。 复制目录需加 -r 参数递归复制，如 cp -r folder1 foldercopy</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">mv</td>
+          <td style="text-align: left">重命名文件或移动文件：mv 文件1 文件2（文件1被重命名为文件2 或 移动到新位置）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">mkdir</td>
+          <td style="text-align: left">创建目录：mkdir 目录名。 -p 可创建多级目录，如 mkdir -p folder1/folder2/folder3</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">du</td>
+          <td style="text-align: left">查看文件和目录的大小，以及目录结构。 -h 以人类可读方式显示（如自动加 K、M 等单位）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">tree</td>
+          <td style="text-align: left">以树状图形式显示目录结构（非 Linux 自带命令，需手动安装）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">find</td>
+          <td style="text-align: left">find [路径] -name &ldquo;*.py&rdquo; 在指定路径下（含子目录）查找所有扩展名为 .py 的文件</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="打包解包-压缩-解压缩">打包/解包 、压缩 /解压缩
+</h3><p><code>tar</code> 此命令可以 <strong>把一系列文件</strong> 打包到 一个<strong>大文件</strong>中，也可以把一个 打包的大文件恢复成一系列文件，注意不是压缩。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 打包文件</span>
+</span></span><span class="line"><span class="cl">tar -cvf 打包文件.tar 被打包的文件／路径...
+</span></span><span class="line"><span class="cl"><span class="c1"># 解包文件</span>
+</span></span><span class="line"><span class="cl">tar -xvf 打包文件.tar
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>tar选项说明：</strong></p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>选项</th>
+          <th>含义</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>c</td>
+          <td>生成档案文件，创建打包文件</td>
+      </tr>
+      <tr>
+          <td>x</td>
+          <td>解开档案文件</td>
+      </tr>
+      <tr>
+          <td>v</td>
+          <td>列出归档解档的详细过程，显示进度</td>
+      </tr>
+      <tr>
+          <td>f</td>
+          <td>指定档案文件名称，f 后面一定是 .tar 文件，注意：必须放选项最后</td>
+      </tr>
+  </tbody>
+</table></div>
+<p><code>gzip</code>压缩 tar 打包后的文件，其扩展名一般用 xxx.tar.gz、bzip2(two)压缩 tar 打包后的文件，其扩展名一般用 xxx.tar.bz2</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 压缩文件</span>
+</span></span><span class="line"><span class="cl">tar -zcvf 打包文件.tar.gz 被压缩的文件／路径...
+</span></span><span class="line"><span class="cl"><span class="c1"># 解压缩文件</span>
+</span></span><span class="line"><span class="cl">tar -zxvf 打包文件.tar.gz
+</span></span><span class="line"><span class="cl"><span class="c1"># 解压缩到指定路径</span>
+</span></span><span class="line"><span class="cl">tar -zxvf 打包文件.tar.gz -C 目标路径
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">如果是bzip2，将z改成j即可
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="软件安装">软件安装
+</h3><p>通过 apt 安装／卸载软件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 1. 安装软件</span>
+</span></span><span class="line"><span class="cl">sudo apt install 软件包
+</span></span><span class="line"><span class="cl"><span class="c1"># 2. 卸载软件</span>
+</span></span><span class="line"><span class="cl">sudo apt remove 软件名
+</span></span><span class="line"><span class="cl"><span class="c1"># 3. 更新已安装的包</span>
+</span></span><span class="line"><span class="cl">sudo apt upgrade
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="其他">其他
+</h3><ol>
+<li>echo 是一个用来输出文本的命令,echo &ldquo;txt&rdquo;/&rsquo;txt&rsquo;/txt 就会在框中输出这段txt，通常会和重定向联合使用</li>
+</ol>
+<ul>
+<li>重定向 &gt; （<strong>表示输出，会覆盖文件原有的内容</strong>）和 &raquo;（<strong>表示追加，会将内容追加到已有文件的末尾</strong>）</li>
+</ul>
+<ol start="2">
+<li>管道 | :Linux 允许将 一个命令的输出 可以通过管道 做为 另一个命令的输入</li>
+</ol>
+<ul>
+<li>
+<p>常用指令</p>
+<ul>
+<li>
+<p>more ：分屏显示内容</p>
+</li>
+<li>
+<p>grep ：在命令执行结果的基础上查询指定的文本</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="系统相关常用命令">系统相关常用命令
+</h2><h3 id="磁盘信息">磁盘信息
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>df -h</td>
+          <td>disk free 显示磁盘剩余空间</td>
+      </tr>
+      <tr>
+          <td>du -h [目录名]</td>
+          <td>disk usage 显示目录下的文件大小</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="进程信息">进程信息
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>ps aux</td>
+          <td>process status 查看进程的详细状况  a:显示终端上的所有进程，包括其他用户的进程；u:显示进程的详细状态；x：显示没有控制终端的进程</td>
+      </tr>
+      <tr>
+          <td>top</td>
+          <td>动态显示运行中的进程并且排序</td>
+      </tr>
+      <tr>
+          <td>kill [-9] 进程代号</td>
+          <td>终止指定代号的进程， -9 表示强行终止</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>注意：ps 默认只会显示当前用户通过终端启动的应用程序</p>
+<h2 id="用户权限相关命令">用户权限相关命令
+</h2><h3 id="组管理">组管理
+</h3><p>注意：创建组 / 删除组 的终端命令都需要通过 sudo 执行</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>groupadd 组名</td>
+          <td>添加组</td>
+      </tr>
+      <tr>
+          <td>groupdel 组名</td>
+          <td>删除组</td>
+      </tr>
+      <tr>
+          <td>cat /etc/group</td>
+          <td>确认组信息</td>
+      </tr>
+      <tr>
+          <td>chgrp -R 组名 文件/目录名</td>
+          <td>递归修改文件/目录的所属组</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="用户管理">用户管理
+</h3><p>注意：创建用户 / 删除用户 / 修改其他用户密码 的终端命令都需要通过 sudo 执行</p>
+<div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">命令格式</th>
+          <th style="text-align: left">作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">useradd -m -g 组 用户名</td>
+          <td style="text-align: left">新建用户。 -m 自动建立用户家目录； -g 指定用户所在的组（否则会建立一个和用户名同名的组）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">passwd 用户名</td>
+          <td style="text-align: left">设置用户密码。 如果是普通用户，直接执行 passwd 可以修改自己的账户密码</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">userdel -r 用户名</td>
+          <td style="text-align: left">删除用户。 -r 选项会自动删除用户家目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">cat /etc/passwd | grep 用户名</td>
+          <td style="text-align: left">确认用户信息。 新建用户后，用户信息会保存在 /etc/passwd 文件中</td>
+      </tr>
+  </tbody>
+</table></div>
+<h4 id="查看用户信息">查看用户信息
+</h4><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>id [用户名]</td>
+          <td>查看用户 UID 和 GID 信息</td>
+      </tr>
+      <tr>
+          <td>who</td>
+          <td>查看当前所有登录的用户列表</td>
+      </tr>
+      <tr>
+          <td>whoami</td>
+          <td>查看当前登录用户的账户名</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="which">which
+</h3><p>which 命令可以查看执行命令所在位置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">which ls 
+</span></span><span class="line"><span class="cl"><span class="c1">#输出 /bin/ls</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="切换用户">切换用户
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>su - 用户名</td>
+          <td>切换用户，并且切换目录 - 可以切换到用户家目录，否则保持位置不变</td>
+      </tr>
+      <tr>
+          <td>exit</td>
+          <td>退出当前登录账户</td>
+      </tr>
+  </tbody>
+</table></div>
+<h3 id="修改文件权限">修改文件权限
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>命令</th>
+          <th>作用</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>chown</td>
+          <td>修改拥有者</td>
+      </tr>
+      <tr>
+          <td>chgrp</td>
+          <td>修改组</td>
+      </tr>
+      <tr>
+          <td>chmod</td>
+          <td>修改权限</td>
+      </tr>
+  </tbody>
+</table></div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 修改文件|目录的拥有者</span>
+</span></span><span class="line"><span class="cl">chown 用户名 文件名<span class="p">|</span>目录名
+</span></span><span class="line"><span class="cl"><span class="c1"># 递归修改文件|目录的组</span>
+</span></span><span class="line"><span class="cl">chgrp -R 组名 文件名<span class="p">|</span>目录名
+</span></span><span class="line"><span class="cl"><span class="c1"># 递归修改文件权限</span>
+</span></span><span class="line"><span class="cl">chmod -R <span class="m">755</span> 文件名<span class="p">|</span>目录名
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="在linux中需知">在Linux中需知
+</h2><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th style="text-align: left">目录</th>
+          <th style="text-align: left">说明</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">/bin</td>
+          <td style="text-align: left">用户二进制文件（基本命令）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/boot</td>
+          <td style="text-align: left">启动加载器相关文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/sbin</td>
+          <td style="text-align: left">系统二进制文件（管理员命令）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/tmp</td>
+          <td style="text-align: left">临时文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/etc</td>
+          <td style="text-align: left">配置文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/usr</td>
+          <td style="text-align: left">用户程序与数据</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/dev</td>
+          <td style="text-align: left">设备文件</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/var</td>
+          <td style="text-align: left">可变文件（日志、缓存等）</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/home</td>
+          <td style="text-align: left">普通用户家目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/root</td>
+          <td style="text-align: left">root 用户家目录</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">/proc</td>
+          <td style="text-align: left">进程信息虚拟文件系统</td>
+      </tr>
+  </tbody>
+</table></div>
+<p>1.以半角英文的点开头的文件和目录都是隐藏的</p>
+<p>2.ls -l显示更详细信息中第一个信息中的第一个字母(-表示普通文件 d表示目录 l表示链接文件)</p>
+<ul>
+<li>第一个信息中除了第一个字母后面9个字符表示文件的权限，可以把它们按照三个字母一组来看</li>
+<li>第一组表示文件所有者的权限(user)</li>
+<li>第二组表示文件所属组别的权限(group)</li>
+<li>第三组表示其他用户的权限(other)</li>
+<li>r可读 w可写 x可执行（rwx） 如果相应的位置上没有相应的权限就会显示一个中杠(-)</li>
+<li>第二个数字表示文件的硬链接数，如果该文件没有设置过硬链接，那么其本身就是一个硬链接，就是1</li>
+</ul>
+<p>第一行total+数字表示该目录下文件和子目录中占据了多少个磁盘块</p>
+<p>3.软链接文件就相当于windows中的快捷方式，不存储任何东西，只是指向那个文件，故存储大小很小</p>
+<p>4.硬链接本质上是一个指向文件系统中另一个文件的指针，它与原始文件共享相同的i节点</p>
+<p>5.i节点(inode)是文件系统中一个非常重要的概念，在Linux系统中，每个文件或者目录都有一个唯一的i节点它存储了文件的元数据信息(包括1.文件类型 2.权限 3.所有者 4.文件大小 5.时间戳[文件的创建时间，最后访问时间和最后的修改时间] 6.数据块指针)，系统也是通过这个i节点来识别文件的，硬链接与原始文件共享相同的i节点，也就说明它们共享相同的文件内容(显示存储大小与源文件相同)，源文件和硬链接实际上是同一个文件的不同两个名字</p>
+<p>6.将文件其中一个硬链接删除，其他的硬链接都还可以正常访问文件</p>
+<p>7.当将软链接目标文件删除时，软连接就会失效</p>
+<p>8.软链接可以指向文件和目录，但是硬链接只能指向文件</p>
+<p>9.windows系统中文件和目录都是以盘符开始的 而Linux系统中文件系统是树状结构，所有文件和目录都是从根目录开始的，根目录的符号是/</p>
+<p>10.相对路径,相对于当前目录的路径</p>
+<p>11.绝对路径,从根目录开始的完整路径 可以用一个点来表示当前目录，使用两个点表示上一个目录(如cd ../..返回到上一级目录的再上一级目录中去)</p>
+<p>12.根目录下 bin存放系统的基本命令和一些二进制可执行文件 etc存放系统核和一些软件的配置文件 home用户家目录</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-08-05
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/vim-%E7%BC%96%E8%BE%91%E5%99%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vim 编辑器快捷键</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/markdown-learn/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">markdown的使用说明</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/tool-jmeter-download/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">JMeter下载安装</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/ai-harnessengineering/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Harness Engineering 相关知识速记</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/claude-code-study/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Claude Code的基本操作</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    <script
+    src="https://giscus.app/client.js"
+    data-repo="munakanisena/munakanisena.github.io"
+    data-repo-id="R_kgDON_Rlkg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDON_Rlks4CnWeY"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading=""
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 划船听水声
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2024089321号-2</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+<style>
+ 
+      #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+        #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://katomegumi.site/icons/backTop.svg);
+    }
+</style>
+
+
+<script src=https://katomegumi.site/background/sakura.js></script>
+
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://katomegumi.site/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+    </body>
+</html>

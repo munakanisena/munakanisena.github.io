@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>线上问题 on 划船听水声</title>
+        <link>https://katomegumi.site/categories/%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/</link>
+        <description>Recent content in 线上问题 on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 05 Aug 2026 10:23:04 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/%E7%BA%BF%E4%B8%8A%E9%97%AE%E9%A2%98/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>上线项目CPU占满排查</title>
+        <link>https://katomegumi.site/p/cpu%E6%8E%92%E6%9F%A5/</link>
+        <pubDate>Thu, 02 Jul 2026 14:29:23 +0800</pubDate>
+        
+        <guid>https://katomegumi.site/p/cpu%E6%8E%92%E6%9F%A5/</guid>
+        <description>&lt;h2 id=&#34;1如何排查找到病因&#34;&gt;1.如何排查？找到病因
+&lt;/h2&gt;&lt;p&gt;起因是因为阿里云突然给我发了一个短信&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729165802074.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729165802074&#34;
+	
+	
+&gt;&lt;br&gt;
+结果我用SSH一看，我靠怎么CPU占用99%，咋回事？？？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729150953710.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729150953710&#34;
+	
+	
+&gt;&lt;br&gt;
+这个时候就该使用我之前在网上逛论坛学到的，&lt;em&gt;线上CPU飙升100%如何排查大法了&lt;/em&gt;。&lt;br&gt;
+具体步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用Top命令定位具体进程 -&amp;gt; &lt;code&gt;java进程PID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;再使用Top命令(&lt;code&gt; top -H -p &amp;lt;PID&amp;gt;&lt;/code&gt;)定位具体的线程 -&amp;gt; &lt;code&gt;找到占用最高的线程 ID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;进行进制转换(&lt;code&gt;printf &amp;quot;%x\n&amp;quot; ID&lt;/code&gt;)  -&amp;gt;拿到十六进制&lt;/li&gt;
+&lt;li&gt;使用&lt;code&gt;jstack&lt;/code&gt;抓包(&lt;code&gt;jstack &amp;lt;进程PID&amp;gt; | grep -A 20 &amp;lt;十六进制线程ID&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;通过堆栈的&lt;code&gt;Java类名和行号&lt;/code&gt;，定位Bug然后进行解决。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote class=&#34;alert alert-tip&#34;&gt;
+  &lt;p&gt;&lt;p&gt;为什么要进行进制转换？主要是因为：&lt;br&gt;
+Linux top 输出的是&lt;strong&gt;十进制&lt;/strong&gt;&lt;br&gt;
+Java jstack 输出的是&lt;strong&gt;十六进制&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;那么就来实操一下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729153246381.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729153246381&#34;
+	
+	
+&gt;&lt;br&gt;
+可以看到Java进程占的cpu最多，说明问题出在Java进程上。&lt;br&gt;
+&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729153643340.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729153643340&#34;
+	
+	
+&gt;&lt;br&gt;
+查询线程发现居然没有这个进程，这是怎么回事？再次使用top命令查询发现，Java进程的PID变了。&lt;br&gt;
+&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729153751766.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729153751766&#34;
+	
+	
+&gt;&lt;br&gt;
+这是怎么一回事呢？可以看到 Java进程的&lt;code&gt;TIME+&lt;/code&gt;，发现每次存活时间都只有十几秒钟，&lt;br&gt;
+这是因为进程在&lt;strong&gt;反复重启，并没有在稳定运行&lt;/strong&gt;。这样的话我们原来的排查思路就行不通了，因为我们原来是依赖一个稳定长期存在的PID进行查询，现在进程不断重启，PID是变动的，自然用不了我上面的排查思路。&lt;/p&gt;
+&lt;h2 id=&#34;2出师不利如何解决&#34;&gt;2.出师不利，如何解决？
+&lt;/h2&gt;&lt;p&gt;既然常规方法解决不了，那么我们可以直接查看 Java项目的启动日志来定位问题所在，由于我的服务器使用的是宝塔进行部署的，保存了日志记录。检查发现：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729163116560.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729163116560&#34;
+	
+	
+&gt;&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729163143312.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729163143312&#34;
+	
+	
+&gt;&lt;br&gt;
+原来是因为我之前写了一个分库分表的功能，但是要上线我把它关掉了（因为反正也没什么人会访问我的网站，而且当前数据量并不大，没有单表瓶颈)，而且还排除了依赖。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nd&#34;&gt;@SpringBootApplication&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;exclude&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ShardingSphereAutoConfiguration&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;class&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;})&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;但是我忘记把分库分表管理器给注释掉了！。导致一直初始化失败，而我把这个推送上去也没关注，现在才发现。。。修改后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://katomegumi.site/%e4%b8%8a%e7%ba%bf%e9%a1%b9%e7%9b%aeCPU%e5%8d%a0%e6%bb%a1%e6%8e%92%e6%9f%a5.assets/image-20260729165327416.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;image-20260729165327416&#34;
+	
+	
+&gt;&lt;br&gt;
+搞了半天是乌龙，也是无语了😐，不过也是一次有价值的尝试吧。。。&lt;br&gt;
+那么是什么原因导致CPU占满呢？大概是因为宝塔后台配置了自动重启，这会大量的消耗CPU。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
