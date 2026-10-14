@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI on 划船听水声</title>
+        <link>https://katomegumi.site/categories/ai/</link>
+        <description>Recent content in AI on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>解决Codex手机号登录验证问题</title>
+            <link>https://katomegumi.site/p/login-codex/</link>
+            <pubDate>Wed, 14 Oct 2026 12:15:09 +0800</pubDate>
+            <guid>https://katomegumi.site/p/login-codex/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;前言&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;由于现在登录codex，需要通过手机验证码验证才能登录，虽然可以用接码平台通过，但是登录后续可能因为登录过期、换了工作环境要求再次验证，这样很不方便，本文就是解决这个问题的。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item><item>
+            <title>Harness Engineering 相关知识速记</title>
+            <link>https://katomegumi.site/p/ai-harnessengineering/</link>
+            <pubDate>Tue, 28 Apr 2026 15:12:23 +0400</pubDate>
+            <guid>https://katomegumi.site/p/ai-harnessengineering/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;用 AI 编程的朋友应该都遇到过这些问题：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;你让 AI 改下页面的样式，结果它没搞清楚你到底想干嘛，重新开发了整个布局，浪费了时间和你的token。&lt;/li&gt;&#xA;&lt;li&gt;你前面明明要求单文件的代码不超过 200 行，结果聊了十几轮之后，AI 把前面的约束给忘了，写了个 1000 行代码的大文件。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;为什么会出现这些问题？说白了就是因为AI不那么可控。那么如何解决这些问题呢？这就是我这篇文章要讲的 &lt;strong&gt;Harness Engineering&lt;/strong&gt;。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item><item>
+            <title>Claude Code的基本操作</title>
+            <link>https://katomegumi.site/p/claude-code-study/</link>
+            <pubDate>Sat, 25 Apr 2026 18:42:53 +0800</pubDate>
+            <guid>https://katomegumi.site/p/claude-code-study/</guid>
+            <description>&lt;h2 id=&#34;1claude-code介绍&#34;&gt;1.Claude code介绍&#xA;&lt;/h2&gt;&lt;p&gt;Claude Code 是一个代理编码工具，可以读取你的代码库、编辑文件、运行命令，并与你的开发工具集成。可在终端、IDE、桌面应用和浏览器中使用。注意：Claude Code 是 Agent（智能体工具），不是 Chat（聊天工具）。&lt;/p&gt;</description>
+        </item><item>
+            <title>使用cc-switch配置claude code 使用DeepSeek V4 Pro</title>
+            <link>https://katomegumi.site/p/cc-switch/</link>
+            <pubDate>Sat, 25 Apr 2026 16:42:53 +0800</pubDate>
+            <guid>https://katomegumi.site/p/cc-switch/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;在2026.4.24 DeepSeek官方发布了最新一代大模型，也就是DeepSeek V4。&lt;br&gt;&#xA;那我们当然要来试一试啦，毕竟是国产大模型嘛，然后还有就是便宜。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item><item>
+            <title>AI相关概念简单介绍</title>
+            <link>https://katomegumi.site/p/ai-intruction/</link>
+            <pubDate>Mon, 09 Mar 2026 19:29:23 +0800</pubDate>
+            <guid>https://katomegumi.site/p/ai-intruction/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;前言：概念都是个人理解，如有错误欢迎指出。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;llm-大语言模型&#34;&gt;LLM (大语言模型)&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;含义&lt;/strong&gt;：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;诞生&lt;/strong&gt;：分为两个阶段&#xA;&lt;ul&gt;&#xA;&lt;li&gt;训练&lt;/li&gt;&#xA;&lt;li&gt;推理&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;涌现&lt;/strong&gt;: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;注意：大模型本身没有记忆。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item><item>
+            <title>【AI】MCP入门学习</title>
+            <link>https://katomegumi.site/p/mcp-introduction/</link>
+            <pubDate>Sat, 09 Aug 2025 14:25:15 +0800</pubDate>
+            <guid>https://katomegumi.site/p/mcp-introduction/</guid>
+            <description>&lt;h2 id=&#34;mcp是什么&#34;&gt;MCP是什么？&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mcp-docs.cn/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;MCP官方文档&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;MCP 是一个开放协议，它为应用程序向 LLM 提供上下文的方式进行了标准化。你可以将 MCP 想象成 AI 应用程序的 USB-C 接口。就像 USB-C 为设备连接各种外设和配件提供了标准化的方式一样，MCP 为 AI 模型连接各种数据源和工具提供了标准化的接口。&lt;/li&gt;&#xA;&lt;li&gt;MCP Servers 服务器每个专精一个服务。比如有的读取文件，有的访问浏览器。MCP server通常就是本地的nodejs或者python程序。其实就相当于是api，只不是是实现了MCP协议进行标准化罢了。因此你也可以自己写一个MCP服务器。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;简单来说MCP就是AI大模型的&lt;strong&gt;标准化工具箱&lt;/strong&gt;。大模型可以利用这些工具与外界互动。打一个比方，在平常我们使用AI需要手动截图或者复制问题到AI窗口进行对话。而MCP通过标准化的协议。可以自动帮助我们完成这些工作。MCP Server相当于AI与外部工具的中间层，代替人类访问并且操作外部工具。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

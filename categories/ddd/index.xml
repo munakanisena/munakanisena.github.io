@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>DDD on 划船听水声</title>
+        <link>https://katomegumi.site/categories/ddd/</link>
+        <description>Recent content in DDD on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/ddd/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>DDD领域驱动设计</title>
+            <link>https://katomegumi.site/p/ddd/</link>
+            <pubDate>Thu, 20 Mar 2025 00:00:00 +0000</pubDate>
+            <guid>https://katomegumi.site/p/ddd/</guid>
+            <description>&lt;h2 id=&#34;1三种软件架构&#34;&gt;1.三种软件架构&#xA;&lt;/h2&gt;&lt;h3 id=&#34;11传统单体架构&#34;&gt;1.1传统单体架构&#xA;&lt;/h3&gt;&lt;p&gt;所有的应用功能都集成在一个单一的应用程序中，所有模块和组件都在同一个进程内运行，请求直接操作数据库，不进行代码分层，易于开发和部署，尤其适合小型或简单的应用。&lt;/p&gt;</description>
+        </item></channel>
+</rss>

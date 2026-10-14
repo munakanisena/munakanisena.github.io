@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>概念 on 划船听水声</title>
+        <link>https://katomegumi.site/categories/%E6%A6%82%E5%BF%B5/</link>
+        <description>Recent content in 概念 on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/%E6%A6%82%E5%BF%B5/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Harness Engineering 相关知识速记</title>
+            <link>https://katomegumi.site/p/ai-harnessengineering/</link>
+            <pubDate>Tue, 28 Apr 2026 15:12:23 +0400</pubDate>
+            <guid>https://katomegumi.site/p/ai-harnessengineering/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;用 AI 编程的朋友应该都遇到过这些问题：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;你让 AI 改下页面的样式，结果它没搞清楚你到底想干嘛，重新开发了整个布局，浪费了时间和你的token。&lt;/li&gt;&#xA;&lt;li&gt;你前面明明要求单文件的代码不超过 200 行，结果聊了十几轮之后，AI 把前面的约束给忘了，写了个 1000 行代码的大文件。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;为什么会出现这些问题？说白了就是因为AI不那么可控。那么如何解决这些问题呢？这就是我这篇文章要讲的 &lt;strong&gt;Harness Engineering&lt;/strong&gt;。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item><item>
+            <title>AI相关概念简单介绍</title>
+            <link>https://katomegumi.site/p/ai-intruction/</link>
+            <pubDate>Mon, 09 Mar 2026 19:29:23 +0800</pubDate>
+            <guid>https://katomegumi.site/p/ai-intruction/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;前言：概念都是个人理解，如有错误欢迎指出。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;llm-大语言模型&#34;&gt;LLM (大语言模型)&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;含义&lt;/strong&gt;：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;诞生&lt;/strong&gt;：分为两个阶段&#xA;&lt;ul&gt;&#xA;&lt;li&gt;训练&lt;/li&gt;&#xA;&lt;li&gt;推理&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;涌现&lt;/strong&gt;: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;注意：大模型本身没有记忆。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>CDN on 划船听水声</title>
+        <link>https://katomegumi.site/categories/cdn/</link>
+        <description>Recent content in CDN on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/cdn/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>博客接入腾讯云EdgeOne，实现免费加速。</title>
+            <link>https://katomegumi.site/p/blog-edgeone/</link>
+            <pubDate>Tue, 13 Oct 2026 14:47:18 +0800</pubDate>
+            <guid>https://katomegumi.site/p/blog-edgeone/</guid>
+            <description>&lt;blockquote&gt;&#xA;        &lt;p&gt;什么是 EdgeOne&lt;/p&gt;&#xA;&lt;p&gt;EdgeOne 基于分布于全球可用区的边缘节点，为用户提供一站式边缘安全加速平台服务，集成了包括动静态 CDN 加速、DDoS 防护、Web 防护、Bot 管理、 四层代理、边缘函数、Makers、媒体服务、DNS 记录管理等多种丰富的能力，旨在为网站、应用、APP、API 接口以及 TCP/UDP 协议提供全方位的安全防护和访问加速服务。&lt;/p&gt;&#xA;&lt;p&gt;抄的官网的说明，简单来说就是CDN的升级版。&lt;/p&gt;&#xA;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

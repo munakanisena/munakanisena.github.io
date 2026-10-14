@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Github on 划船听水声</title>
+        <link>https://katomegumi.site/categories/github/</link>
+        <description>Recent content in Github on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/github/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Github Actions 工作流入门</title>
+            <link>https://katomegumi.site/p/github-actions/</link>
+            <pubDate>Mon, 15 Sep 2025 18:53:18 +0800</pubDate>
+            <guid>https://katomegumi.site/p/github-actions/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.github.com/zh/actions/get-started/quickstart&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;GitHub 文档&lt;/a&gt;是一种持续集成和持续交付 (CI/CD) 平台，可用于自动执行生成、测试和部署管道。&lt;br&gt;&#xA;常见的用途包括：代码推送后自动运行测试、合并 PR 后自动部署到服务器、定时执行数据抓取脚本等。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

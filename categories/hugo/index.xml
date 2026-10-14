@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hugo on 划船听水声</title>
+        <link>https://katomegumi.site/categories/hugo/</link>
+        <description>Recent content in Hugo on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/hugo/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Hugo相关知识记忆--持续更新</title>
+            <link>https://katomegumi.site/p/hugo-knowledge/</link>
+            <pubDate>Mon, 12 Oct 2026 18:19:48 +0800</pubDate>
+            <guid>https://katomegumi.site/p/hugo-knowledge/</guid>
+            <description>&lt;h2 id=&#34;hugo的内容组织方式&#34;&gt;hugo的内容组织方式&#xA;&lt;/h2&gt;&lt;h3 id=&#34;1一个文件夹装很多篇文章&#34;&gt;1.一个文件夹装很多篇文章&#xA;&lt;/h3&gt;&lt;p&gt;也就是直接在一个文件夹中放 A文章.md、B文章.md（不需要命名为&lt;strong&gt;index.md&lt;/strong&gt;），但是由于hugo同目录下的内容都看成文章，因此不能直接把图片放在当前目录中，要放在&lt;strong&gt;static文件&lt;/strong&gt;夹或者图床。&lt;/p&gt;</description>
+        </item><item>
+            <title>解决Hugo渲染html换行和Typora本地配置换行不一致的问题</title>
+            <link>https://katomegumi.site/p/hugo-html-linebreak/</link>
+            <pubDate>Tue, 24 Mar 2026 20:29:23 +0800</pubDate>
+            <guid>https://katomegumi.site/p/hugo-html-linebreak/</guid>
+            <description>&lt;h2 id=&#34;问题&#34;&gt;问题&#xA;&lt;/h2&gt;&lt;p&gt;在Typora中使用&lt;code&gt;shift+Enter&lt;/code&gt;进行软换行，但hugo渲染网页时不会换行。只能使用&lt;code&gt;2个空格+Enter&lt;/code&gt;进行换行/使用&amp;lt;br&amp;gt;进行换行。&lt;/p&gt;</description>
+        </item></channel>
+</rss>

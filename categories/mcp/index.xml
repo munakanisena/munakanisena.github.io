@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>MCP on 划船听水声</title>
+        <link>https://katomegumi.site/categories/mcp/</link>
+        <description>Recent content in MCP on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/mcp/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>【AI】MCP入门学习</title>
+            <link>https://katomegumi.site/p/mcp-introduction/</link>
+            <pubDate>Sat, 09 Aug 2025 14:25:15 +0800</pubDate>
+            <guid>https://katomegumi.site/p/mcp-introduction/</guid>
+            <description>&lt;h2 id=&#34;mcp是什么&#34;&gt;MCP是什么？&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mcp-docs.cn/introduction&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;MCP官方文档&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;MCP 是一个开放协议，它为应用程序向 LLM 提供上下文的方式进行了标准化。你可以将 MCP 想象成 AI 应用程序的 USB-C 接口。就像 USB-C 为设备连接各种外设和配件提供了标准化的方式一样，MCP 为 AI 模型连接各种数据源和工具提供了标准化的接口。&lt;/li&gt;&#xA;&lt;li&gt;MCP Servers 服务器每个专精一个服务。比如有的读取文件，有的访问浏览器。MCP server通常就是本地的nodejs或者python程序。其实就相当于是api，只不是是实现了MCP协议进行标准化罢了。因此你也可以自己写一个MCP服务器。&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;简单来说MCP就是AI大模型的&lt;strong&gt;标准化工具箱&lt;/strong&gt;。大模型可以利用这些工具与外界互动。打一个比方，在平常我们使用AI需要手动截图或者复制问题到AI窗口进行对话。而MCP通过标准化的协议。可以自动帮助我们完成这些工作。MCP Server相当于AI与外部工具的中间层，代替人类访问并且操作外部工具。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

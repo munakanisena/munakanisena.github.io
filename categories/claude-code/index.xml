@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Claude Code on 划船听水声</title>
+        <link>https://katomegumi.site/categories/claude-code/</link>
+        <description>Recent content in Claude Code on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/claude-code/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Claude Code的基本操作</title>
+            <link>https://katomegumi.site/p/claude-code-study/</link>
+            <pubDate>Sat, 25 Apr 2026 18:42:53 +0800</pubDate>
+            <guid>https://katomegumi.site/p/claude-code-study/</guid>
+            <description>&lt;h2 id=&#34;1claude-code介绍&#34;&gt;1.Claude code介绍&#xA;&lt;/h2&gt;&lt;p&gt;Claude Code 是一个代理编码工具，可以读取你的代码库、编辑文件、运行命令，并与你的开发工具集成。可在终端、IDE、桌面应用和浏览器中使用。注意：Claude Code 是 Agent（智能体工具），不是 Chat（聊天工具）。&lt;/p&gt;</description>
+        </item><item>
+            <title>使用cc-switch配置claude code 使用DeepSeek V4 Pro</title>
+            <link>https://katomegumi.site/p/cc-switch/</link>
+            <pubDate>Sat, 25 Apr 2026 16:42:53 +0800</pubDate>
+            <guid>https://katomegumi.site/p/cc-switch/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;在2026.4.24 DeepSeek官方发布了最新一代大模型，也就是DeepSeek V4。&lt;br&gt;&#xA;那我们当然要来试一试啦，毕竟是国产大模型嘛，然后还有就是便宜。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

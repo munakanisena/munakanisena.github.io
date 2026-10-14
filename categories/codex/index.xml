@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Codex on 划船听水声</title>
+        <link>https://katomegumi.site/categories/codex/</link>
+        <description>Recent content in Codex on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/codex/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>解决Codex手机号登录验证问题</title>
+            <link>https://katomegumi.site/p/login-codex/</link>
+            <pubDate>Wed, 14 Oct 2026 12:15:09 +0800</pubDate>
+            <guid>https://katomegumi.site/p/login-codex/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;前言&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;由于现在登录codex，需要通过手机验证码验证才能登录，虽然可以用接码平台通过，但是登录后续可能因为登录过期、换了工作环境要求再次验证，这样很不方便，本文就是解决这个问题的。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;</description>
+        </item></channel>
+</rss>

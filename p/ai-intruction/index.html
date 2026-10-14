@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh-cn" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="介绍一些AI相关的概念">
+<title>AI相关概念简单介绍</title>
+
+
+<link rel="canonical" href="https://katomegumi.site/p/ai-intruction/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap">
+
+
+
+
+<link rel="stylesheet" href="/css/style.min.ab2e695a211c59c775d1d373b87cded6c92066d72cf20782c4d717b39d52bc34.css"><meta property='og:title' content="AI相关概念简单介绍">
+<meta property='og:description' content="介绍一些AI相关的概念">
+<meta property='og:url' content='https://katomegumi.site/p/ai-intruction/'>
+<meta property='og:site_name' content='划船听水声'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2026-03-09T19:29:23&#43;08:00'/><meta property='article:modified_time' content='2026-10-14T21:00:31&#43;08:00'/>
+<meta name="twitter:title" content="AI相关概念简单介绍">
+<meta name="twitter:description" content="介绍一些AI相关的概念">
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        <figure class="site-avatar">
+                <a href="/">
+                    <img src="/img/avatar.webp" 
+                        width="764"
+                        height="846"
+                        class="site-logo"
+                        loading="lazy"
+                        alt="Avatar">
+                </a>
+                
+            </figure>
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">划船听水声</a></h1>
+            <h2 class="site-description">欢迎来到我的个人博客</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://space.bilibili.com/429965261?spm_id_from=333.1007.0.0'
+                        
+                        title="bilibili"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" width="24" height="24" stroke-width="2"> <path d="M3 10a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4v-6z"></path> <path d="M8 3l2 3"></path> <path d="M16 3l-2 3"></path> <path d="M9 13v-2"></path> <path d="M15 11v2"></path> </svg> 
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/munakanisena'
+                        
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>技术链接</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>暗色模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav class="toc-nav" id="TableOfContents">
+                
+  <ul>
+    <li><a href="#llm-大语言模型">LLM (大语言模型)</a></li>
+    <li><a href="#context-window上下文窗口">Context Window（上下文窗口）</a></li>
+    <li><a href="#token词元">Token（词元）</a>
+      <ul>
+        <li><a href="#token-和-字-词-有什么区别"><strong>Token</strong> 和 <strong>字</strong>、 <strong>词</strong> 有什么区别？</a></li>
+      </ul>
+    </li>
+    <li><a href="#tokenizer分词器">Tokenizer（分词器）</a></li>
+    <li><a href="#embedding嵌入">Embedding（嵌入）</a>
+      <ul>
+        <li><a href="#为什么要引入高维数据向量">为什么要引入高维数据向量？</a></li>
+      </ul>
+    </li>
+    <li><a href="#function-call方法调用">Function Call(方法调用)</a></li>
+    <li><a href="#mcp模型上下文协议">MCP(模型上下文协议)</a>
+      <ul>
+        <li><a href="#什么是mcp">什么是MCP？</a></li>
+        <li><a href="#核心架构">核心架构</a></li>
+        <li><a href="#三大核心原语">三大核心原语</a></li>
+        <li><a href="#传输方式">传输方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#skills-技能">Skills (技能)</a></li>
+    <li><a href="#大模型的幻觉">大模型的幻觉</a>
+      <ul>
+        <li><a href="#1什么是幻觉">1.什么是幻觉？</a></li>
+        <li><a href="#2为什么会出现幻觉">2.为什么会出现幻觉？</a></li>
+      </ul>
+    </li>
+    <li><a href="#rag检索增强生成">RAG（检索增强生成）</a>
+      <ul>
+        <li><a href="#数据预处理与文档切分chunking">数据预处理与文档切分（Chunking）</a>
+          <ul>
+            <li><a href="#复杂文档解析">复杂文档解析</a></li>
+            <li><a href="#文档切分策略重点">文档切分策略（重点）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#ai-agent智能体">AI Agent(智能体)</a>
+      <ul>
+        <li><a href="#ai-agent-构成">AI Agent 构成</a>
+          <ul>
+            <li><a href="#1大型语言模型-llm">1.<strong>大型语言模型 (LLM)</strong></a></li>
+            <li><a href="#2工具-tools---可执行的动作">2.工具 <strong>(Tools) - 可执行的动作</strong></a></li>
+            <li><a href="#3记忆-memory---对话与经验的存储">3.记忆 (Memory) - 对话与经验的存储</a></li>
+          </ul>
+        </li>
+        <li><a href="#ai-agent的工作流程">AI Agent的工作流程</a></li>
+        <li><a href="#cot思维链">CoT（思维链）</a></li>
+        <li><a href="#agent-loop智能体循环">Agent Loop（智能体循环）</a></li>
+      </ul>
+    </li>
+    <li><a href="#向量数据库">向量数据库</a>
+      <ul>
+        <li><a href="#为什么需要向量数据库">为什么需要向量数据库</a></li>
+        <li><a href="#核心概念向量与嵌入">核心概念：向量与嵌入</a>
+          <ul>
+            <li><a href="#什么向量">什么向量</a></li>
+            <li><a href="#什么是嵌入">什么是嵌入</a></li>
+            <li><a href="#应用">应用</a></li>
+            <li><a href="#常见问题">常见问题</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+
+            </nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+        
+        
+        
+        <a
+                href="/categories/ai/"
+                style="background-color: hsl(167, 60%, 84%); color: hsl(167, 60%, 15%);"
+        >
+            AI
+        </a>
+        
+        
+        
+        
+        <a
+                href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"
+                style="background-color: hsl(237, 60%, 84%); color: hsl(237, 60%, 15%);"
+        >
+            学习笔记
+        </a>
+        
+        
+        
+        
+        <a
+                href="/categories/%E6%A6%82%E5%BF%B5/"
+                style="background-color: hsl(232, 60%, 84%); color: hsl(232, 60%, 15%);"
+        >
+            概念
+        </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ai-intruction/">AI相关概念简单介绍</a>
+        </h2>
+
+        
+        <h3 class="article-subtitle">
+            介绍一些AI相关的概念
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    
+
+    
+    <footer class="article-meta">
+        
+            <div class="inline-meta">
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                    <time class="article-time--published" datetime='2026-03-09T19:29:23&#43;08:00'>2026-03-09</time>
+                
+
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                    <time class="article-time--reading">
+                        阅读时长: 10 分钟
+                    </time>
+                
+
+                
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+    <path d="M854.6 288.6L639.4 73.4c-6-6-14.1-9.4-22.6-9.4H192c-17.7 0-32 14.3-32 32v832c0 17.7 14.3 32 32 32h640c17.7 0 32-14.3 32-32V311.3c0-8.5-3.4-16.7-9.4-22.7zM790.2 326H602V137.8L790.2 326zm1.8 562H232V136h302v216a42 42 0 0 0 42 42h216v494zM528.1 472h-32.2c-5.5 0-10.3 3.7-11.6 9.1L434.6 680l-46.1-198.7c-1.3-5.4-6.1-9.3-11.7-9.3h-35.4a12.02 12.02 0 0 0-11.6 15.1l74.2 276c1.4 5.2 6.2 8.9 11.6 8.9h32c5.4 0 10.2-3.6 11.6-8.9l52.8-197l52.8 197c1.4 5.2 6.2 8.9 11.6 8.9h31.8c5.4 0 10.2-3.6 11.6-8.9l74.4-276a12.04 12.04 0 0 0-11.6-15.1H647c-5.6 0-10.4 3.9-11.7 9.3l-45.8 199.1l-49.8-199.3c-1.3-5.4-6.1-9.1-11.6-9.1z"
+          fill="currentColor"></path>
+</svg>
+                    <time class="article-time--wordcount">
+                        4671字
+                    </time>
+                </div>
+            </div>
+        
+
+        
+
+        
+    </footer>
+    
+</div>
+
+</header>
+
+    
+    <aside class="article-toc">
+        <details>
+            <summary>
+                <div class="article-toc-title">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6" /></svg>
+                    <span>目录</span>
+                </div>
+            </summary>
+            <nav class="toc-nav">
+                
+  <ul>
+    <li><a href="#llm-大语言模型">LLM (大语言模型)</a></li>
+    <li><a href="#context-window上下文窗口">Context Window（上下文窗口）</a></li>
+    <li><a href="#token词元">Token（词元）</a>
+      <ul>
+        <li><a href="#token-和-字-词-有什么区别"><strong>Token</strong> 和 <strong>字</strong>、 <strong>词</strong> 有什么区别？</a></li>
+      </ul>
+    </li>
+    <li><a href="#tokenizer分词器">Tokenizer（分词器）</a></li>
+    <li><a href="#embedding嵌入">Embedding（嵌入）</a>
+      <ul>
+        <li><a href="#为什么要引入高维数据向量">为什么要引入高维数据向量？</a></li>
+      </ul>
+    </li>
+    <li><a href="#function-call方法调用">Function Call(方法调用)</a></li>
+    <li><a href="#mcp模型上下文协议">MCP(模型上下文协议)</a>
+      <ul>
+        <li><a href="#什么是mcp">什么是MCP？</a></li>
+        <li><a href="#核心架构">核心架构</a></li>
+        <li><a href="#三大核心原语">三大核心原语</a></li>
+        <li><a href="#传输方式">传输方式</a></li>
+      </ul>
+    </li>
+    <li><a href="#skills-技能">Skills (技能)</a></li>
+    <li><a href="#大模型的幻觉">大模型的幻觉</a>
+      <ul>
+        <li><a href="#1什么是幻觉">1.什么是幻觉？</a></li>
+        <li><a href="#2为什么会出现幻觉">2.为什么会出现幻觉？</a></li>
+      </ul>
+    </li>
+    <li><a href="#rag检索增强生成">RAG（检索增强生成）</a>
+      <ul>
+        <li><a href="#数据预处理与文档切分chunking">数据预处理与文档切分（Chunking）</a>
+          <ul>
+            <li><a href="#复杂文档解析">复杂文档解析</a></li>
+            <li><a href="#文档切分策略重点">文档切分策略（重点）</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#ai-agent智能体">AI Agent(智能体)</a>
+      <ul>
+        <li><a href="#ai-agent-构成">AI Agent 构成</a>
+          <ul>
+            <li><a href="#1大型语言模型-llm">1.<strong>大型语言模型 (LLM)</strong></a></li>
+            <li><a href="#2工具-tools---可执行的动作">2.工具 <strong>(Tools) - 可执行的动作</strong></a></li>
+            <li><a href="#3记忆-memory---对话与经验的存储">3.记忆 (Memory) - 对话与经验的存储</a></li>
+          </ul>
+        </li>
+        <li><a href="#ai-agent的工作流程">AI Agent的工作流程</a></li>
+        <li><a href="#cot思维链">CoT（思维链）</a></li>
+        <li><a href="#agent-loop智能体循环">Agent Loop（智能体循环）</a></li>
+      </ul>
+    </li>
+    <li><a href="#向量数据库">向量数据库</a>
+      <ul>
+        <li><a href="#为什么需要向量数据库">为什么需要向量数据库</a></li>
+        <li><a href="#核心概念向量与嵌入">核心概念：向量与嵌入</a>
+          <ul>
+            <li><a href="#什么向量">什么向量</a></li>
+            <li><a href="#什么是嵌入">什么是嵌入</a></li>
+            <li><a href="#应用">应用</a></li>
+            <li><a href="#常见问题">常见问题</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#参考">参考</a></li>
+  </ul>
+
+            </nav>
+        </details>
+    </aside>
+    
+
+    <section class="article-content">
+    
+    
+    <blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p>前言：概念都是个人理解，如有错误欢迎指出。</p>
+        </div>
+    </blockquote>
+<h2 id="llm-大语言模型">LLM (大语言模型)
+</h2><ul>
+<li><strong>含义</strong>：LLM是一个参数量巨大的数学模型（统计概率模型）；本质上是词语接龙不断去预测下一个字。</li>
+<li><strong>诞生</strong>：分为两个阶段
+<ul>
+<li>训练</li>
+<li>推理</li>
+</ul>
+</li>
+<li><strong>涌现</strong>: 当参数达到一定规模时，AI 会突然获得原本不具备的复杂逻辑推理、代码理解等高级能力。</li>
+</ul>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p>注意：大模型本身没有记忆。</p>
+        </div>
+    </blockquote>
+<h2 id="context-window上下文窗口">Context Window（上下文窗口）
+</h2><ul>
+<li><strong>含义</strong>：AI 一次能处理的最大 Token 数，也就是你能够输入的最大token数。</li>
+</ul>
+<h2 id="token词元">Token（词元）
+</h2><ul>
+<li><strong>含义</strong>：AI 能理解的最小文本单位（约 ¾ 个英文单词），介于单词与字符之间，同时也是大模型计费和上下文长度的计量单位</li>
+</ul>
+<h3 id="token-和-字-词-有什么区别"><strong>Token</strong> 和 <strong>字</strong>、 <strong>词</strong> 有什么区别？
+</h3><p>很多人以为Token = 单词，但其实不完全是。因为Token的划分是基于算法的。</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th>文本</th>
+					<th>Token数</th>
+					<th>备注</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>cat</td>
+					<td>1</td>
+					<td>常见词，一个词一个Token</td>
+			</tr>
+			<tr>
+					<td>ChatGPT</td>
+					<td>3</td>
+					<td><code>Chat</code> + <code>G</code> + <code>PT</code></td>
+			</tr>
+			<tr>
+					<td>你好</td>
+					<td>约 2～3</td>
+					<td>中文比英文会消耗更多的Token</td>
+			</tr>
+	</tbody>
+</table></div>
+<h2 id="tokenizer分词器">Tokenizer（分词器）
+</h2><ul>
+<li><strong>作用</strong>：把文本切割成一块一块的碎片，每一块就叫做一个 Token（词元）。</li>
+</ul>
+<h2 id="embedding嵌入">Embedding（嵌入）
+</h2><ul>
+<li><strong>作用</strong>：把文本/图片转成数字向量，用于相似度计算，同时也是RAG的基础。embedding模型属于LLM模型中的一部分。</li>
+</ul>
+<h3 id="为什么要引入高维数据向量">为什么要引入高维数据向量？
+</h3><ul>
+<li>主要是为了从更多的维度描述单词。</li>
+</ul>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p>例如：维度1表示颜色；维度2表示形状；苹果和西瓜在向量坐标中虽然<strong>编号不同</strong>；但是<strong>空间位置</strong>很相近。</p>
+        </div>
+    </blockquote>
+<h2 id="function-call方法调用">Function Call(方法调用)
+</h2><ul>
+<li><strong>含义</strong>：Agent 调用外部工具/API 执行动作</li>
+<li><strong>作用</strong>：允许模型在需要时调用预定义的函数来获取数据或执行操作。</li>
+<li><strong>缺点</strong>：
+<ul>
+<li>Function Call的<strong>平台依赖性强</strong>，没有一个统一的标准，不能做到即插即用。</li>
+<li>一般是本地程序调用，外界无法使用；也因此MCP应运而生。</li>
+</ul>
+</li>
+</ul>
+<h2 id="mcp模型上下文协议">MCP(模型上下文协议)
+</h2><ul>
+<li>官方文档：<a class="link" href="https://modelcontextprotocol.io/"  target="_blank" rel="noopener"
+    >https://modelcontextprotocol.io</a></li>
+<li>调试工具 Inspector：<strong>npx @modelcontextprotocol/inspector</strong></li>
+</ul>
+<h3 id="什么是mcp">什么是MCP？
+</h3><ul>
+<li><strong>含义</strong>：Agent 连接外部工具/数据源的<strong>标准化协议</strong>。</li>
+<li><strong>作用</strong>：主要是为增强AI的能力，作为使用者通过MCP我们可以轻松接入别人已经写好的服务。</li>
+</ul>
+<h3 id="核心架构">核心架构
+</h3><ul>
+<li>Host（主机）：用户使用的 AI Agent，管理多个Client。</li>
+<li>Client（客户端）：Host的内部组件，与Sever一对一连接，负责将模型的<strong>工具调用请求</strong>翻译为标准协议消息。注意：Host 每连接一个 Server 就会创建一个 Client</li>
+<li>Server（服务器）：包一层标准协议，暴露某个具体工具或数据源的能力，注意：不<strong>直接</strong>大模型对话，通过Client传递对话。</li>
+</ul>
+<p>底层通信统一使用 <strong>JSON-RPC 2.0</strong> 消息格式。</p>
+<h3 id="三大核心原语">三大核心原语
+</h3><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th style="text-align: left">原语</th>
+					<th style="text-align: left">定义</th>
+					<th style="text-align: left">典型场景</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">Tools（工具）</td>
+					<td style="text-align: left">可执行的动作，模型可主动调用，会产生副作用（如写数据、发消息）</td>
+					<td style="text-align: left">发送邮件、创建工单、执行数据库查询、操作文件</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Resources（资源）</td>
+					<td style="text-align: left">只读数据，供模型读取上下文，不涉及执行</td>
+					<td style="text-align: left">日志文件内容、数据库表快照、API 文档</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">Prompts（提示词模板）</td>
+					<td style="text-align: left">预先写好的可复用提示词模板，用户或应用可以直接调用</td>
+					<td style="text-align: left">&ldquo;帮我总结这份合同的关键条款&rdquo;、&ldquo;分析这段代码的性能问题&rdquo;</td>
+			</tr>
+	</tbody>
+</table></div>
+<h3 id="传输方式">传输方式
+</h3><p>支持两种传输方式一种stdio，一种Streamable HTTP</p>
+<ul>
+<li>stdio（标准输入输出）：本地工具，Host 以子进程方式启动 Server</li>
+<li>Streamable HTTP：远程生产环境，Server 作为 HTTPS 服务部署</li>
+</ul>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p>Function Calling和MCP的区别？</p>
+<p>Function Calling 是模型调用工具的底层机制，MCP其实就是在上加了一层标准化协议罢了，规定协议后就可以让多个AI Agent共同调用了。<br>
+<strong>注意</strong>：MCP只是一个标准协议，并不提供特定的服务，你可以按照要求编写自己的MCP服务。</p>
+        </div>
+    </blockquote>
+<h2 id="skills-技能">Skills (技能)
+</h2><p>Skills 在技术上是一个 Markdown 文件（SKILL.md），写着该任务的完整执行指南。它由人类编写，然后被智能体在执行任务时自动读取和遵循。</p>
+<ul>
+<li>
+<p><strong>含义</strong>： Agent 可调用的<strong>专项能力模块</strong></p>
+</li>
+<li>
+<p><strong>核心思想</strong>：将人类的专业知识封装成技能包，让 AI 在需要时自行加载和使用。</p>
+<blockquote class="alert alert-tip">
+        <div class="alert-header">
+            <span class="alert-icon">💡</span>
+            <span class="alert-title">提示</span>
+        </div>
+        <div class="alert-body">
+            <p><strong>行为规范 + 专业知识 + 使用时机的组合</strong></p>
+        </div>
+    </blockquote>
+</li>
+<li>
+<p><strong>组成</strong>：其实就是一个文件夹(相当于打包好的提示词工程)；里面必须有一个 SKILL.md 文件（包含说明和元数据），可选其他资源文件（如脚本、示例、参考文档）。</p>
+</li>
+<li>
+<p><strong>使用</strong>：Skills 的关键是渐进式披露，分三层加载：</p>
+<ul>
+<li><strong>技能发现</strong> ：AI 先读取所有技能的元数据（name 和 description），判断任务是否相关，注意：这些元数据始终在系统提示中。</li>
+<li><strong>加载核心指令</strong> ： 如果相关，AI 自动读取 SKILL.md 的正文内容，获取详细指导。</li>
+<li><strong>加载资源文件</strong> ：按需读取，执行脚本。</li>
+</ul>
+</li>
+</ul>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p>Skills和MCP的区别?</p>
+<p>核心：Skills 用于<strong>知识复用</strong>，MCP 用于<strong>能力扩展</strong>。<br>
+简单来讲：<br>
+Skills相当于<strong>懒加载</strong>，是按需加载自动决定上下文。<br>
+MCP是<strong>启动就加载</strong>，每次请求都会占用上下文。</p>
+        </div>
+    </blockquote>
+<h2 id="大模型的幻觉">大模型的幻觉
+</h2><h3 id="1什么是幻觉">1.什么是幻觉？
+</h3><p>其实就是大模型生成不合理或完全虚构的内容，简单来说就是大模型瞎编。</p>
+<h3 id="2为什么会出现幻觉">2.为什么会出现幻觉？
+</h3><ul>
+<li>一方面，跟模型的训练时间有关，比如模型的训练数据中可能包含错误或过时的信息。</li>
+<li>另一方面，大语言模型本质上是 <strong>预测下一个词的概率</strong> 模型，它们倾向于生成流畅而未必准确的内容。</li>
+</ul>
+<h2 id="rag检索增强生成">RAG（检索增强生成）
+</h2><ul>
+<li><strong>含义</strong>：先从知识库检索，获取信息后添加到提示词，然后再让模型生成。</li>
+<li><strong>作用</strong>：减少大模型的幻觉和知识截止日期。</li>
+</ul>
+<p>一个完整的 RAG 系统由两条流水线组成：<strong>离线索引流水线</strong>（将文档预处理存入向量库）和<strong>在线查询流水线</strong>（接收用户问题、检索、生成）。</p>
+<p><strong>具体实现步骤如下</strong>：</p>
+<ol>
+<li>离线索引流水线</li>
+</ol>
+<ul>
+<li>文档收集和切割</li>
+<li>向量转换和存储</li>
+</ul>
+<ol start="2">
+<li>在线查询流水线</li>
+</ol>
+<ul>
+<li>文档过滤和检索</li>
+<li>查询增强和关联</li>
+</ul>
+<p><strong>核心工作流程：</strong></p>
+<ol>
+<li>用户提问</li>
+<li>问题向量化</li>
+<li>向量检索</li>
+<li>LLM生成</li>
+<li>返回结果</li>
+</ol>
+<h3 id="数据预处理与文档切分chunking">数据预处理与文档切分（Chunking）
+</h3><p>在离线索引流水线中，我们要把文档预处理进向量数据库，因此我们需要对数据进行预处理，还要进行文档切分。（因embedding模型有token限制）</p>
+<h4 id="复杂文档解析">复杂文档解析
+</h4><p>数据要保证语义完整，但是对于复杂文档如PDF、Word、图片等，普通的文本提取极易造成语义错乱。因此一般使用解析器，转成结构化的 Markdown。</p>
+<h4 id="文档切分策略重点">文档切分策略（重点）
+</h4><p>文档切分是 RAG 效果的基础，<strong>切分粒度</strong>直接影响检索质量。块太大会引入噪声，块太小会丢失上下文。常用策略如下：</p>
+<div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th style="text-align: left">切分策略</th>
+					<th style="text-align: left">适用场景</th>
+					<th style="text-align: left">优点</th>
+					<th style="text-align: left">缺点</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left"><strong>固定大小切分</strong></td>
+					<td style="text-align: left">通用文本</td>
+					<td style="text-align: left">实现简单，速度快</td>
+					<td style="text-align: left">可能切断语义完整的句子</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>递归字符切分</strong></td>
+					<td style="text-align: left">结构化文本（Markdown、代码）</td>
+					<td style="text-align: left">优先按段落、句子等语义边界切分</td>
+					<td style="text-align: left">实现略复杂，需设定合理的分隔符列表</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>语义切分 (Semantic)</strong></td>
+					<td style="text-align: left">长文档、书籍</td>
+					<td style="text-align: left">利用 Embedding 计算相邻句子的相似度，自动寻找语义转折点切分</td>
+					<td style="text-align: left">计算成本高，预处理速度慢</td>
+			</tr>
+			<tr>
+					<td style="text-align: left"><strong>父子文档检索 (Small-to-Big)</strong></td>
+					<td style="text-align: left">全面覆盖场景</td>
+					<td style="text-align: left">用&quot;小块&quot;进行高精度向量检索，命中后返回对应的&quot;大块&quot;（父文档）给 LLM，兼顾了检索精度和上下文完整性。</td>
+					<td style="text-align: left">数据库设计和维护成本翻倍</td>
+			</tr>
+	</tbody>
+</table></div>
+<p>注意：实践中常在切分时加入<strong>重叠</strong>，即相邻块之间共享若干字符，防止重要信息在边界处被截断。典型配置：块大小 512 tokens，重叠 50~100 tokens。</p>
+<blockquote class="alert alert-note">
+        <div class="alert-header">
+            <span class="alert-icon">📝</span>
+            <span class="alert-title">备注</span>
+        </div>
+        <div class="alert-body">
+            <p><strong>注意</strong>：RAG进行向量转换的Embedding模型和LLM的Embedding的模型并不一致。LLM的Embedding模型是随着训练一起出来的，而RAG进行向量转换的Embedding模型是需要单独去训练的。</p>
+<p><strong>差异</strong>：</p>
+<ul>
+<li>RAG Embedding：对整段文本做语义压缩，输出一个向量。</li>
+<li>LLM Embedding：对每个 token 编码，再通过 Transformer 整体理解整句话。</li>
+</ul>
+        </div>
+    </blockquote>
+<h2 id="ai-agent智能体">AI Agent(智能体)
+</h2><ul>
+<li><strong>含义</strong>：<strong>Agent = LLM (大脑) + Planning (规划) + Tool use (执行) + Memory (记忆)。</strong></li>
+<li><strong>分类</strong>：
+<ul>
+<li>反应式智能体</li>
+<li>目标导向智能体</li>
+<li>实用性智能体</li>
+<li>有限规划智能体</li>
+<li>自主规划智能体</li>
+<li>多智能体系统（多个智能体协同工作）</li>
+</ul>
+</li>
+</ul>
+<h3 id="ai-agent-构成">AI Agent 构成
+</h3><p>一个典型的 AI Agent 由三个关键部分协同工作。</p>
+<h4 id="1大型语言模型-llm">1.<strong>大型语言模型 (LLM)</strong>
+</h4><ul>
+<li>功能：理解用户的目标，然后进行分析做出决策，是决策者相当于大脑。</li>
+</ul>
+<h4 id="2工具-tools---可执行的动作">2.工具 <strong>(Tools) - 可执行的动作</strong>
+</h4><ul>
+<li>功能：一个个具体的函数或 API，让 Agent 能够与外部世界互动。比如读取文件、调用高德地图API获得位置信息等</li>
+</ul>
+<h4 id="3记忆-memory---对话与经验的存储">3.记忆 (Memory) - 对话与经验的存储
+</h4><ul>
+<li>功能
+<ul>
+<li>短期记忆：保存当前对话的历史、工具调用的结果等，让 Agent 记得之前说过什么、做过什么。就好比你跟朋友聊天，不需要每句话都重新自我介绍。</li>
+<li>长期记忆：可以存储更持久的信息（例如用户偏好、历史任务结果），供未来任务参考。就像你有一本专属于你的用户档案。</li>
+</ul>
+</li>
+</ul>
+<blockquote class="alert alert-warning">
+        <div class="alert-header">
+            <span class="alert-icon">⚠️</span>
+            <span class="alert-title">警告</span>
+        </div>
+        <div class="alert-body">
+            <p>这里要和大模型的上下文窗口区分开来。<br>
+短期记忆：直接对应大模型的上下文窗口，相当于当前的工作台。<br>
+长期记忆：是存储在数据库或者向量数据库中，需要时检索出来塞进大模型的上下文窗口中，相当于外部存储数据。<br>
+总结：AI Agent 的记忆核心在于 <strong>管理大模型上下文窗口。</strong></p>
+        </div>
+    </blockquote>
+<p>总结：简答来说大脑负责思考，工具负责行动，记忆保证连贯，三者缺一不可。</p>
+<h3 id="ai-agent的工作流程">AI Agent的工作流程
+</h3><p>AI Agent 通常遵循一个名为 <strong>ReAct = Reasoning（推理）+ Acting（行动）</strong> 的经典思维范式。</p>
+<ul>
+<li><strong>含义</strong>：Reasoning + Acting 交替进行，边想边干，是 Agent 的<strong>核心范式</strong>。</li>
+</ul>
+<p>具体流程如下：</p>
+<ol>
+<li>Thought (思考)： 模型描述当前要做什么，为什么要这么做。</li>
+<li>Action (行动)： 模型选择一个工具（如：<code>Google Search</code>）。</li>
+<li>Observation (观察)： 模型读取工具返回的结果。</li>
+<li>Repeat (循环)： 重复上述步骤，直到得出最终答案。</li>
+</ol>
+<p>这个 思考 → 行动 → 观察 → 再思考 的循环，就是 AI Agent 自主完成复杂任务的核心动力机制。</p>
+<p>另外具体到实际项目中的流程如下：</p>
+<ol>
+<li>用户输入</li>
+<li>记忆增强：从Memory和RAG中取出数据，补充上下文和专业知识信息</li>
+<li>LLM推理</li>
+<li>Agent进行规划：进行决策，拆解任务、判断分几步完成、调用哪些工具等</li>
+<li>执行工具：本地函数调用、MCP、API调用等</li>
+<li>输出结果：汇总工具返回数据与模型推理结果，整理后返回用户，同时写入记忆存档。</li>
+</ol>
+<h3 id="cot思维链">CoT（思维链）
+</h3><ul>
+<li><strong>含义</strong>：引导模型<strong>产生中间推理过程</strong>，提升复杂推理能力。(思维链的实现主要是通过prompt实现，比如可以给出答题示例，然后再问问题，从而引导大模型推理)</li>
+<li>核心思想：<strong>强制要求模型在输出最终答案前，先显式地输出中间的推理步骤</strong></li>
+</ul>
+<h3 id="agent-loop智能体循环">Agent Loop（智能体循环）
+</h3><ul>
+<li><strong>含义</strong>：是一种思考→行动→观察→再思考的迭代机制，核心就是React。</li>
+</ul>
+<h2 id="向量数据库">向量数据库
+</h2><p>向量数据库（Vector Database）是一种专门用于存储、索引和检索高维向量数据的数据库系统。<br>
+你可以把它理解为：把意思相近的东西存在一起，并能快速找到和这个最像的那些东西。<br>
+与传统数据库的不同之处：传统数据库通过精确匹配来查询（<strong>WHERE name = &lsquo;张三&rsquo;</strong>），向量数据库通过相似度来查询。</p>
+<h3 id="为什么需要向量数据库">为什么需要向量数据库
+</h3><p>传统数据库擅长处理结构化数据，但是无法理解语义。比如你听歌时的推荐系统，会推荐符合你喜好的歌曲，这时候需要理解语义，而非字面意义上的匹配。<br>
+总结：向量数据库解决了传统数据库<strong>处理的语义相似性搜索</strong>问题。</p>
+<h3 id="核心概念向量与嵌入">核心概念：向量与嵌入
+</h3><h4 id="什么向量">什么向量
+</h4><p>在数学上，向量就是一组有序的数字。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[0.12, -0.54, 0.87, 0.03, ..., 0.61]   ← 这就是一个向量
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在机器学习中，这组数字代表某个<strong>对象的语义特征</strong>，维度通常在 128 到 4096 之间。</p>
+<h4 id="什么是嵌入">什么是嵌入
+</h4><p>嵌入（Embedding）是将现实世界的对象（文字、图片、音频等）转换成向量的过程和结果。这个转换由嵌入模型完成，其核心思想是：语义相近的对象，其向量在空间中的距离也更近。</p>
+<h4 id="应用">应用
+</h4><ul>
+<li>RAG</li>
+<li>个性化推荐系统</li>
+<li>去重</li>
+<li>图片</li>
+<li>人脸</li>
+</ul>
+<h4 id="常见问题">常见问题
+</h4><div class="table-wrapper"><table>
+	<thead>
+			<tr>
+					<th style="text-align: left">问题</th>
+					<th style="text-align: left">说明</th>
+					<th style="text-align: left">解决方案</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td style="text-align: left">嵌入模型要统一</td>
+					<td style="text-align: left">插入和查询必须用同一个模型</td>
+					<td style="text-align: left">在配置文件中固定模型版本</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">维度不匹配</td>
+					<td style="text-align: left">换了embedding模型但没重建集合</td>
+					<td style="text-align: left">换模型时删除重建集合</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">文本过长</td>
+					<td style="text-align: left">大多数embedding模型有 token 限制（512~8192）</td>
+					<td style="text-align: left">超长文本先分块（chunking）</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">相似度不准确</td>
+					<td style="text-align: left">文本没有分块，语义被稀释</td>
+					<td style="text-align: left">按段落或固定长度切分文档</td>
+			</tr>
+			<tr>
+					<td style="text-align: left">冷启动慢</td>
+					<td style="text-align: left">数据量大时首次加载索引耗时</td>
+					<td style="text-align: left">提前预热，或使用持久索引</td>
+			</tr>
+	</tbody>
+</table></div>
+<h2 id="参考">参考
+</h2><p><a class="link" href="https://www.runoob.com/ai-agent/ai-agent-tutorial.html"  target="_blank" rel="noopener"
+    >AI Agent(智能体) 教程 | 菜鸟教程</a></p>
+
+</section>
+
+
+    <footer class="article-meta article-footer">
+    
+
+    
+
+    <section class="article-lastmod inline-meta">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            最后更新于 2026-10-14
+        </span>
+    </section></footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        const elementsToRender = [".main-article", ".widget--toc"];
+
+        elementsToRender.forEach(selector => {
+            const element = document.querySelector(selector);
+            if (element) {
+                renderMathInElement(element, {
+                    delimiters: [
+                        { left: "$$", right: "$$", display: true },
+                        { left: "$", right: "$", display: false },
+                        { left: "\\(", right: "\\)", display: false },
+                        { left: "\\[", right: "\\]", display: true }
+                    ],
+                    ignoredClasses: ["gist"]
+                });
+            }
+        });
+    });
+</script>
+    
+</article>
+
+    
+
+    
+
+<aside>
+    <h2 class="section-title">相关文章</h2>
+    <div class="subsection-list">
+        <div class="article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/ai-harnessengineering/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Harness Engineering 相关知识速记</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/p/claude-code-study/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Claude Code的基本操作</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/p/login-codex/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">解决Codex手机号登录验证问题</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/p/markdown-learn/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">markdown的使用说明</h2>
+        </div>
+    </a>
+</article>
+            
+                
+<article class="">
+    <a href="/p/vim-shortcuts/">
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vim 编辑器快捷键</h2>
+        </div>
+    </a>
+</article>
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+
+        <script
+    src="https://giscus.app/client.js"
+    data-repo="munakanisena/munakanisena.github.io"
+    data-repo-id="R_kgDON_Rlkg"
+    data-category="Announcements"
+    data-category-id="DIC_kwDON_Rlks4CnWeY"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+></script>
+<script>
+    function setGiscusTheme(theme) {
+        let giscus = document.querySelector("iframe.giscus-frame");
+        if (giscus) {
+            giscus.contentWindow.postMessage(
+                {
+                    giscus: {
+                        setConfig: {
+                            theme: theme,
+                        },
+                    },
+                },
+                "https://giscus.app"
+            );
+        }
+    }
+
+    (function () {
+        addEventListener("message", (e) => {
+            if (event.origin !== "https://giscus.app") return;
+            handler();
+        });
+        window.addEventListener("onColorSchemeChange", handler);
+
+        function handler() {
+            if (document.documentElement.dataset.scheme === "light") {
+                setGiscusTheme('light');
+            } else {
+                setGiscusTheme('dark_dimmed');
+            }
+        }
+    })();
+</script>
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2025 - 
+        
+        2026 划船听水声
+    </section>
+    
+    <section class="powerby">
+        
+            <a href="https://beian.miit.gov.cn" target="_blank">湘ICP备2024089321号-2</a> <br/>
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 构建 <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="4.0.3">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+
+
+
+<script type="module">
+    import gallery from '\/js\/gallery.f515e1d543b5db33ebb452ad83e31b4678dd8fcc7584c5bd2d74cc348ea9e64f.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script>
+
+    
+
+            </main>
+        </div>
+        
+<script type="text/javascript" src="/js/main.f856840516f7c2ad1769a8f5937e3d08d6cb386e2cd2dd025ae696e0ff207958.js" defer></script>
+<style>
+ 
+      #TableOfContents > ul, ol {
+        ul, ol {
+            display: none;
+        }
+        .open {
+            display: block;
+        }
+    }
+        #backTopBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        z-index: 99;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        background-image: url(https://katomegumi.site/icons/backTop.svg);
+    }
+</style>
+
+
+<script src=https://katomegumi.site/background/sakura.js></script>
+
+
+<script>
+    function initTocHide() {
+        
+        let toc = document.querySelector(".widget--toc");
+        if (!toc) {
+            return;
+        }
+        
+        window.addEventListener('scroll', function() {
+            
+            let openUl = document.querySelectorAll(".open");
+            if (openUl.length > 0) {
+              openUl.forEach((ul) => {
+                ul.classList.remove("open")
+              })
+            }
+            
+            let currentLi = document.querySelector(".active-class");
+            if (!currentLi) {
+                return
+            }
+            
+            if (currentLi.children.length > 1) {
+                currentLi.children[1].classList.add("open")
+            }
+            
+            let ul = currentLi.parentElement;
+            do {
+                ul.classList.add("open");
+                ul = ul.parentElement.parentElement
+            } while (ul !== undefined && (ul.localName === 'ul' || ul.localName === 'ol'))
+        });
+    }
+    initTocHide()
+</script>
+
+<script>
+    
+
+    function initScrollTop() {
+        let rightSideBar = document.querySelector(".right-sidebar");
+        if (!rightSideBar) {
+            return;
+        }
+        
+        let btn = document.createElement("div");
+        btn.id = "backTopBtn";
+        btn.onclick = backToTop
+        rightSideBar.appendChild(btn)
+        
+        window.onscroll = function() {
+            
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+    }
+
+    
+
+    function backToTop(){
+        window.scrollTo({ top: 0, behavior: "smooth" })
+    }
+
+    initScrollTop();
+</script>
+
+
+
+<style>
+    .highlight {
+         
+        max-height: 400px;
+        overflow: hidden;
+    }
+
+    .code-show {
+        max-height: none !important;
+    }
+
+    .code-more-box {
+        width: 100%;
+        padding-top: 78px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    .code-more-btn {
+        display: block;
+        margin: auto;
+        width: 44px;
+        height: 22px;
+        background: #f0f0f5;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding-top: 6px;
+        cursor: pointer;
+    }
+
+    .code-more-img {
+        cursor: pointer !important;
+        display: block;
+        margin: auto;
+        width: 22px;
+        height: 16px;
+    }
+</style>
+
+<script>
+  function initCodeMoreBox() {
+    let codeBlocks = document.querySelectorAll(".highlight");
+    if (!codeBlocks) {
+      return;
+    }
+    codeBlocks.forEach(codeBlock => {
+      
+      if (codeBlock.scrollHeight <= codeBlock.clientHeight) {
+        return;
+      }
+      
+      
+      let codeMoreBox = document.createElement('div');
+      codeMoreBox.classList.add('code-more-box');
+      
+      let codeMoreBtn = document.createElement('span');
+      codeMoreBtn.classList.add('code-more-btn');
+      codeMoreBtn.addEventListener('click', () => {
+        codeBlock.classList.add('code-show');
+        codeMoreBox.style.display = 'none';
+        
+        window.dispatchEvent(new Event('resize'))
+      })
+      
+      let img = document.createElement('img');
+      img.classList.add('code-more-img');
+      img.src = "https://katomegumi.site/icons/codeMore.png"
+      
+      codeMoreBtn.appendChild(img);
+      codeMoreBox.appendChild(codeMoreBtn);
+      codeBlock.appendChild(codeMoreBox)
+    })
+  }
+  
+  initCodeMoreBox();
+</script>
+
+
+
+    </body>
+</html>

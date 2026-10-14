@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>工具 on 划船听水声</title>
+        <link>https://katomegumi.site/categories/%E5%B7%A5%E5%85%B7/</link>
+        <description>Recent content in 工具 on 划船听水声</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>划船听水声</copyright>
+        <lastBuildDate>Wed, 14 Oct 2026 21:00:31 +0800</lastBuildDate><atom:link href="https://katomegumi.site/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>JMeter下载安装</title>
+            <link>https://katomegumi.site/p/tool-jmeter-download/</link>
+            <pubDate>Fri, 01 May 2026 15:11:23 +0900</pubDate>
+            <guid>https://katomegumi.site/p/tool-jmeter-download/</guid>
+            <description>&lt;blockquote class=&#34;alert alert-note&#34;&gt;&#xA;        &lt;div class=&#34;alert-header&#34;&gt;&#xA;            &lt;span class=&#34;alert-icon&#34;&gt;📝&lt;/span&gt;&#xA;            &lt;span class=&#34;alert-title&#34;&gt;备注&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;        &lt;div class=&#34;alert-body&#34;&gt;&#xA;            &lt;p&gt;由于写了Redis+lua脚本限流，想要测试是否有效，需要使用JMeter进行测试。&lt;/p&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/blockquote&gt;&#xA;&lt;h2 id=&#34;1jmeter简介&#34;&gt;1.JMeter简介&#xA;&lt;/h2&gt;&lt;p&gt;JMeter是一个纯Java编写的开源软件，主要用于进行&lt;strong&gt;性能测试&lt;/strong&gt;和&lt;strong&gt;功能测试&lt;/strong&gt;。它支持测试的应用/服务/协议包括Web (HTTP, HTTPS)、SOAP/REST Webservices、FTP、Database via JDBC等。我们最常使用的是HTTP和HTTPS协议。&lt;/p&gt;</description>
+        </item></channel>
+</rss>
